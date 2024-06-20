@@ -1,0 +1,172 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2344448">
+    <member name="download" type="view" />
+</basis>
+<basis run="atclient" core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2344448">
+    <member name="downloads" type="list" />
+</basis>
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper4.1.6.css" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/style.css" />
+    <script src="https://cdn.basiscore.net/academy.basiscore.com/_js/basiscore-2.30.0.min.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/alasql.min.js"></script>
+</head>
+
+<body>
+    <basis core="call" file="header.inc" />
+    <div class="downloads">
+        <div class="section1">
+            <div class="title">
+                <basis core="print" datamembername="db.download">
+                    <face filter="TypeID=150">
+                        <h1>@Answer</h1>
+                    </face>
+                </basis>
+                <basis core="print" datamembername="db.download">
+                    <face filter="TypeID=128">
+                        <p>@Answer</p>
+                    </face>
+                </basis>
+            </div>
+            <div class="filters">
+                <ul>
+                    <li>
+                        <button data-text="INDOORS" bc-value="true" run="atclient" onclick="indoor()">
+                            INDOORS
+                        </button>
+                    </li>
+                    <li>
+                        <button data-text="OUTDOORS" bc-value="true" run="atclient" onclick="outdoor()">
+                            OUTDOORS
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section2">
+            <ul>
+                <basis core="group" if="{##db.indoor.value|(true)##}" run="atclient" triggers="db.indoor">
+                    <basis core="print" datamembername="db.downloads" run="atclient">
+
+                        <face filter="ord=1">
+                            <script type="text/template">
+
+                            <li>
+                                <div class="inList">
+                                    <h2>
+                                        @name@
+                                    </h2>
+                                    <div class="DownloadIcon">
+                                        <a href="/@largeIMG@" title="downloads catalouge">
+
+                                            <svg width="92" height="92" viewBox="0 0 92 92" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M34.4023 46.8343L45.2954 57.7271L56.1885 46.8343"
+                                                    stroke="#C59B47" stroke-width="2" />
+                                                <path d="M45.2891 57.7269V29.1333" stroke="#C59B47" stroke-width="2" />
+                                                <path d="M27.5977 63.1733H64.3617" stroke="#C59B47" stroke-width="2" />
+                                                <circle cx="46" cy="46" r="45.5" stroke="#C59B47" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </script>
+
+                        </face>
+                    </basis>
+                </basis>
+                <basis core="group" if="{##db.outdoor.value|(false)##}" run="atclient" triggers="db.outdoor">
+                    <basis core="print" datamembername="db.downloads" run="atclient">
+
+                        <face filter="ord=2">
+                            <script type="text/template">
+
+                            <li>
+                                <div class="inList">
+                                    <h2>
+                                        @name@
+                                    </h2>
+                                    <div class="DownloadIcon">
+                                        <a href="/@largeIMG@" title="downloads catalouge">
+
+                                            <svg width="92" height="92" viewBox="0 0 92 92" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M34.4023 46.8343L45.2954 57.7271L56.1885 46.8343"
+                                                    stroke="#C59B47" stroke-width="2" />
+                                                <path d="M45.2891 57.7269V29.1333" stroke="#C59B47" stroke-width="2" />
+                                                <path d="M27.5977 63.1733H64.3617" stroke="#C59B47" stroke-width="2" />
+                                                <circle cx="46" cy="46" r="45.5" stroke="#C59B47" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </li>
+                </script>
+
+                        </face>
+                    </basis>
+                </basis>
+            </ul>
+        </div>
+        <div class="section3">
+            <basis core="print" datamembername="db.downloads" run="atclient">
+                
+                <face filter="ord=1000">
+                    <script type="text/template">
+                    <img loading="lazy" src="/@largeIMG@" alt="@name@" title="@name@" />
+                </script>
+                </face>
+            </basis>
+        </div>
+    </div>
+
+    <basis core="call" file="footer.inc" />
+    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js"></script>
+
+    <basis core="call" file="scripts.inc" />
+
+
+    <script>
+        var host = {
+            settings: {
+                "connection.web.media": "https://basispanel.ir/apicms",
+                "connection.web.basiscore": "https://basiscore.net/apicms",
+                "default.dmnid": 4836,
+                "default.source.verb": "post",
+                "default.binding.regex": "\\{##([^#]*)##\\}",
+            },
+        };
+
+        function outdoor() {
+            $bc.setSource("db.outdoor", true);
+            $bc.setSource("db.indoor", false);
+        }
+        function indoor() {
+            $bc.setSource("db.outdoor", false);
+            $bc.setSource("db.indoor", true);
+        }
+
+
+let filters = document.querySelectorAll(".filters ul li")
+
+filters[0].classList.add("activeBtn");
+filters.forEach(element => {
+  element.addEventListener("click" , function(params) {
+    $(".filters ul li").removeClass("activeBtn")
+    element.classList.add("activeBtn")
+  })
+});
+    </script>
+</body>
+
+</html>

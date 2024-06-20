@@ -1,0 +1,277 @@
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2343699">
+    <member name="serviceGallery" type="list" />
+   
+    <member name="serviceGallery20" type="list" postsql="select * from [db.serviceGallery20] where ord=20" />
+   
+    </basis>
+   <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2343699"> <member name="service" type="view"/ > </basis>	
+
+    <basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+        <member name="list" type="list" request="product" id="[##cms.query.id##]"></member>
+    </basis>
+    
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <basis core="print" datamembername="db.list">
+        <face>
+            <title>[##cms.seo.title|db.list.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.list.description##]" />
+        </face>
+    </basis>
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper4.1.6.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/style.css">
+</head>
+
+<body>
+    <basis core="call" file="header.inc" />
+    <div class="service">
+  <div class="cursor-follower">
+            <div class="innerCursor"></div>
+          </div>
+        <div class="section1">
+            <basis core="print" datamembername="db.serviceGallery">
+           
+                <face filter="ord=1">
+                    
+                    <div class="imgBack" style="background-image: url(/@largeIMG);">
+                        <div class="overlayText">
+                            <p>
+                                
+                                @name
+                            </p>
+                        </div>
+                    </div>
+                </face>
+            </basis>
+            <div class="share shareBtn">
+
+                <ul class="share__wrapper share__wrapper--open-left">
+
+
+
+                    <li class="social-link">
+                        <a href="" title="instagram" id="instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0,0,256,256" width="24px" height="24px">
+                                <g fill="#c59b47" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(10.66667,10.66667)">
+                                        <path
+                                            d="M8,3c-2.761,0 -5,2.239 -5,5v8c0,2.761 2.239,5 5,5h8c2.761,0 5,-2.239 5,-5v-8c0,-2.761 -2.239,-5 -5,-5zM18,5c0.552,0 1,0.448 1,1c0,0.552 -0.448,1 -1,1c-0.552,0 -1,-0.448 -1,-1c0,-0.552 0.448,-1 1,-1zM12,7c2.761,0 5,2.239 5,5c0,2.761 -2.239,5 -5,5c-2.761,0 -5,-2.239 -5,-5c0,-2.761 2.239,-5 5,-5zM12,9c-1.65685,0 -3,1.34315 -3,3c0,1.65685 1.34315,3 3,3c1.65685,0 3,-1.34315 3,-3c0,-1.65685 -1.34315,-3 -3,-3z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </a>
+                    </li>
+                    <li class="social-link">
+                        <a href="" title="telegram" id="telegram">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0,0,256,256" width="24px" height="24px">
+                                <g fill="#c59b47" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(10.66667,10.66667)">
+                                        <path
+                                            d="M20.30273,2.98438c-0.28897,0.01257 -0.55415,0.09568 -0.78711,0.1875c-0.21522,0.08476 -0.98809,0.4096 -2.21875,0.92578c-1.23066,0.51618 -2.8614,1.20058 -4.59961,1.93164c-3.47642,1.46212 -7.38303,3.10683 -9.38477,3.94922c-0.06874,0.02864 -0.34791,0.11411 -0.65625,0.34961c-0.30905,0.23605 -0.65234,0.74834 -0.65234,1.30859c0,0.45195 0.22561,0.91225 0.49805,1.17578c0.27243,0.26353 0.54854,0.38674 0.7793,0.47852v-0.00195c0.78003,0.31076 3.10944,1.24288 3.66406,1.46484c0.19673,0.58953 1.04128,3.11337 1.24219,3.74805h-0.00195c0.14201,0.44921 0.28043,0.74196 0.47266,0.98633c0.09611,0.12218 0.21084,0.2329 0.35156,0.32031c0.05399,0.03354 0.11378,0.05955 0.17383,0.08398c0.00837,0.00355 0.01699,0.00443 0.02539,0.00781l-0.02344,-0.00586c0.01741,0.007 0.03304,0.01733 0.05078,0.02344c0.02891,0.00996 0.04896,0.00963 0.08789,0.01758c0.137,0.04215 0.27376,0.07031 0.40039,0.07031c0.54361,0 0.87695,-0.29492 0.87695,-0.29492l0.02149,-0.01563l2.34766,-1.98633l2.875,2.66016c0.05251,0.07415 0.4639,0.63086 1.41602,0.63086c0.56813,0 1.01731,-0.28121 1.30469,-0.57617c0.28738,-0.29496 0.4664,-0.59677 0.54688,-1.00586l0.00195,-0.00195c0.06418,-0.33018 2.81641,-14.15039 2.81641,-14.15039l-0.00586,0.02344c0.08566,-0.38235 0.11095,-0.7521 0.00977,-1.12891c-0.10119,-0.37681 -0.37428,-0.74453 -0.70312,-0.9375c-0.32885,-0.19297 -0.64072,-0.25085 -0.92969,-0.23828zM19.9082,5.17383c-0.10876,0.54603 -2.57419,12.93205 -2.72656,13.70898l-4.15234,-3.8418l-2.80664,2.37305l0.77734,-3.03906c0,0 5.36255,-5.42814 5.68555,-5.74414c0.26,-0.253 0.31445,-0.34169 0.31445,-0.42969c0,-0.117 -0.06022,-0.20117 -0.19922,-0.20117c-0.125,0 -0.29477,0.11978 -0.38477,0.17578c-1.14365,0.713 -6.01473,3.4889 -8.41016,4.85156c-0.14416,-0.0578 -2.30846,-0.92689 -3.47461,-1.39258c2.07426,-0.873 5.62991,-2.36896 8.94141,-3.76172c1.73791,-0.73094 3.36817,-1.41595 4.59766,-1.93164c1.03785,-0.43531 1.57923,-0.6607 1.83789,-0.76758zM17.15234,19.02539h0.00195c-0.00005,0.00023 -0.00185,0.00556 -0.00195,0.00586c0.00127,-0.00646 -0.00095,-0.0008 0,-0.00586z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+
+                        </a>
+                    </li>
+                    </li>
+                    <li class="social-link">
+                        <a href="" title="whatsapp" id="whatsapp">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0,0,256,256" width="24px" height="24px">
+                                <g fill="#c59b47" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                    stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                    stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                    font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(10.66667,10.66667)">
+                                        <path
+                                            d="M19.077,4.928c-1.886,-1.887 -4.394,-2.927 -7.066,-2.928c-5.506,0 -9.987,4.479 -9.989,9.985c-0.001,1.76 0.459,3.478 1.333,4.992l-1.355,5.023l5.233,-1.237c1.459,0.796 3.101,1.215 4.773,1.216h0.004c5.505,0 9.986,-4.48 9.989,-9.985c0.002,-2.669 -1.036,-5.178 -2.922,-7.066zM16.898,15.554c-0.208,0.583 -1.227,1.145 -1.685,1.186c-0.458,0.042 -0.887,0.207 -2.995,-0.624c-2.537,-1 -4.139,-3.601 -4.263,-3.767c-0.125,-0.167 -1.019,-1.353 -1.019,-2.581c0,-1.228 0.645,-1.832 0.874,-2.081c0.229,-0.25 0.499,-0.312 0.666,-0.312c0.166,0 0.333,0 0.478,0.006c0.178,0.007 0.375,0.016 0.562,0.431c0.222,0.494 0.707,1.728 0.769,1.853c0.062,0.125 0.104,0.271 0.021,0.437c-0.083,0.166 -0.125,0.27 -0.249,0.416c-0.125,0.146 -0.262,0.325 -0.374,0.437c-0.125,0.124 -0.255,0.26 -0.11,0.509c0.146,0.25 0.646,1.067 1.388,1.728c0.954,0.85 1.757,1.113 2.007,1.239c0.25,0.125 0.395,0.104 0.541,-0.063c0.146,-0.166 0.624,-0.728 0.79,-0.978c0.166,-0.25 0.333,-0.208 0.562,-0.125c0.229,0.083 1.456,0.687 1.705,0.812c0.25,0.125 0.416,0.187 0.478,0.291c0.062,0.103 0.062,0.603 -0.146,1.186z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+                <button class="toggle-button">
+                    <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.75 18.25C13.0208 18.25 12.401 17.9948 11.8906 17.4844C11.3802 16.974 11.125 16.3542 11.125 15.625C11.125 15.5229 11.1323 15.4172 11.1469 15.3078C11.1615 15.1984 11.1833 15.1 11.2125 15.0125L5.04375 11.425C4.79583 11.6438 4.51875 11.8151 4.2125 11.9391C3.90625 12.063 3.58542 12.125 3.25 12.125C2.52083 12.125 1.90104 11.8698 1.39062 11.3594C0.880208 10.849 0.625 10.2292 0.625 9.5C0.625 8.77083 0.880208 8.15104 1.39062 7.64062C1.90104 7.13021 2.52083 6.875 3.25 6.875C3.58542 6.875 3.90625 6.93698 4.2125 7.06094C4.51875 7.1849 4.79583 7.35625 5.04375 7.575L11.2125 3.9875C11.1833 3.9 11.1615 3.80156 11.1469 3.69219C11.1323 3.58281 11.125 3.47708 11.125 3.375C11.125 2.64583 11.3802 2.02604 11.8906 1.51562C12.401 1.00521 13.0208 0.75 13.75 0.75C14.4792 0.75 15.099 1.00521 15.6094 1.51562C16.1198 2.02604 16.375 2.64583 16.375 3.375C16.375 4.10417 16.1198 4.72396 15.6094 5.23438C15.099 5.74479 14.4792 6 13.75 6C13.4146 6 13.0938 5.93802 12.7875 5.81406C12.4813 5.6901 12.2042 5.51875 11.9563 5.3L5.7875 8.8875C5.81667 8.975 5.83854 9.07344 5.85313 9.18281C5.86771 9.29219 5.875 9.39792 5.875 9.5C5.875 9.60208 5.86771 9.70781 5.85313 9.81719C5.83854 9.92656 5.81667 10.025 5.7875 10.1125L11.9563 13.7C12.2042 13.4812 12.4813 13.3099 12.7875 13.1859C13.0938 13.062 13.4146 13 13.75 13C14.4792 13 15.099 13.2552 15.6094 13.7656C16.1198 14.276 16.375 14.8958 16.375 15.625C16.375 16.3542 16.1198 16.974 15.6094 17.4844C15.099 17.9948 14.4792 18.25 13.75 18.25ZM13.75 4.25C13.9979 4.25 14.2057 4.16615 14.3734 3.99844C14.5411 3.83073 14.625 3.62292 14.625 3.375C14.625 3.12708 14.5411 2.91927 14.3734 2.75156C14.2057 2.58385 13.9979 2.5 13.75 2.5C13.5021 2.5 13.2943 2.58385 13.1266 2.75156C12.9589 2.91927 12.875 3.12708 12.875 3.375C12.875 3.62292 12.9589 3.83073 13.1266 3.99844C13.2943 4.16615 13.5021 4.25 13.75 4.25ZM3.25 10.375C3.49792 10.375 3.70573 10.2911 3.87344 10.1234C4.04115 9.95573 4.125 9.74792 4.125 9.5C4.125 9.25208 4.04115 9.04427 3.87344 8.87656C3.70573 8.70885 3.49792 8.625 3.25 8.625C3.00208 8.625 2.79427 8.70885 2.62656 8.87656C2.45885 9.04427 2.375 9.25208 2.375 9.5C2.375 9.74792 2.45885 9.95573 2.62656 10.1234C2.79427 10.2911 3.00208 10.375 3.25 10.375ZM13.75 16.5C13.9979 16.5 14.2057 16.4161 14.3734 16.2484C14.5411 16.0807 14.625 15.8729 14.625 15.625C14.625 15.3771 14.5411 15.1693 14.3734 15.0016C14.2057 14.8339 13.9979 14.75 13.75 14.75C13.5021 14.75 13.2943 14.8339 13.1266 15.0016C12.9589 15.1693 12.875 15.3771 12.875 15.625C12.875 15.8729 12.9589 16.0807 13.1266 16.2484C13.2943 16.4161 13.5021 16.5 13.75 16.5Z"
+                            fill="#C59B47" />
+                    </svg>
+                    <span> اشتراک گذاری </span>
+                </button>
+
+
+
+            </div>
+        </div>
+        <div class="section2">
+            <basis core="print" datamembername="db.service">
+                <face filter="TypeID=150">
+                    
+                    <h1>
+                        @Answer
+                    </h1>
+                </face>
+            </basis>
+            <basis core="print" datamembername="db.service">
+                <face filter="TypeID=129">
+                    @Answer
+                </face>
+            </basis>
+        </div>
+        <div class="section3">
+            <h2>
+                لیست خدمات ما:
+            </h2>
+            <div class="in3">
+                <div class="leftItems">
+                    <ul>
+                        <basis core="print" datamembername="db.serviceGallery20">
+                            <face>
+                                
+                                <li>
+                                    <button class="faNum">
+                                       @RowNumber- @name
+                                    </button>
+                                </li>
+                            </face>
+                        </basis>
+                       
+                    </ul>
+                </div>
+                <div class="rightSliders">
+                    <div class="sliderSection">
+                        <div class="swiper verticalSlider">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <basis core="print" datamembername="db.serviceGallery20">
+                                    <face>
+                                        <div class="swiper-slide verticalSlide">
+                                            <div class="topSection">
+                                                <div class="imgS">
+                                                    <img src="/@largeIMG" alt="@name" title="@name">
+                                                </div>
+                                            </div>
+                                            <div class="descriptionSection">
+                                                <h4>
+                                                    @name
+                                                </h4>
+                                                <p>
+                                                   @description
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                    </face>
+                                </basis>
+                             
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- If we need navigation buttons -->
+                            <div class="btns">
+                                <div class="button-prev">
+                                    <svg width="53" height="53" viewBox="0 0 53 53" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_80_489)">
+                                            <path
+                                                d="M26.7305 33.1248L23.7906 33.1248L18.9278 26.4639L24.0077 19.8748L26.7305 19.8748L21.7229 26.4639L26.7305 33.1248Z"
+                                                fill="white" />
+                                            <path d="M21.7237 26.4639L33.125 26.4639" stroke="white" stroke-width="0.5"
+                                                stroke-miterlimit="10" />
+                                        </g>
+                                        <circle cx="26.5" cy="26.5" r="26" stroke="white" />
+                                        <defs>
+                                            <clipPath id="clip0_80_489">
+                                                <rect width="13.25" height="14.1964" fill="white"
+                                                    transform="translate(33.125 19.8748) rotate(90)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="button-next">
+                                    <svg width="54" height="53" viewBox="0 0 54 53" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_80_484)">
+                                            <path
+                                                d="M26.625 19.8752L29.5648 19.8752L34.4277 26.5361L29.3478 33.1252L26.625 33.1252L31.6326 26.5361L26.625 19.8752Z"
+                                                fill="white" />
+                                            <path d="M31.6318 26.5361L20.2305 26.5361" stroke="white" stroke-width="0.5"
+                                                stroke-miterlimit="10" />
+                                        </g>
+                                        <circle cx="26.8555" cy="26.5" r="26" stroke="white" />
+                                        <defs>
+                                            <clipPath id="clip0_80_484">
+                                                <rect width="13.25" height="14.1964" fill="white"
+                                                    transform="translate(20.2305 33.1252) rotate(-90)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section4">
+            <basis core="print" datamembername="db.service">
+
+                <face filter="TypeID=128">
+                    
+                    <p>
+                        @Answer
+                    </p>
+                </face>
+            </basis>
+            <a href="/تماس-با-ما" title="تماس با ما">
+                تماس با ما
+                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_128_766)">
+                    <path d="M9.34375 17.5L5.82336 17.5L0.000134099 8.954L6.08329 0.5L9.34375 0.5L3.34724 8.954L9.34375 17.5Z" fill="white"/>
+                    <path d="M3.3471 8.9541L17 8.9541" stroke="white" stroke-miterlimit="10"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_128_766">
+                    <rect width="17" height="17" fill="white" transform="translate(17 0.5) rotate(90)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+            </a>
+        </div>
+    </div>
+    <basis core="call" file="footer.inc" />
+    <basis core="call" file="scripts.inc" />
+
+    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/scrollTrigger.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/lenisScroll.js"></script>
+    <script src="[##cms.cms.cdn##]/js/service.js"></script>
+</body>
+
+</html>

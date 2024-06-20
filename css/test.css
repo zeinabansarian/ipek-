@@ -1,0 +1,93 @@
+body{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.goDown {
+
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+
+  }
+  .goIcon {
+    position: relative;
+    width: 259.2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d0d0d09a;
+    height: 259.2px;
+    border-radius: 50%;
+  }
+
+  .goIcon:hover::before {
+    animation: scrollDownBorderAnimation 1s forwards;
+  }
+
+  .goIcon:before {
+    border-radius: 50%;
+    border-top: 1px solid #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .maskArrow {
+    width: 49px;
+    display: block;
+    height: 50px;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_216_232)"><path d="M50.2 23.4988V33.9357L25.316 51.1999L0.699951 33.1651V23.4988L25.316 41.2767L50.2 23.4988Z" fill="%23D0D0D0"/><path d="M25.3162 41.2766V0.799805" stroke="%23D0D0D0" stroke-width="1.8" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_216_232"><rect width="49.5" height="50.4" fill="white" transform="translate(0.700195 0.799805)"/></clipPath></defs></svg>')
+      center/contain no-repeat;
+    mask: url('data:image/svg+xml;utf8,<svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_216_232)"><path d="M50.2 23.4988V33.9357L25.316 51.1999L0.699951 33.1651V23.4988L25.316 41.2767L50.2 23.4988Z" fill="%23D0D0D0"/><path d="M25.3162 41.2766V0.799805" stroke="%23D0D0D0" stroke-width="1.8" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_216_232"><rect width="49.5" height="50.4" fill="white" transform="translate(0.700195 0.799805)"/></clipPath></defs></svg>')
+      center/contain no-repeat;
+    -webkit-mask-size: 49px 50px;
+    mask-size: 49px 50px;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    transition: -webkit-mask-image 2s ease-in-out;
+    transition: mask-image 2s ease-in-out;
+    transition: mask-image 2s ease-in-out, -webkit-mask-image 2s ease-in-out;
+
+    span {
+      height: 50px;
+      width: 50px;
+      background-color: #c59b47;
+      display: block;
+      transform: translateY(-100%);
+    }
+  }
+
+  .goDown:hover {
+    .maskArrow {
+      span {
+        transform: translateY(100%);
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+
+  @keyframes scrollDownBorderAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(1turn);
+    }
+  }

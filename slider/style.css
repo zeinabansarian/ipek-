@@ -1,0 +1,241 @@
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+body {
+  --color-text: #000;
+  --color-bg: #fff;
+  --color-link: #000;
+  --color-link-hover: #858585;
+  --color-header: #858585;
+  --color-nav-bg: #fff;
+  --color-nav-hover: #858585;
+  --color-cart-bg: #000;
+  --color-cart: #fff;
+  --color-close-bg: #6a6a6a;
+  --color-close: #fff;
+  --color-details-hover: #858585;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  min-height: 100vh;
+  color: #57585c;
+  color: var(--color-text);
+  background-color: #fff;
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^=swiper-button-] {
+  transition: all 0.3s ease;
+}
+
+.swiper-slide {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+  float: left;
+  transition: opacity 0.6s ease, transform 0.3s ease;
+}
+.swiper-container.nav-slider {
+  width: 20%;
+  padding-left: 5px;
+}
+.swiper-container.nav-slider .swiper-slide {
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+.swiper-container.nav-slider .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+.swiper-container.nav-slider .swiper-slide .content {
+  width: 100%;
+}
+.swiper-container.nav-slider .swiper-slide .content .title {
+  font-size: 20px;
+}
+.swiper-container:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-next {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+.swiper-container.loading {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
+.swiper-slide .slide-bgimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center top;
+  background-size: cover;
+}
+.swiper-slide .entity-img {
+  display: none;
+}
+.swiper-slide .content {
+  opacity: 1;
+  color: #fff;
+  transform: translateX(50px);
+}
+.swiper-slide .content.show {
+  opacity: 1;
+}
+.swiper-slide .content .title {
+  font-size: 2.6em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.swiper-slide .content .caption {
+  display: block;
+  font-size: 13px;
+  line-height: 1.4;
+  transform: translateX(50px);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.7s ease;
+}
+.swiper-slide .content .caption.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+[class^=swiper-button-] {
+  width: 44px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.swiper-button-prev {
+  transform: translateX(50px);
+}
+
+.swiper-button-next {
+  transform: translateX(-50px);
+}
+
+.icon {
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+.slide__title-wrap {
+  padding: 2rem 1rem 0;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.slide__title {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 0.9;
+  white-space: pre;
+}
+
+.slide__title span {
+  display: inline-block;
+}
+
+.slide__subtitle {
+  font-size: 1.15rem;
+  font-weight: normal;
+}
+
+.boxnav__item {
+  width: 10vw;
+  height: 12vw;
+  flex: none;
+}
+
+.boxnav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  z-index: 1000;
+  width: 100%;
+}
+
+.boxnav {
+  left: auto;
+  right: 50vw;
+  width: auto;
+}
+
+.boxnav__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-nav-bg);
+  border: 0;
+  height: 4rem;
+  flex: 1;
+}
+
+.boxnav__item--prev:hover,
+.boxnav__item--next:hover {
+  color: var(--color-nav-hover);
+}
+
+.boxnav__item:focus {
+  outline: none;
+}
+
+.boxnav__label {
+  padding: 0 0.5rem;
+  font-size: 1.15rem;
+  position: relative;
+}
+
+.boxnav__label--total::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 2px;
+  height: 1.45rem;
+  background: #000;
+  transform: rotate(22.5deg);
+}
+
+.icon--caret-rot {
+  transform: rotate(180deg);
+}
+
+@media screen and (min-width: 53em) {
+  .slide__title-wrap {
+    padding: calc(6rem + 10vh) 0 0 4rem;
+    text-align: left;
+  }
+}

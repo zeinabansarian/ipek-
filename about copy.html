@@ -1,0 +1,431 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2344324"> <member name="about" type="view"/ > </basis>	
+    <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2344324"> <member name="aboutGallery" type="list" /> </basis>	
+    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="11" catid="207620"> <member name="ourteam" type="list" size="320x320" propertyid="2732,2739"/> </basis>
+     <basis core="dbsource" name="db" source="media" lid="1" sourcemid="11" usedforid="2344497"> <member name="voice" type="list" format="7"/> </basis>	
+    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="207619"> <member name="brands" type="list" size="167x44" propertyid="7244,7245"/> </basis>
+    
+    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2344522"> <member name="repabout" type="view"/ > </basis>	
+    
+<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+    <member name="list" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/style.css" />
+    <basis core="print" datamembername="db.list">
+        <face>
+            <title>[##cms.seo.title|db.list.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.list.description##]" />
+        </face>
+    </basis>
+</head>
+
+<body>
+    <basis core="call" file="header.inc" />
+    <div class="aboutUs">
+        <div class="section1">
+            <div class="imgS">
+                <basis core="print" datamembername="db.aboutGallery">
+                    <face filter="ord=1 and format=4">
+                        
+                        <img src="/@largeIMG" alt="درباره ما" title="درباره ما" />
+                    </face>
+                </basis>
+            </div>
+            <div class="title1">
+                <div class="inTitle downText">
+                    <basis core="print" datamembername="db.aboutGallery">
+                        <face filter="ord=1 and format=4">
+                            
+                            <h1>@name</h1>
+                            <span>
+                                @description
+                            </span>
+                        </face>
+                    </basis>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="lSide upText">
+                <div class="imgS">
+                    <basis core="print" datamembername="db.aboutGallery">
+                        <face filter="ord=3">
+                            
+                            <img src="/@largeIMG" alt="درباره ما" title="درباره ما" />
+                        </face>
+                    </basis>    
+                                </div>
+            </div>
+            <div class="middle downText">
+                <basis core="print" datamembername="db.about">
+                   
+                    <face filter="TypeID=150">
+                        
+                        <h2>@Answer</h2>
+                    </face>
+                </basis>
+                <div class="para">
+                    <basis core="print" datamembername="db.about">
+                       
+                        <face filter="TypeID=129">
+                   @Answer
+                   </face>
+                </basis>
+                </div>
+            </div>
+            <div class="rSide upText">
+                <div class="imgS">
+                    <basis core="print" datamembername="db.aboutGallery">
+                        <face filter="ord=2 and format=4">
+                            
+                            <img src="/@largeIMG" alt="درباره ما" title="درباره ما" />
+                        </face>
+                    </basis>                
+                </div>
+            </div>
+        </div>
+        <div class="section3">
+            <div class="in3 ">
+                <div class="lImg upText hoverPlay">
+                    <basis core="print" datamembername="db.ourteam">
+                        <face filter="RowNumber=1">
+                            
+                            <div class="imgS">
+                                <img src="/@00320X00320prp" alt="@title" title="@titled " />
+                            </div>
+                            <span>@title</span>
+                            <h5>@prp_2732</h5>
+                        </face>
+                    </basis>
+
+                    <div class="svgS">
+                      <span class="svgSpan"></span>
+                      <span class="svgSpan"></span>
+                      <span class="svgSpan"></span>
+                      <span class="svgSpan"></span>
+                    </div>
+                    <audio controls class="managerSounds">  
+                        <basis core="print" datamembername="db.voice">
+
+                            <face>
+                                <source src="/@largeIMG">
+                                
+                            </face>
+                        </basis>
+                    </audio>
+                </div>
+
+                <div class="rP">
+                    <basis core="print" datamembername="db.ourteam">
+                        <face filter="RowNumber=1">
+                    <p>
+                       @prp_2739
+                    </p>
+                        </face>
+                        </basis>
+                </div>
+            </div>
+        </div>
+        <div class="section4">
+            <div class="in4 ">
+                <div class="lVideo upText">
+                    <basis core="print" datamembername="db.aboutGallery">
+                        
+                        <face filter="ord=4">
+                            
+                            <video poster="/@largeIMG" playsinline>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.aboutGallery">
+                     
+                        <face filter="format=3 and ord=1">
+                            
+                            <source src="/@largeIMG" />
+                        </face>
+                    </basis>
+                    </video>
+                    <div class="playbtn">
+                        <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="31.5039" cy="31.5039" r="30.9961" stroke="white" />
+                            <path d="M46.8496 31.9077L23.2276 45.5459L23.2276 18.2695L46.8496 31.9077Z" fill="white" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="lImg upText hoverPlay">
+                    <basis core="print" datamembername="db.ourteam">
+                        <face filter="RowNumber=2">
+                            
+                            <div class="imgS">
+                                <img src="/@00320X00320prp" alt="@name" />
+                            </div>
+                            <span>@title</span>
+                            <h5>@prp_2732</h5>
+                        </face>
+                    </basis>
+
+                    <div class="svgS">
+                        <span class="svgSpan"></span>
+                        <span class="svgSpan"></span>
+                        <span class="svgSpan"></span>
+                        <span class="svgSpan"></span>
+                      </div>
+                      <audio controls class="managerSounds">  
+                        <basis core="print" datamembername="db.voice">
+                            <face>
+                                
+                                <source src="/@largeIMG">
+                            </face>
+                        </basis>
+                        </audio>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="section5">
+            <div class="in3">
+                <div class="lImg upText hoverPlay">
+
+                   <basis core="print" datamembername="db.ourteam">
+                        <face filter="RowNumber=3">
+                            
+                            <div class="imgS">
+                                <img src="/@00320X00320prp" alt="@name" />
+                            </div>
+                            <span>@title</span>
+                            <h5>@prp_2732</h5>
+                        </face>
+                    </basis>
+                    <div class="svgS">
+                        <span class="svgSpan"></span>
+                        <span class="svgSpan"></span>
+                        <span class="svgSpan"></span>
+                        <span class="svgSpan"></span>
+                      </div>
+                      <audio controls class="managerSounds" type="mp3">  
+                        <basis core="print" datamembername="db.voice">
+                            <face>
+                                
+                                <source src="/@largeIMG">
+                            </face>
+                        </basis>
+                        </audio>
+                </div>
+
+                <!-- <div class="rP">
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                        نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                        کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان
+                        جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای
+                        طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان
+                        فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری
+                        موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد.
+                    </p>
+                </div> -->
+            </div>
+        </div>
+        <div class="section6">
+            <div class="imgS">
+                <basis core="print" datamembername="db.aboutGallery">
+         
+                    <face filter="ord=5">
+                        <img src="/@largeIMG" alt="@name" title="@name" />
+                        
+                    </face>
+                </basis>
+            </div>
+        </div>
+        <div class="section7">
+            
+            <basis core="print" datamembername="db.aboutGallery">
+     
+                <face filter="ord=5">
+            <h3>@name</h3>
+            <div class="para">
+                <p>
+                  @description
+                </p>
+            </div>
+        </face>
+    </basis>
+        </div>
+        <div class="section8">
+
+            <div class="topSlider">
+                <div class="swiper brandTop">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <basis core="print" datamembername="db.brands">
+                            <face>
+                                
+                                <div class="swiper-slide">
+                                    <h4>@title</h4>
+                                </div>
+                            </face>
+                        </basis>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <div class="btmSlider">
+                <div class="swiper brandBtm">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <basis core="repeater" name="rep" datamembername="db.brands">
+                            <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##rep.current.id##]">
+                                 <member name="brandGallery" type="list" /> </basis>
+
+                            <div class="swiper-slide">
+                                <div class="slideContainer" data-swiper-parallax="2" data-swiper-parallax-scale="0.8"
+                                    data-swiper-parallax-opacity="0">
+                                    <div class="mainInfo">
+                                        <div class="right">
+                                            <div class="imgS">
+                                                <basis core="print" datamembername="db.brandGallery">
+                                            
+                                                <face filter="RowNumber=1">
+                                                    <img src="/@largeIMG" alt="@name" title="@name" />
+                                                    
+                                                </face>
+                                            </basis>
+                                            </div>
+                                        </div>
+                                        <div class="mid">
+                                            <p>
+                                            [##rep.current.prp_7244##]
+                                            </p>
+                                        </div>
+                                        <div class="left">
+                                            <div class="imgS">
+                                                <basis core="print" datamembername="db.brandGallery">
+                                            
+                                                    <face filter="RowNumber=2">
+                                                        <img src="/@largeIMG" alt="@name" title="@name" />
+                                                        
+                                                    </face>
+                                                </basis>                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="brandLink">
+                                        <a href="[##rep.current.prp_7245##]" title="@title">
+                                            <svg width="57" height="39" viewBox="0 0 57 39" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="56.5" y="38.5" width="56" height="38" rx="19"
+                                                    transform="rotate(-180 56.5 38.5)" stroke="#C59B47" />
+                                                <g clip-path="url(#clip0_26_1864)">
+                                                    <path
+                                                        d="M27.6565 11L31.1769 11L37.0001 19.546L30.917 28L27.6565 28L33.653 19.546L27.6565 11Z"
+                                                        fill="white" />
+                                                    <path d="M33.6529 19.5459L20 19.5459" stroke="white"
+                                                        stroke-miterlimit="10" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_26_1864">
+                                                        <rect width="17" height="17" fill="white"
+                                                            transform="translate(20 28) rotate(-90)" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </basis>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section9">
+            <div class="in4">
+                <div class="lVideo upText">
+                    <div class="videoIn">
+                        <basis core="print" datamembername="db.aboutGallery">
+                            <face filter="ord=6">
+                                <video poster="/@largeIMG" playsinline>
+                                
+                            </face>
+                        </basis>
+                        <basis core="print" datamembername="db.aboutGallery">
+                            <face filter="format=3 and ord=2">
+                                <source src="/@largeIMG	" />
+                                
+                            </face>
+                        </basis>
+                        </video>
+                        <div class="playbtn">
+                            <svg width="63" height="63" viewBox="0 0 63 63" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="31.5039" cy="31.5039" r="30.9961" stroke="white" />
+                                <path d="M46.8496 31.9077L23.2276 45.5459L23.2276 18.2695L46.8496 31.9077Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="pR">
+                    <basis core="print" datamembername="db.aboutGallery">
+                        <face filter="ord=6">
+                            <h5>@name</h5>
+                            <div class="para">
+                                <p>
+                                   @description
+                                </p>
+                            </div>
+                            
+                        </face>
+                    </basis>
+                </div>
+            </div>
+        </div>
+        <div class="section10">
+            <h3>پروانه‌ها و گواهینامه‌ها</h3>
+
+            <div class="sliderSection">
+                <div class="swiper certificateSlider">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <basis core="print" datamembername="db.aboutGallery">
+                            <face filter="ord=1000">
+                                
+                                <div class="swiper-slide">
+                                    <div class="slideIn">
+                                        <div class="imgS">
+                                            <img src="/@largeIMG" alt="@name" title="@name" />
+                                        </div>
+                                        <h6>@name</h6>
+                                    </div>
+                                </div>
+                            </face>
+                        </basis>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <basis core="call" file="footer.inc" />   
+     <basis core="call" file="scripts.inc" />
+    
+
+    <script src="[##cms.cms.cdn##]/_js/swiper4.7.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/scrollTrigger.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/lenisScroll.js"></script>
+    <!-- <script src="js/playVideo.js"></script> -->
+    <script src="[##cms.cms.cdn##]/js/aboutUs.js"></script>
+</body>
+
+</html>

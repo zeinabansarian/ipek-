@@ -1,0 +1,5082 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Test Domaine Sans Display";
+  src: url("../_fonts/domaine-sans-display-light.eot");
+  src: url("../_fonts/domaine-sans-display-light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/domaine-sans-display-light.woff") format("woff"),
+    url("../_fonts/domaine-sans-display-light.woff2") format("woff2"),
+    url("../_fonts/domaine-sans-display-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Test Domaine Sans Display";
+  src: url("../_fonts/TestDomaineSansDisplay-Regular.eot");
+  src: url("../_fonts/TestDomaineSansDisplay-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/TestDomaineSansDisplay-Regular.woff") format("woff"),
+    url("../_fonts/TestDomaineSansDisplay-Regular.woff2") format("woff2"),
+    url("../_fonts/TestDomaineSansDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Test Domaine Sans Display";
+  src: url("../_fonts/Domaine Sans Display Medium.eot");
+  src: url("../_fonts/Domaine Sans Display Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/Domaine Sans Display Medium.woff") format("woff"),
+    url("../_fonts/Domaine Sans Display Medium.woff2") format("woff2"),
+    url("../_fonts/Domaine Sans Display Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Byekan";
+  src: url("../_fonts/B YekanplusRegular.eot");
+  src: url("../_fonts/B YekanplusRegular.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/B YekanplusRegular.woff") format("woff"),
+    url("../_fonts/B YekanplusRegular.woff2") format("woff2"),
+    url("../_fonts/B YekanplusRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Byekan";
+  src: url("../_fonts/B Yekanplus Bold.eot");
+  src: url("../_fonts/B Yekanplus Bold.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/B Yekanplus Bold.woff") format("woff"),
+    url("../_fonts/B Yekanplus Bold.woff2") format("woff2"),
+    url("../_fonts/B Yekanplus Bold.ttf") format("truetype");
+
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Yekan Bakh FaNum";
+  src: url("../_fonts/Yekan Bakh FA 04 Regular.eot");
+  src: url("../_fonts/Yekan Bakh FA 04 Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/Yekan Bakh FA 04 Regular.woff") format("woff"),
+    url("../_fonts/Yekan Bakh FA 04 Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Yekan Bakh FaNum";
+  src: url("../_fonts/YekanBakh-Light.woff2") format("woff2"),
+    url("../_fonts/YekanBakh-Light.woff") format("woff"),
+    url("../_fonts/YekanBakh-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Assistant";
+  src: url("../_fonts/Assistant-Regular.eot");
+  src: url("../_fonts/Assistant-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/Assistant-Regular.woff2") format("woff2"),
+    url("../_fonts/Assistant-Regular.woff") format("woff"),
+    url("../_fonts/Assistant-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DaxlinePro";
+  src: url("../_fonts/DaxlinePro-Regular.eot");
+  src: url("../_fonts/DaxlinePro-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/DaxlinePro-Regular.woff2") format("woff2"),
+    url("../_fonts/DaxlinePro-Regular.woff") format("woff"),
+    url("../_fonts/DaxlinePro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yekan Bakh FaNum";
+  src: url("../_fonts/Yekan Bakh FA 06 Bold.woff") format("woff"),
+    url("../_fonts/Yekan Bakh FA 06 Bold.woff2") format("woff2"),
+    url("../_fonts/Yekan Bakh FA 06 Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IRANSansWeb(FaNum)';
+  font-weight: 800;
+  font-style: bold;
+  src: url('../_fonts/IRANSansWeb(FaNum).eot') format('embedded-opentype'),
+   url('../_fonts/IRANSansWeb(FaNum).woff') format('woff'),
+    url('../_fonts/IRANSansWeb(FaNum).ttf') format('truetype');
+}
+.faNum,
+.faNump p {
+  font-family: 'IRANSansWeb(FaNum)' !important;
+}
+@mixin DomaineSans300 {
+  font-family: "Test Domaine Sans Display";
+  font-weight: 300;
+}
+
+@mixin byekan400 {
+  font-family: "Byekan";
+  font-weight: 400;
+}
+
+@mixin byekan700 {
+  font-family: "Byekan";
+  font-weight: 700;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(179, 179, 179);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #6d6d6d;
+}
+.activeMenu2{
+  span{
+    color: white!important;
+    transition: 1s ease-in-out;
+  }
+
+  path{
+    stroke: white!important;
+    transition: 1s ease-in-out;
+  }
+}
+.downloads {
+  background-color: black;
+
+  .section1 {
+    padding: 204px 0 123px 0;
+
+    h1 {
+      @include DomaineSans300();
+      font-size: 150px;
+      line-height: 208.2px;
+      text-align: center;
+      color: #c59b47;
+    }
+
+    p {
+      font-family: "Yekan Bakh FaNum";
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 31px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .filters {
+      margin-top: 61px;
+      direction: rtl;
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 28px;
+
+        li {
+          button {
+            background-color: transparent;
+            color: white;
+            outline: none;
+            width: 168px;
+            text-align: center;
+            height: 50px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 26.1px;
+            border: 1px solid white;
+            position: relative;
+            font-family: "Test Domaine Sans Display";
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 33.31px;
+          }
+
+          button:after {
+            color: currentColor;
+            content: attr(data-text);
+            height: 100%;
+            left: 0;
+            right: 0px;
+             opacity: 0;
+            position: absolute;
+             transform: translateY(40%);
+            width: 100%;
+          }
+
+          button:hover {
+            &:after {
+              opacity: 1;
+              transform: translateY(0);
+              transition: transform 0.3s, opacity 0.3s;
+            }
+          }
+
+          .activeBtn {
+            border: 1px solid #c59b47;
+            color: #c59b47;
+          }
+        }
+
+        .activeBtn {
+          button {
+            border: 1px solid #c59b47;
+            color: #c59b47;
+            transition: 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  .section2 {
+    ul {
+      li:first-child {
+        border-top: 1px solid #b6b6b6a9;
+      }
+
+      li {
+        border-bottom: 1px solid #b6b6b6a9;
+
+        .inList {
+          display: flex;
+          padding: 68px 0;
+          align-items: center;
+          justify-content: space-between;
+          direction: rtl;
+          // max-width: 1133px;
+          margin: 0 151px;
+        }
+
+        h2 {
+          font-family: "Byekan";
+          font-weight: 400;
+          color: white;
+          font-size: 36.51px;
+          line-height: 51.78px;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .section3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 105px;
+  }
+}
+
+footer {
+  background-color: #0d0d0d;
+  
+  .footerIn {
+    border-top: 1px solid #b6b6b69d;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 78px;
+    align-items: center;
+    padding: 0 50px;
+    .info {
+      padding: 62px 0 51px 0;
+
+      p {
+        font-family: "Yekan Bakh FaNum";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: right;
+        direction: rtl;
+        color: white;
+      }
+
+      h5,
+      h3 {
+        font-family: "Yekan Bakh FaNum";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: right;
+        color: white;
+      }
+
+      .location,
+      .fax,
+      .phone {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        direction: rtl;
+      }
+
+      .mid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        direction: rtl;
+        margin-top: 24px;
+
+        h3 {
+          direction: ltr;
+        }
+      }
+
+      .socials {
+        display: flex;
+        align-items: center;
+        direction: rtl;
+        margin-top: 15px;
+        justify-content: space-between;
+
+        ul {
+          column-gap: 30px;
+          display: flex;
+          align-items: center;
+          direction: rtl;
+        }
+      }
+    }
+  }
+
+  .brmFooter {
+   
+    border-top: 1px solid #b6b6b69d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 78px;
+    direction: rtl;
+
+    p {
+      font-family: "Assistant";
+      font-size: 14px;
+      font-weight: 400;
+      direction: ltr;
+      line-height: 18.31px;
+      text-align: left;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .copyNamaSite {
+      display: flex;
+      direction: ltr;
+      column-gap: 7px;
+      padding: 22px 0 17px 0;
+      align-items: center;
+
+      span {
+        font-family: "Yekan Bakh FaNum";
+        font-size: 13.72px;
+        font-weight: 300;
+        line-height: 31.39px;
+        text-align: right;
+        color: white;
+      }
+    }
+  }
+}
+
+.projectList {
+  display: flex;
+  align-items: center;
+  direction: rtl;
+  height: 100vh;
+  background-color: black;
+  column-gap: 112px;
+  justify-content: end;
+
+  .title {
+    align-self: center;
+    padding-right: 69px;
+    width: 100%;
+
+    h1 {
+      font-family: "Byekan";
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 56.74px;
+      text-align: right;
+      color: #c59b47;
+    }
+  }
+
+  .projectListSection {
+    height: 100vh;
+
+    .projectListSlider {
+      padding-left: 50px;
+      height: 100%;
+      padding-right: 50px;
+      max-width: 72.361vw;
+      overflow: hidden;
+
+      .swiper-wrapper {
+        transition-duration: 1s !important;
+        align-items: center;
+      }
+
+      .swiper-slide {
+        width: fit-content;
+        display: flex;
+        z-index: 1;
+        height: fit-content;
+        align-items: center;
+
+        a {
+          display: block;
+          position: relative;
+          transform: scale(1);
+          transition: 0.4s ease-in-out;
+          position: relative;
+          text-decoration: none;
+
+          .projectTitle {
+            position: absolute;
+            bottom: 26px;
+            right: 0;
+            left: 0;
+            padding-right: 27px;
+          }
+
+          .imgS {
+            transition: 0.3s ease-in-out;
+          }
+
+          .projectTitle {
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+
+            h2 {
+              font-family: "Byekan";
+              font-size: 24px;
+              color: white;
+              font-weight: 700;
+              line-height: 34.04px;
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .swiper-slide:hover {
+        z-index: 10;
+
+        a {
+          transform: scale(1.2);
+          transition: 0.4s ease-in-out;
+        }
+
+        .projectTitle {
+          opacity: 1;
+          transition: 0.3s ease-in-out;
+        }
+
+        .imgS {
+          transition: 0.3s ease-in-out;
+          filter: brightness(0.7);
+        }
+      }
+    }
+
+    .btns {
+      position: absolute;
+      bottom: 86px;
+      left: 85px;
+      display: flex;
+      direction: ltr;
+      z-index: 10000;
+      column-gap: 21.67px;
+
+      .nextBtn,
+      .prevBtn {
+        cursor: pointer;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+      }
+
+      .swiper-button-disabled {
+        opacity: 0;
+        visibility: hidden;
+        transition-delay: visibility 0.3s;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.architect {
+  background-color: #181818;
+
+  .section1 {
+    max-width: 1286px;
+    margin: 0 auto;
+    padding-top: 161px;
+
+    .in1 {
+      position: relative;
+    }
+
+    .imgS {
+      width: 100%;
+      height: 570px;
+      overflow: hidden;
+      filter: brightness(0.6);
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .archiTitle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        @include byekan400();
+        font-size: 40px;
+        line-height: 56.74px;
+        text-align: center;
+        color: white;
+      }
+    }
+  }
+
+  .section2 {
+    padding: 114px 0 133px 0;
+    max-width: 1286px;
+    margin: 0 auto;
+
+    p {
+      @include byekan400();
+      font-size: 20px;
+      line-height: 28.37px;
+      text-align: justify;
+      color: white;
+      direction: rtl;
+    }
+  }
+
+  .section3 {
+    max-width: 1286px;
+    margin: 0 auto;
+    padding-bottom: 344px;
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      @include byekan700();
+      line-height: 39.72px;
+      text-align: center;
+      color: #c59b47;
+      margin-bottom: 117px;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 123px;
+
+      li {
+        width: 26%;
+        padding: 36px 0 30px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.596);
+
+        .archItem {
+          .imgS {
+            border-radius: 50%;
+            overflow: hidden;
+            width: 348px;
+            transition: 0.4s ease-in-out;
+            height: 348px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .imgS:hover {
+            border-radius: 16px;
+            transition: 0.4s ease-in-out;
+          }
+
+          .arTitle {
+            text-align: center;
+            margin-top: 43px;
+
+            span {
+              @include byekan700();
+              font-size: 20px;
+              line-height: 28.37px;
+              text-align: center;
+              text-align: center;
+              color: white;
+            }
+
+            h3 {
+              @include byekan400();
+              text-align: center;
+              color: white;
+              font-size: 24px;
+              line-height: 34.04px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.blogShow {
+  background-color: black;
+  overflow-x: hidden;
+
+  .section1 {
+    .imgBanner {
+      display: flex;
+      align-items: center;
+      width: 100vw;
+      height: 621px;
+      overflow: hidden;
+      filter: brightness(0.25);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .data {
+      display: flex;
+      padding: 0 75px 0 85px;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        color: white;
+        font-family: "Yekan Bakh FaNum";
+        font-weight: 400;
+        direction: rtl;
+        font-size: 20px;
+        line-height: 31px;
+        text-align: right;
+      }
+
+      .share,
+      .calender,
+      .writer {
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+      }
+
+      .info {
+        display: flex;
+        align-items: center;
+        column-gap: 49px;
+        margin-top: 17px;
+      }
+    }
+  }
+
+  .section2 {
+    padding: 0 75px 0 85px;
+    margin-top: 88px;
+
+    h1 {
+      font-family: "Yekan Bakh FaNum";
+      font-size: 40px;
+      font-weight: 700;
+      color: #c59b47;
+      line-height: 62px;
+      text-align: right;
+      margin-bottom: 63px;
+    }
+
+    p {
+      font-size: 20px;
+      @include byekan400();
+      line-height: 28.37px;
+      text-align: justify;
+      color: white;
+      direction: rtl;
+    }
+  }
+
+  .section3 {
+    padding: 0 75px 0 85px;
+
+
+    h2 {
+      font-size: 28px;
+      @include byekan400();
+      line-height: 39.72px;
+      text-align: right;
+      margin-bottom: 10px;
+      margin-top: 50px;
+      color: #c59b47;
+    }
+
+    p {
+      font-size: 20px;
+      @include byekan400();
+      line-height: 28.37px;
+      text-align: justify;
+      color: white;
+      direction: rtl;
+    }
+  }
+
+  .section4 {
+    padding: 0 75px 0 85px;
+
+    margin: 68px 0;
+
+    .imgS {
+      width: 689px;
+      height: 689px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        transition: 0.5s ease-in-out;
+        transition: 1s ease-in-out;
+        transform: scale(1.15);
+      }
+    }
+
+    .imgS:hover {
+      img {
+        transform: scale(1.01);
+        transition: 1s ease-in-out;
+      }
+    }
+  }
+
+  .section5,
+  .section7 {
+    padding: 0 75px 0 85px;
+    margin-bottom: 68px;
+
+    p {
+      @include byekan400();
+      font-size: 20px;
+      line-height: 45.75px;
+      text-align: justify;
+      direction: rtl;
+      color: white;
+    }
+  }
+
+  .section6 {
+    padding: 0 75px 0 85px;
+    margin-bottom: 64px;
+
+    .imgS {
+      width: 100%;
+      height: 495px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .section7 {
+    margin-bottom: 80px;
+  }
+
+  .section8 {
+    padding: 0 75px 0 85px;
+
+    .in8 {
+      padding-bottom: 105px;
+      // max-width: 1308px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      column-gap: 83px;
+      direction: rtl;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+
+    h3 {
+      @include byekan400();
+      font-size: 28px;
+      line-height: 38.16px;
+      text-align: right;
+      white-space: nowrap;
+      color: #c59b47;
+    }
+
+    .relatedBlog {
+      width: 72.431vw;
+      min-width: 900px;
+      overflow: hidden;
+
+      .swiper-slide {
+        min-width: fit-content !important;
+
+        a {
+          position: relative;
+          text-decoration: none;
+          width: fit-content;
+          display: block;
+        }
+
+        .imgS {
+          overflow: hidden;
+          width: fit-content;
+        }
+
+        .title {
+          position: absolute;
+          width: 100%;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          bottom: 0;
+          height: 100%;
+          background-color: #45320cb2;
+          opacity: 0;
+          transition: 0.3s ease-in-out;
+
+          h4 {
+            font-size: 20px;
+            @include byekan700();
+            color: white;
+            line-height: 27.26px;
+            text-align: center;
+          }
+        }
+
+        img {
+          // width: 100%;
+          transition: 0.5s ease-in-out;
+        }
+      }
+
+      .swiper-slide:hover {
+        .title {
+          z-index: 10;
+          opacity: 1;
+          transition: 0.3s ease-in-out;
+        }
+
+        img {
+          transform: scale(1.1);
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+
+    .swiper-scrollbar {
+      background-color: #d9d9d9;
+      bottom: -5px;
+      height: 5px;
+    }
+
+    .swiper-scrollbar-drag {
+      background-color: #c59b47;
+    }
+  }
+
+  .section9 {
+    padding: 0 75px 0 85px;
+
+    .in8 {
+      padding-bottom: 177px;
+      // max-width: 1308px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      column-gap: 83px;
+      direction: rtl;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+
+    h3 {
+      @include byekan400();
+      font-size: 28px;
+      line-height: 38.16px;
+      text-align: right;
+      white-space: nowrap;
+      color: #c59b47;
+    }
+
+    .relatedProducts {
+      width: 72.431vw;
+
+      min-width: 900px;
+      overflow: hidden;
+
+      .swiper-slide {
+        min-width: fit-content !important;
+
+        a {
+          position: relative;
+          text-decoration: none;
+        }
+
+        .imgS {
+          overflow: hidden;
+        }
+
+        .title {
+          position: absolute;
+          width: 100%;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          right: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          bottom: 0;
+          height: 100%;
+          background-color: #45320cb2;
+          opacity: 0;
+          transition: 0.3s ease-in-out;
+
+          h4 {
+            font-size: 20px;
+            @include byekan700();
+            color: white;
+            line-height: 27.26px;
+            text-align: center;
+          }
+        }
+
+        img {
+          // width: 100%;
+          transition: 0.5s ease-in-out;
+        }
+      }
+
+      .swiper-slide:hover {
+        .title {
+          z-index: 10;
+          opacity: 1;
+          transition: 0.3s ease-in-out;
+        }
+
+        img {
+          transform: scale(1.1);
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+
+    .swiper-scrollbar-relatedProducts {
+      background-color: #d9d9d9;
+      bottom: -5px;
+      height: 5px;
+      position: relative;
+    }
+
+    .swiper-scrollbar-drag {
+      background-color: #c59b47;
+    }
+  }
+}
+
+.pause {
+  opacity: 1;
+}
+
+.play {
+  opacity: 0;
+  display: none;
+}
+@media only screen and (max-height:750px){
+  .projectShow , .productShow{
+    .share{
+      bottom: 457px!important;
+      z-index: 1000;
+    }
+  }
+}
+.projectShow {
+  #PinSection {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    right: 0;
+    direction: rtl;
+    position: relative;
+  }
+
+  .Pin-Wrapp {
+    display: flex;
+    direction: rtl;
+
+    .line {
+      transform: translateY(80%);
+      opacity: 0;
+    }
+
+    .section1 {
+      display: flex;
+      align-items: end;
+      height: 100vh;
+      position: relative;
+      .in1 {
+        width: 782px;
+        padding: 0 75px 0 214px;
+        margin-bottom: 173px;
+      }
+
+      .share {
+        direction: ltr;
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+        position: absolute;
+        bottom: 568px;
+        left: 214px;
+        span {
+          @include byekan400();
+
+          font-size: 20px;
+          line-height: 28.37px;
+          text-align: right;
+          color: black;
+        }
+        .share__wrapper{
+          direction: rtl;
+        }
+      }
+
+      h1 {
+        font-family: "Yekan Bakh FaNum";
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 97.31px;
+        text-align: right;
+        color: #c59b47;
+        margin-bottom: 26px;
+      }
+
+      h2 {
+        font-family: "Yekan Bakh FaNum";
+        font-size: 70px;
+        font-weight: 400;
+        line-height: 90.82px;
+        text-align: right;
+      }
+
+      .para {
+        p {
+          @include byekan400();
+          font-size: 22px;
+          line-height: 28.54px;
+          text-align: justify;
+        }
+      }
+    }
+
+    .section2 {
+      display: flex;
+      align-items: end;
+
+      .imgS {
+        overflow: hidden;
+        img{
+
+          transform: scale(1.2);
+          transition: 1s ease-in-out;
+        }
+      }
+
+      .imgS:hover {
+        img {
+          transform: scale(1.01);
+
+          transition: 1s ease-in-out;
+        }
+      }
+   
+    }
+
+    .section3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 116px 0 153px;
+      align-items: end;
+
+      .roundTxt {
+        margin-left: -60px;
+      }
+
+      .para {
+        width: 360px;
+
+        p {
+          font-size: 20px;
+          @include byekan400();
+          line-height: 28.37px;
+          text-align: justify;
+          direction: rtl;
+        }
+      }
+    }
+
+    .section4 {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      video {
+        height: 100vh;
+        object-fit: cover;
+        width: 1375px;
+        filter: brightness(0.8);
+      }
+
+      .playbtn {
+        position: absolute;
+        cursor: pointer;
+      }
+    }
+
+    .section5 {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      width: max-content;
+      padding: 0 124px 0 138px;
+      column-gap: 69px;
+
+      .rightP {
+        margin-top: 10vh;
+        width: 417px;
+      }
+
+      p {
+        @include byekan400();
+        font-size: 20px;
+        line-height: 36.35px;
+        text-align: justify;
+        direction: rtl;
+
+        span {
+          font-weight: 700;
+          color: #c59b47;
+        }
+      }
+
+      .leftP {
+        width: 358px;
+        margin-top: -205px;
+      }
+
+      img {
+        filter: brightness(0.8);
+        transform: scale(1.15);
+        transition: 1s ease-in-out;
+      }
+
+      .imgS {
+        margin-top: 50px;
+        overflow: hidden;
+      }
+
+      .imgS:hover {
+        img {
+          transform: scale(1.01);
+
+          transition: 1s ease-in-out;
+        }
+      }
+    }
+
+    .section6 {
+      margin-left: 309px;
+
+      img {
+        height: 100vh;
+        filter: brightness(0.8);
+      }
+    }
+
+    .section7 {
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        .imgS {
+          img {
+            filter: brightness(0.5);
+            height: 100vh;
+          }
+        }
+
+        .titleOverlay {
+          position: absolute;
+          inset: 0;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          flex-direction: column;
+
+          h3 {
+            width: 219px;
+            @include byekan700();
+            color: white;
+            margin-top: 20px;
+            font-size: 28px;
+            line-height: 39.72px;
+            text-align: center;
+          }
+
+          .nextArrow {
+            margin-top: 121px;
+            margin-bottom: 147px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.productShow {
+  .line {
+    transform: translateY(80%);
+    opacity: 0;
+  }
+
+  #PinSection {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    right: 0;
+    direction: rtl;
+    position: relative;
+  }
+
+  .Pin-Wrapp {
+    display: flex;
+    direction: rtl;
+
+    .section1 {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-top: 30px;
+      }
+    }
+
+    .section2 {
+      margin-right: 116px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      .share {
+        direction: ltr;
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+        margin-bottom: 45px;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        bottom: 525px;
+        z-index: 11000;
+        .share__wrapper{
+          direction: rtl
+        }
+        span {
+          @include byekan400();
+          font-size: 20px;
+          line-height: 28.37px;
+          color: black;
+          text-align: right;
+        }
+      }
+
+      h1 {
+        font-family: "Yekan Bakh FaNum";
+        font-size: 96px;
+        font-weight: 400;
+        line-height: 134.63px;
+        text-align: right;
+        margin-bottom: 47px;
+
+        span {
+          font-weight: 700;
+          color: #c59b47;
+        }
+      }
+
+      .para {
+        width: 860px;
+
+        p {
+          @include byekan400();
+          font-size: 22px;
+          line-height: 30.45px;
+          text-align: justify;
+        }
+      }
+    }
+
+    .section3 {
+      margin: 0 116px;
+      display: flex;
+      align-items: end;
+
+      .imgS {
+        overflow: hidden;
+        width: 571px;
+        height: 597px;
+        img {
+          transform: scale(1.2);
+          transition: 1s ease-in-out;
+        }
+      }
+
+      .imgS:hover {
+        img {
+          transform: scale(1.01);
+          transition: 1s ease-in-out;
+        }
+      }
+    }
+
+    .section4 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .roundTxt {
+        margin-left: -190px;
+      }
+
+      .para {
+        margin-top: 20px;
+        width: 360px;
+
+        p {
+          @include byekan400();
+          font-size: 20px;
+          line-height: 28.37px;
+          text-align: justify;
+        }
+      }
+    }
+
+    .section5 {
+      position: relative;
+      margin-right: 165px;
+      background-color: #f4f4f4;
+      padding: 0 95px 0 80px;
+
+      .modal {
+        position: absolute !important;
+
+        .modal-dialog {
+          margin-top: 115px !important;
+        }
+
+        .close {
+          float: left !important;
+          font-size: 35px;
+        }
+
+        .modal-content {
+          background: #f4f4f4;
+        }
+
+        .modal-header {
+          border: none;
+
+          h4 {
+            font-family: "Byekan";
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 32.39px;
+            text-align: right;
+          }
+        }
+
+        .modal-body {
+          font-family: "Byekan";
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 36.35px;
+          text-align: right;
+          direction: rtl;
+        }
+      }
+
+      .line {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .in5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        .topSec {
+          display: flex;
+          column-gap: 72px;
+          align-items: center;
+
+          .gallerySlider {
+            width: 360px;
+            overflow: hidden;
+
+            .swiper-slide {
+              .imgS {
+                overflow: hidden;
+              }
+
+              img {
+                width: 100%;
+                transition: 0.5s ease-in-out;
+                transition: 1s ease-in-out;
+                transform: scale(1.15);
+              }
+
+              .imgS:hover {
+                img {
+                  transform: scale(1.01);
+                  transition: 1s ease-in-out;
+                }
+              }
+            }
+            .swiper-pagination{
+              display: flex;
+              justify-content: left;
+              bottom: 34px;
+              left: 40px;
+              align-items: center;
+    direction: ltr;   
+              .swiper-pagination-bullet{
+                opacity: 1;
+                background-color: #D9D9D9;
+                width: 5px;
+                height: 5px;
+                transition: 0.5s ease-in-out;
+                
+              }
+              
+              .swiper-pagination-bullet-active{
+                background-color: #c59b47;
+                width: 11px;
+                height: 11px;
+                transition: 0.5s ease-in-out;
+              }
+            }
+          }
+
+          .infoList {
+            width: 376px;
+
+            ul {
+              li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 13px 12px;
+                border-bottom: 1px solid #c59b479d;
+
+                h4 {
+                  @include byekan400();
+                  font-size: 20px;
+                  line-height: 36.35px;
+                  text-align: justify;
+                }
+
+                .colors {
+                  display: flex;
+                  align-items: center;
+                  column-gap: 16.18px;
+
+                  span {
+                    width: 25.55px;
+                    height: 25.55px;
+                    border-radius: 50%;
+                    position: relative;
+                  }
+                }
+              }
+
+              li:last-child {
+                border: none;
+                padding: 13px 0;
+              }
+
+              .download {
+                display: flex;
+                align-items: center;
+                column-gap: 11px;
+                a{
+                  display: flex;
+                  align-items: center;
+                  @include byekan400();
+font-size: 20px;
+line-height: 36.35px;
+color: black;
+column-gap: 11px;
+                }
+              }
+
+              .orderBtn {
+                display: flex;
+                align-items: center;
+                column-gap: 20px;
+                @include byekan400();
+                font-size: 20px;
+                line-height: 28.37px;
+                text-align: justify;
+                color: black;
+                text-decoration: none;
+                border: 1px solid #c59b47;
+                padding: 7px 23px 7px 23px;
+                border-radius: 29px;
+              }
+            }
+          }
+        }
+
+        .btmSec {
+          margin-top: 62px;
+
+          .tops {
+            display: flex;
+            align-items: center;
+            column-gap: 65px;
+            margin-bottom: 23px;
+
+            .fragm {
+              display: block !important;
+              width: fit-content;
+              direction: ltr;
+
+              font-family: "DaxlinePro";
+              font-size: 24px;
+              font-weight: 400;
+              line-height: 33.64px;
+              text-align: center;
+              color: #c59b47;
+
+              span:first-child {
+                font-size: 20px;
+                transform: translate(5px, -5px);
+                display: inline-block;
+              }
+
+              span:last-child {
+                font-size: 22px;
+                display: inline-block;
+                transform: translateX(-2px);
+              }
+            }
+
+            p {
+              @include byekan700();
+              font-size: 22px;
+              line-height: 32.39px;
+              text-align: justify;
+              color: #c59b47;
+            }
+          }
+
+          .btms {
+            display: flex;
+            column-gap: 36px;
+
+            .btns {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              row-gap: 11px;
+
+              .swiper-button-lock {
+                display: block !important;
+              }
+
+              .prevBtn,
+              .nextBtn {
+                cursor: pointer;
+              }
+            }
+
+            .swiper-slide {
+              display: flex;
+              align-items: center;
+            }
+
+            .descriptionSlider {
+              height: 100px;
+              overflow: hidden;
+              margin: 0;
+              p{
+                @include byekan400();
+font-size: 20px;
+line-height: 29.45px;
+text-align: justify;
+                span{
+                  color: #69374E;
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+      form {
+        legend {
+          display: none;
+        }
+
+        [data-bc-title-container] {
+          display: none;
+        }
+
+        [data-bc-answer-container] {
+          width: 100%;
+        }
+
+        [data-bc-part-container] {
+          width: 100%;
+        } 
+        [data-bc-question]{
+          text-align: left;
+        }
+        input {
+          border: none;
+          border-bottom: 1px solid black;
+          background: transparent;
+          border-radius: 0;
+          @include byekan400();
+          font-size: 16px;
+          color: black;
+        }
+        .msg{
+          color: rgb(0, 156, 0);
+          direction: rtl;
+          text-align: right;
+        }
+        .captchaContainerclass.captcha-sefaresh2 {
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          column-gap: 25px;
+          padding: 10px 15px 10px 20px;
+        }
+        button{
+          background-color: transparent;
+          border: 1px solid #c59b47;
+          color: #c59b47;
+          @include byekan400();
+          font-size: 15px;
+          padding: 0px 20px;
+          border-radius: 5px;
+          
+        }
+      }
+      button{
+        opacity: 1;
+        color: #c59b47;
+
+      }
+    }
+
+    .section6 {
+      display: flex;
+      padding: 0 116px 0 165px;
+      column-gap: 27px;
+
+      .paraTitle {
+        margin-top: 163px;
+
+        p {
+          font-family: "Test Domaine Sans Display";
+          font-size: 20px;
+          font-weight: 400;
+          white-space: nowrap;
+          height: 100%;
+          line-height: 22.36px;
+          letter-spacing: 0.035em;
+          text-align: left;
+          color: #c59b47;
+          writing-mode: vertical-rl;
+          direction: ltr;
+
+          .line {
+            display: inline-block !important;
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      .line {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+      }
+
+      .vertImgs {
+        margin-top: 95px;
+        display: flex;
+        align-items: end;
+        .imgS {
+          margin-bottom: 15px;
+          overflow: hidden;
+        }
+
+        img {
+          transition: 0.5s ease-in-out;
+          transition: 1s ease-in-out;
+          transform: scale(1.15);
+        }
+
+        .imgS:hover {
+          img {
+            transform: scale(1.01);
+            transition: 1s ease-in-out;
+          }
+        }
+      }
+    }
+
+    .section7 {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      video {
+        height: 100vh;
+        width: 1375px;
+        filter: brightness(0.8);
+        object-fit: cover;
+      }
+
+      .playbtn {
+        position: absolute;
+        cursor: pointer;
+      }
+    }
+
+    .section8 {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+      width: max-content;
+      padding: 0 124px 0 138px;
+      column-gap: 69px;
+      position: relative;
+
+      .modal {
+        position: absolute !important;
+        left: -1000px;
+
+        .line {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        .modal-dialog {
+          margin-top: 115px !important;
+        }
+
+        .close {
+          float: left !important;
+          font-size: 35px;
+        }
+
+        .modal-content {
+          background: #f4f4f4;
+        }
+
+        .modal-header {
+          border: none;
+
+          h4 {
+            font-family: "Byekan";
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 32.39px;
+            text-align: right;
+          }
+        }
+
+        .modal-body {
+          font-family: "Byekan";
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 36.35px;
+          text-align: right;
+          direction: rtl;
+        }
+
+        form {
+          legend {
+            display: none;
+          }
+
+          [data-bc-title-container] {
+            display: none;
+          }
+
+          [data-bc-answer-container] {
+            width: 100%;
+          }
+
+          [data-bc-part-container] {
+            width: 100%;
+          } 
+          [data-bc-question]{
+            text-align: left;
+          }
+          input {
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+            border-radius: 0;
+            @include byekan400();
+            font-size: 16px;
+            color: black;
+          }
+          .msg{
+            color: rgb(0, 156, 0);
+            direction: rtl;
+            text-align: right;
+          }
+          .captchaContainerclass.captcha-sefaresh2 {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            column-gap: 25px;
+            padding: 10px 15px 10px 20px;
+          }
+          button{
+            background-color: transparent;
+            border: 1px solid #c59b47;
+            color: #c59b47;
+            @include byekan400();
+            font-size: 15px;
+            padding: 0px 20px;
+            border-radius: 5px;
+            
+          }
+        }
+        button{
+          opacity: 1;
+          color: #c59b47;
+
+        }
+      }
+
+      .rightP {
+        margin-top: 10vh;
+        width: 417px;
+      }
+
+      .downSection {
+        display: flex;
+        direction: ltr;
+        justify-content: right;
+        margin-top: 30px;
+        column-gap: 32px;
+        align-items: end;
+      }
+
+      .order {
+        a {
+          display: flex;
+          column-gap: 20px;
+          align-items: center;
+          direction: rtl;
+          border: 1px solid #c59b47;
+          border-radius: 29px;
+          padding: 7px 23px 7px 23px;
+          text-decoration: none;
+          color: black;
+          @include byekan400();
+          font-size: 24px;
+          line-height: 34.04px;
+          text-align: justify;
+        }
+      }
+
+      .download {
+        a {
+          display: flex;
+          align-items: center;
+          direction: rtl;
+          column-gap: 6px;
+          text-decoration: none;
+          color: black;
+          @include byekan400();
+          font-size: 24px;
+          line-height: 43.62px;
+          text-align: justify;
+        }
+      }
+
+      p {
+        @include byekan400();
+        font-size: 20px;
+        line-height: 36.35px;
+        text-align: justify;
+        direction: rtl;
+        display: contents;
+        span {
+          font-weight: 700;
+          display: inline-block;
+          color: #c59b47;
+        }
+      }
+
+      .leftP {
+        width: 358px;
+        margin-top: -205px;
+      }
+
+      img {
+        filter: brightness(0.8);
+        transform: scale(1.15);
+        transition: 1s ease-in-out;
+      }
+
+      .imgS {
+        margin-top: 50px;
+        overflow: hidden;
+      }
+
+      .imgS:hover {
+        img {
+          transform: scale(1.01);
+
+          transition: 1s ease-in-out;
+        }
+      }
+    }
+
+    .section9 {
+      margin-left: 309px;
+
+      img {
+        height: 100vh;
+        filter: brightness(0.8);
+      }
+    }
+
+    .section10 {
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+
+        .imgS {
+          img {
+            filter: brightness(0.5);
+            height: 100vh;
+          }
+        }
+
+        .titleOverlay {
+          position: absolute;
+          inset: 0;
+          z-index: 10;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          flex-direction: column;
+
+          h2 {
+            width: 219px;
+            @include byekan700();
+            color: white;
+            margin-top: 20px;
+            font-size: 28px;
+            line-height: 39.72px;
+            text-align: center;
+          }
+
+          .nextArrow {
+            margin-top: 121px;
+            margin-bottom: 144px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  display: none;
+}
+
+.blog {
+  background-color: black;
+
+  .elseBlog {
+    text-align: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-family: "Yekan Bakh FaNum";
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 99.2px;
+      width: 200px;
+      text-align: center;
+      color: white;
+    }
+  }
+
+  .section1 {
+    padding-top: 185px;
+    margin-bottom: 75px;
+
+    h1 {
+      font-family: "Yekan Bakh FaNum";
+      font-size: 64px;
+      font-weight: 400;
+      line-height: 99.2px;
+      text-align: center;
+      color: white;
+    }
+  }
+
+  .section2 {
+    padding-bottom: 116px;
+
+    .blogContainer {
+      max-width: 1098px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      direction: rtl;
+      justify-content: space-between;
+
+      .midLine {
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.5);
+        top: 0;
+        left: 50%;
+      }
+
+      .blogItem {
+        position: relative;
+        width: 100%;
+        max-width: 411px;
+        margin-bottom: 134px;
+        opacity: 0;
+        transform: translateY(20%);
+
+        .date {
+          position: absolute;
+          left: -30px;
+          top: 33px;
+
+          span {
+            writing-mode: vertical-lr;
+            color: #c59b47;
+            @include byekan700();
+            font-size: 16px;
+            transform: rotate(180deg);
+            line-height: 22.7px;
+            text-align: right;
+          }
+        }
+
+        a {
+          text-decoration: none;
+
+          .imgS {
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              transition: 0.5s ease-in-out;
+              transition: 1s ease-in-out;
+              transform: scale(1.15);
+            }
+          }
+
+          .imgS:hover {
+            img {
+              transform: scale(1.01);
+              transition: 1s ease-in-out;
+            }
+          }
+
+          h2 {
+            font-family: "Yekan Bakh FaNum";
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 31px;
+            margin-top: 25px;
+            text-align: right;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-height:750px){
+.btmContact{
+  margin-bottom: 3.642vh!important;
+  margin-top: 70px!important;
+}
+
+}
+.contact {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  .imgS {
+    img {
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
+  .overlayInfo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    .topContact {
+      margin-top: 170px;
+      text-align: center;
+
+      h1 {
+        @include byekan400();
+        font-size: 40px;
+        color: white;
+        line-height: 56.74px;
+        text-align: center;
+        margin-bottom: 19px;
+      }
+
+      p {
+        @include byekan400();
+        font-size: 22px;
+        color: white;
+        margin: 0 auto;
+        line-height: 31.21px;
+        text-align: center;
+
+        width: 400px;
+      }
+
+      .socials {
+        margin-top: 23.8px;
+
+        ul {
+          direction: rtl;
+
+          li {
+            display: inline-block;
+            margin-left: 23.4px;
+          }
+
+          li:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .btmContact {
+      display: flex;
+      position: relative;
+      direction: rtl;
+      column-gap: 196px;
+      margin-bottom: 9.642vh;
+      margin-top: 89px;
+      padding: 0 75px 0 83px;
+      .midLine {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        left: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .office,
+      .company {
+        width: 50%;
+        direction: rtl;
+
+        li {
+          display: flex;
+          align-items: center;
+          direction: rtl;
+          flex-wrap: wrap;
+        }
+
+        h2 {
+          font-family: "Yekan Bakh FaNum";
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 37.2px;
+          text-align: right;
+          color: #c59b47;
+          direction: ltr;
+        }
+
+        h3,
+        p,
+        span,
+        i {
+          font-family: "Yekan Bakh FaNum";
+          font-size: 24px;
+          color: white;
+
+          font-weight: 400;
+          line-height: 45.89px;
+          text-align: right;
+        }
+
+        i,
+        span,
+        h5 {
+          direction: ltr;
+        }
+
+        h5:nth-child(2) {
+          span {
+            display: none;
+          }
+        }
+
+        h5 {
+          font-family: "Yekan Bakh FaNum";
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 33.02px;
+          text-align: right;
+          color: white;
+        }
+
+        p {
+          display: contents;
+        }
+      }
+    }
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.home {
+  background-color: black;
+  width: 100vw;
+  overflow-x: hidden;
+
+  .section1 {
+    video {
+      filter: brightness(0.35);
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+  }
+    
+
+    img {
+      width: 100%;
+      filter: brightness(0.35);
+    }
+
+    .sliderContainer {
+      position: relative;
+      width: 100vw;
+    }
+
+    .swiper-slide-active {
+      z-index: 3;
+    }
+
+    .cta {
+      padding: 12% 0;
+    }
+
+    .cta__slider-wrapper {
+      position: relative;
+      width: 100%;
+      float: left;
+      height: 100vh;
+    }
+
+    .cta__slider-wrapper .block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+
+    .cta__slider {
+      min-height: 50vh;
+    }
+
+    .cta__slider .swiper-slide {
+      overflow: hidden;
+    }
+
+    .cta__slider-arrows {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    .cta__slider-arrow {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+    }
+
+    .cta__slider-arrow.cta__slider-arrow--previous {
+      left: 0;
+    }
+
+    .cta__slider-arrow.cta__slider-arrow--next {
+      left: 50%;
+    }
+
+    .cta__slider-item {
+      position: relative;
+
+      .title {
+        position: absolute;
+        z-index: 5;
+        left: 0%;
+        right: 0;
+        top: 43%;
+        overflow: hidden;
+
+        p {
+          font-family: "Yekan Bakh FaNum";
+          font-size: 75px;
+          font-weight: 300;
+          line-height: 88.83px;
+          text-align: center;
+          white-space: nowrap;
+          direction: rtl;
+          text-align: center;
+          color: white;
+          transform: translateY(100%);
+          transition: 0.4s ease-in-out;
+
+          span {
+            color: #c59b47;
+          }
+        }
+      }
+    }
+
+    .goDown {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      right: 0;
+      width: fit-content;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      z-index: 100;
+      cursor: pointer;
+
+      .goIcon {
+        position: relative;
+        width: 259.2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #d0d0d09a;
+        height: 259.2px;
+        border-radius: 50%;
+      }
+
+      .goIcon:hover::before {
+        animation: scrollDownBorderAnimation 1s forwards;
+      }
+
+      .goIcon:before {
+        border-radius: 50%;
+        border-top: 1px solid #fff;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      .maskArrow {
+        width: 49px;
+        display: block;
+        height: 50px;
+        background-color: white;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-mask: url('data:image/svg+xml;utf8,<svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_216_232)"><path d="M50.2 23.4988V33.9357L25.316 51.1999L0.699951 33.1651V23.4988L25.316 41.2767L50.2 23.4988Z" fill="%23D0D0D0"/><path d="M25.3162 41.2766V0.799805" stroke="%23D0D0D0" stroke-width="1.8" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_216_232"><rect width="49.5" height="50.4" fill="white" transform="translate(0.700195 0.799805)"/></clipPath></defs></svg>')
+          center/contain no-repeat;
+        mask: url('data:image/svg+xml;utf8,<svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_216_232)"><path d="M50.2 23.4988V33.9357L25.316 51.1999L0.699951 33.1651V23.4988L25.316 41.2767L50.2 23.4988Z" fill="%23D0D0D0"/><path d="M25.3162 41.2766V0.799805" stroke="%23D0D0D0" stroke-width="1.8" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_216_232"><rect width="49.5" height="50.4" fill="white" transform="translate(0.700195 0.799805)"/></clipPath></defs></svg>')
+          center/contain no-repeat;
+        -webkit-mask-size: 49px 50px;
+        mask-size: 49px 50px;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        transition: -webkit-mask-image 2s ease-in-out;
+        transition: mask-image 2s ease-in-out;
+        transition: mask-image 2s ease-in-out, -webkit-mask-image 2s ease-in-out;
+
+        span {
+          height: 50px;
+          width: 50px;
+          background-color: #c59b47;
+          display: block;
+          transform: translateY(-100%);
+        }
+      }
+    }
+
+    .goDown:hover {
+      .maskArrow {
+        span {
+          transform: translateY(100%);
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+
+    @keyframes scrollDownBorderAnimation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(1turn);
+      }
+    }
+
+    .cta__slider-item .media-wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    .cta__slider-item{
+     img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      // transform: scale(1.2);
+      transition: 1.3s ease-in-out;
+    }}
+
+    .hoverImg {
+      transform: scale(1.01) !important;
+      transition: 1.3s ease-in-out;
+    }
+
+    .cta__slider-counter {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      padding: 20px 40px;
+      color: #ffffff;
+    }
+
+    .cta__cta {
+      padding-top: 12%;
+      max-width: 480px;
+    }
+
+    .overlayItems {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+
+      h2 {
+        opacity: 0;
+        font-family: "Yekan Bakh FaNum";
+        font-size: 57.6px;
+        direction: rtl;
+        font-weight: 400;
+        line-height: 89.28px;
+        letter-spacing: -0.04em;
+        text-align: center;
+        color: white;
+
+        span {
+          font-family: "Test Domaine Sans Display";
+          font-size: 57.6px;
+          font-weight: 500;
+          line-height: 79.95px;
+          letter-spacing: -0.04em;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .items {
+        overflow: hidden;
+
+        ul {
+          display: flex;
+          justify-content: center;
+          column-gap: 46px;
+
+          li {
+            overflow: hidden;
+            position: relative;
+            transform: translateY(100%);
+            min-width: 100px;
+          }
+
+          a {
+            text-decoration: none;
+          }
+
+          h4 {
+            font-family: "Yekan Bakh FaNum";
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 43.4px;
+            text-align: center;
+            color: white;
+            transform: translateY(0);
+            transition: 0.4s ease-in-out;
+          }
+
+          h5 {
+            font-family: "Test Domaine Sans Display";
+            font-size: 32px;
+            font-weight: 400;
+            color: #c59b47;
+            line-height: 44.42px;
+            letter-spacing: -0.04em;
+            text-align: center;
+            transform: translateY(0);
+            opacity: 0;
+            transition: 0.4s ease-in-out;
+            position: absolute;
+            left: 0;
+            right: 0;
+          }
+
+          a:hover {
+            h5 {
+              opacity: 1;
+              transition: 0.4s ease-in-out;
+              transform: translateY(-100%);
+            }
+
+            h4 {
+              opacity: 0;
+              transition: 0.4s ease-in-out;
+              transform: translateY(-100%);
+            }
+            span {
+              opacity: 1;
+              transition: 0.4s ease-in-out;
+              transform: translateY(-100%);
+            }
+
+            h6 {
+              opacity: 0;
+              transition: 0.4s ease-in-out;
+              transform: translateY(-100%);
+            }
+          }
+
+          h6 {
+            font-family: "Test Domaine Sans Display";
+            font-size: 35.2px;
+            font-weight: 300;
+            line-height: 48.86px;
+            text-align: center;
+            color: white;
+            transform: translateY(0);
+            transition: 0.4s ease-in-out;
+            min-width: 100px;
+          }
+          span{
+            
+            font-family: "Test Domaine Sans Display";
+            font-size: 35.2px;
+            font-weight: 300;
+            line-height: 48.86px;
+            text-align: center;
+            transform: translateY(0);
+            transition: 0.4s ease-in-out;
+            color: #c59b47;
+            transform: translateY(0);
+            opacity: 0;
+            transition: 0.4s ease-in-out;
+            position: absolute;
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+
+    .slider2.swiper-slide-active {
+      h2 {
+        opacity: 1 !important;
+        transition: 1s ease-in-out;
+        transition-delay: 0.25;
+        transition-property: opacity;
+      }
+
+      .items {
+        li {
+          transform: translateY(0) !important;
+          transition: 1s ease-in-out;
+          transition-delay: 0.25;
+          transition-property: transform;
+        }
+      }
+    }
+
+    .slider3.swiper-slide-active {
+      h2 {
+        opacity: 1 !important;
+        transition: 1s ease-in-out;
+        transition-delay: 0.25;
+        transition-property: opacity;
+      }
+
+      .items {
+        li {
+          transform: translateY(0) !important;
+          transition: 1s ease-in-out;
+          transition-delay: 0.25;
+          transition-property: transform;
+        }
+      }
+    }
+
+    .innerSlider {
+      height: 100vh;
+      position: relative;
+    }
+
+    .slider4.swiper-slide-active {
+      h1 {
+        transform: translateY(0) !important;
+        transition: 1s ease-in-out;
+        transition-delay: 0.25;
+        transition-property: transform;
+      }
+    }
+
+    .slider4 {
+      .title4 {
+        position: absolute;
+        top: 38%;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        overflow: hidden;
+      }
+      .imgS{
+        height: 100%;
+        img{
+          transform: scale(1.12);
+        }
+      }
+      h1 {
+        font-family: "Yekan Bakh FaNum";
+        font-size: 58px;
+        font-weight: 400;
+        line-height: 89.9px;
+        text-align: center;
+        color: white;
+        transform: translateY(100%);
+      }
+
+      h4 {
+        @include byekan400();
+        font-size: 28px;
+        line-height: 39.72px;
+        text-align: center;
+        color: white;
+      }
+
+      .btns {
+        position: absolute;
+        width: 99%;
+        top: 45%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 100;
+        direction: rtl;
+
+        .nexBtn,
+        .preBtn {
+          cursor: pointer;
+        }
+
+        .nexBtn {
+          margin-right: 71px;
+        }
+
+        .preBtn {
+          margin-left: 71px;
+        }
+      }
+
+      .swiper-slide .sliderTitle {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        transform: translateY(40%);
+        opacity: 0;
+        transition: 1s ease-in-out;
+        transition-delay: 1s;
+        overflow: hidden;
+
+        h4 {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+      }
+
+      .swiper-slide-active .sliderTitle {
+        transform: translateY(0);
+        opacity: 1;
+        transition: 1s ease-in-out;
+      }
+    }
+
+    .slider4.swiper-slide-active {
+      h4 {
+        transform: translateY(0) !important;
+        transition: 1s ease-in-out;
+        transition-delay: 0.25;
+        transition-property: transform;
+        opacity: 1 !important;
+      }
+    }
+
+    .slider1.swiper-slide-active {
+      .title {
+        p {
+          transform: translateY(0) !important;
+          transition: 1s ease-in-out;
+          opacity: 1 !important;
+          transition-delay: 0.25;
+          transition-property: transform;
+        }
+      }
+    }
+
+    .swiper-pagination {
+      padding-left: 79px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 20px;
+      z-index: 100000000;
+      bottom: 116px;
+
+      .swiper-pagination-bullet {
+        opacity: 1;
+        width: 5px;
+        cursor: pointer;
+        height: 5px;
+        background-color: #d9d9d9;
+        transition: 0.3s ease-in-out;
+      }
+
+      .swiper-pagination-bullet-active {
+        width: 11px;
+        height: 11px;
+        background-color: #c59b47;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+  .section2 {
+    display: flex;
+    padding-top: 83px;
+    width: 100vw;
+    direction: rtl;
+    // overflow: hidden;
+    // padding-left: 79px;
+    position: relative;
+    column-gap: 75px;
+    justify-content: space-between;
+
+    .goDown {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      right: 0;
+      width: fit-content;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      z-index: 100;
+      cursor: pointer;
+
+      .goIcon {
+        position: relative;
+        width: 259.2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #d0d0d09a;
+        height: 259.2px;
+        border-radius: 50%;
+
+        .clipMask {
+          //   background-color: hsla(0, 0%, 100%, 0.8);
+          //   display: block;
+          //   height: 40px;
+          //   -webkit-mask-image: url(../images/arrD.svg);
+          //   mask-image: url(../images/arrD.svg);
+          //   -webkit-mask-size: 50px 50px;
+
+          //   mask-size: 50px 50px;
+
+          //   position: relative;
+          //   width: 40px;
+          width: 40px;
+          height: 40px;
+          background-color: red;
+          -webkit-mask-image: url(../images/لوگو\ سفید\ 2.png);
+          mask-image: url(../images/لوگو\ سفید\ 2.png);
+          -webkit-mask-repeat: repeat;
+        }
+      }
+
+      .goIcon:hover::before {
+        animation: scrollDownBorderAnimation 1s forwards;
+      }
+
+      .goIcon:before {
+        border-radius: 50%;
+        border-top: 1px solid #fff;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      .maskArrow {
+        width: 49px;
+        display: block;
+        height: 50px;
+        background-color: white;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-mask: url('data:image/svg+xml;utf8,<svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_216_232)"><path d="M50.2 23.4988V33.9357L25.316 51.1999L0.699951 33.1651V23.4988L25.316 41.2767L50.2 23.4988Z" fill="%23D0D0D0"/><path d="M25.3162 41.2766V0.799805" stroke="%23D0D0D0" stroke-width="1.8" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_216_232"><rect width="49.5" height="50.4" fill="white" transform="translate(0.700195 0.799805)"/></clipPath></defs></svg>')
+          center/contain no-repeat;
+        mask: url('data:image/svg+xml;utf8,<svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_216_232)"><path d="M50.2 23.4988V33.9357L25.316 51.1999L0.699951 33.1651V23.4988L25.316 41.2767L50.2 23.4988Z" fill="%23D0D0D0"/><path d="M25.3162 41.2766V0.799805" stroke="%23D0D0D0" stroke-width="1.8" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_216_232"><rect width="49.5" height="50.4" fill="white" transform="translate(0.700195 0.799805)"/></clipPath></defs></svg>')
+          center/contain no-repeat;
+        -webkit-mask-size: 49px 50px;
+        mask-size: 49px 50px;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        transition: -webkit-mask-image 2s ease-in-out;
+        transition: mask-image 2s ease-in-out;
+        transition: mask-image 2s ease-in-out, -webkit-mask-image 2s ease-in-out;
+
+        span {
+          height: 50px;
+          width: 50px;
+          background-color: #c59b47;
+          display: block;
+          transform: translateY(-100%);
+        }
+      }
+    }
+
+    .goDown:hover {
+      .maskArrow {
+        span {
+          transform: translateY(100%);
+          transition: 0.5s ease-in-out;
+        }
+      }
+    }
+
+    .rightSlider {
+      margin-top: 91px;
+
+      // padding-right: 10px;
+      .serviceSlider {
+        width: 494px;
+        overflow: hidden;
+        position: relative;
+
+        .swiper-slide {
+          .imgS {
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              transition: 0.5s ease-in-out;
+              transition: 1s ease-in-out;
+              filter: brightness(0.55);
+              transform: scale(1.15);
+            }
+          }
+
+          .imgS:hover {
+            img {
+              transform: scale(1.01);
+              transition: 1s ease-in-out;
+            }
+          }
+        }
+
+        .swiper-pagination-service {
+          text-align: right;
+    right: 71px;
+    bottom: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 71px;
+    transform: translateX(-71px);
+    position: absolute;
+    z-index: 100;
+        }
+
+        .swiper-pagination-bullet {
+          opacity: 1;
+          background-color: #d9d9d9;
+          width: 5px;
+          transition: 0.3s ease-in-out;
+          height: 5px;
+        }
+
+        .swiper-pagination-bullet-active {
+          background-color: #c59b47;
+          width: 11px;
+          transition: 0.3s ease-in-out;
+          height: 11px;
+        }
+
+        .btns {
+          position: absolute;
+          top: 0;
+          z-index: 100;
+          display: flex;
+          left: 32px;
+          direction: rtl;
+          top: 26px;
+          column-gap: 11.32px;
+          align-items: center;
+
+          .prevBtn,
+          .nextBtn {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .leftServices {
+      padding-left: 79px;
+
+      h3 {
+        font-family: "Yekan Bakh FaNum";
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 62px;
+        text-align: right;
+        color: white;
+        margin-bottom: 22px;
+      }
+
+      p {
+        font-family: "Yekan Bakh FaNum";
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 31px;
+        text-align: justify;
+        color: white;
+      }
+
+      a {
+        text-decoration: none;
+        display: flex;
+        padding: 7px 23px 7px 23px;
+        border: 1px solid #c59b47;
+        border-radius: 29px;
+        width: fit-content;
+        align-items: center;
+        float: left;
+        margin-top: 40px;
+        column-gap: 20px;
+        @include byekan400();
+        font-size: 24px;
+        line-height: 34.04px;
+        text-align: justify;
+        color: white;
+      }
+    }
+  }
+
+  .section6 {
+    max-width: 1019px;
+    margin: 0 auto;
+    margin-top: 76px;
+    margin-bottom: 80px;
+
+    h3 {
+      @include byekan400();
+      font-size: 40px;
+      line-height: 56.74px;
+      text-align: center;
+      color: white;
+      margin-bottom: 22px;
+    }
+
+    p {
+      font-family: "Yekan Bakh FaNum";
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 31px;
+      text-align: center;
+      color: white;
+      direction: rtl;
+    }
+  }
+
+  .section7 {
+    padding: 0 74px;
+
+    .brandTop {
+      .swiper-slide {
+        opacity: 0.25;
+        transition: 0.5s ease-in-out;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        h4 {
+          font-family: "Test Domaine Sans Display";
+          font-size: 32px;
+          font-weight: 500;
+          line-height: 44.42px;
+          white-space: nowrap;
+          letter-spacing: -0.04em;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .swiper-slide-active {
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+      }
+    }
+
+    .brandBtm {
+      margin-top: 44px;
+      margin-bottom: 147px;
+
+      .swiper-slide {
+        .mainInfo {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          column-gap: 63px;
+
+          .right,
+          .left {
+            .imgS {
+              border-radius: 89px;
+              overflow: hidden;
+
+              img {
+              }
+            }
+          }
+
+          .mid {
+            p {
+              font-family: "Yekan Bakh FaNum";
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 31px;
+              text-align: center;
+              color: white;
+              direction: rtl;
+            }
+          }
+        }
+
+        .brandLink {
+          margin-top: 50px;
+          text-align: center;
+        }
+      }
+    }
+  
+}
+}
+.share {
+  direction: rtl;
+  display: flex;
+  align-items: end;
+  column-gap: 6px;
+  margin-top: 25px;
+  justify-content: end;
+  span {
+    @include byekan400();
+    color: white;
+    font-size: 20px;
+    line-height: 28.37px;
+    text-align: right;
+  }
+  
+      .share__wrapper,
+      .social-link {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: end;
+        margin-left: 10px;
+      }
+      
+  
+      
+      .toggle-button {
+        cursor: pointer;
+        display: flex;
+        white-space: nowrap;
+        align-items: center;
+        column-gap: 10px;
+        position: relative;
+        direction: ltr;
+        margin-top: 25px;
+      }
+      .toggle-button:focus {
+        outline: 0;
+      }
+      .toggle-button:before, .toggle-button:after {
+        content: "";
+        position: absolute;
+      }
+      .toggle-button:after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.2s ease;
+      }
+      
+  
+      .social-link {
+        visibility: hidden;
+        border-radius: 50%;
+        transition: all 0.1s ease;
+        
+        margin-left: 15px;
+       
+      }
+  
+      
+      .share__wrapper--open-left .social-link {
+        animation: 1s right forwards;
+        opacity: 0;
+        will-change: animation;
+      }
+     
+      
+      .share__wrapper--active .social-link {
+        visibility: visible;
+        animation: 0.1s left forwards;
+      }
+      .share__wrapper--active .social-link:nth-child(1) {
+        animation-delay: 0.075s;
+      }
+      .share__wrapper--active .social-link:nth-child(2) {
+        animation-delay: 0.05s;
+      }
+      
+      @keyframes shareClose {
+        0% {
+          opacity: 0;
+          transform: rotateY(0);
+        }
+        100% {
+          opacity: 1;
+          transform: rotateY(360deg);
+        }
+      }
+      @keyframes left {
+        0% {
+          transform: translateX(-170%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      @keyframes right {
+        0% {
+          transform: translateX(-170%);
+        }
+        // 50% {
+        //   opacity: 1;
+        // }
+        100% {
+          opacity: 0;
+          transform: translateX(0);
+        }
+      }
+  
+      
+      .visually-hidden {
+        position: absolute;
+        left: 9999px;
+        width: 1px;
+        height: 1px;
+      }
+      
+      ul, li {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      button {
+        border: none;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        overflow: visible;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        line-height: normal;
+        -webkit-font-smoothing: inherit;
+        -moz-osx-font-smoothing: inherit;
+        -webkit-appearance: none;
+      }
+  
+  
+  
+
+}  
+
+.service {
+  background-color: black;
+
+  .section1 {
+    padding: 161px 61px 0 85px;
+
+    .imgBack {
+      position: relative;
+      width: 100%;
+      height: 570px;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .imgBack::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .overlayText {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+
+      p {
+        @include byekan400();
+        font-size: 40px;
+        color: white;
+        line-height: 56.74px;
+        text-align: center;
+        direction: rtl;
+      }
+    }
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  }
+
+  .section2 {
+    margin-top: 51px;
+    padding: 0 69px 0 85px;
+
+    h1 {
+      @include byekan400();
+      font-size: 40px;
+      line-height: 56.74px;
+      text-align: right;
+      color: #c59b47;
+      margin-bottom: 27px;
+    }
+
+    p {
+      @include byekan400();
+      font-size: 20px;
+      line-height: 28.37px;
+      text-align: justify;
+      color: white;
+      direction: rtl;
+    }
+  }
+
+  .section3 {
+    padding: 0 65px 0 85px;
+
+    h2 {
+      @include byekan400();
+      font-size: 28px;
+      line-height: 39.72px;
+      text-align: right;
+      color: #c59b47;
+      margin-top: 40px;
+      direction: rtl;
+    }
+
+    .in3 {
+      display: flex;
+      justify-content: right;
+      margin-top: 15px;
+      column-gap: 87px;
+    }
+
+    .leftItems {
+      ul {
+        direction: rtl;
+
+        li {
+          button {
+            background-color: transparent;
+            font-family: "Yekan Bakh FaNum";
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 47.54px;
+            text-align: right;
+            color: white;
+            border: none;
+            direction: rtl;
+            cursor: pointer;
+          }
+
+          .activeBtn {
+            font-weight: 700;
+            color: #c59b47;
+          }
+        }
+      }
+    }
+
+    .rightSliders {
+      .sliderSection {
+        width: fit-content;
+
+        .verticalSlider {
+          height: 900px;
+          overflow: hidden;
+          width: fit-content;
+          position: relative;
+
+          .verticalSlide {
+            width: fit-content;
+
+            .topSection {
+              width: fit-content;
+            }
+
+            .imgS {
+              width: fit-content;
+              filter: brightness(0.8);
+            }
+
+            .descriptionSection {
+              width: 756px;
+
+              h4 {
+                margin: 37px 0 28px 0;
+                @include byekan700();
+                font-size: 28px;
+                line-height: 55.46px;
+                text-align: right;
+                direction: rtl;
+                color: #c59b47;
+              }
+
+              p {
+                @include byekan400();
+                font-size: 20px;
+                color: white;
+                line-height: 40.4px;
+                text-align: justify;
+                color: white;
+                direction: rtl;
+              }
+            }
+          }
+        }
+      }
+
+      .swiper-pagination {
+        display: flex;
+        right: 44px;
+        position: absolute;
+        top: 50%;
+        transform: none;
+        column-gap: 17px;
+        align-items: center;
+        height: fit-content;
+
+        .swiper-pagination-bullet {
+          opacity: 1;
+          transition: 0.3s ease-in-out;
+          cursor: pointer;
+          width: 5px;
+          height: 5px;
+          background-color: #d9d9d9;
+          border-radius: 50%;
+        }
+
+        .swiper-pagination-bullet-active {
+          width: 11px;
+          height: 11px;
+          background-color: #c59b47;
+          transition: 0.3s ease-in-out;
+        }
+      }
+
+      .btns {
+        position: absolute;
+        left: 44px;
+        top: 47%;
+        z-index: 10000;
+        column-gap: 11.5px;
+        display: flex;
+      }
+    }
+  }
+
+  .section4 {
+    padding: 110px 0;
+    text-align: center;
+
+    p {
+      @include byekan400();
+      font-size: 28px;
+
+      line-height: 39.72px;
+      text-align: center;
+      direction: rtl;
+      color: white;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      direction: rtl;
+      column-gap: 20px;
+      width: fit-content;
+      margin: 0 auto;
+      margin-top: 65px;
+      @include byekan400();
+      font-size: 24px;
+      line-height: 34.04px;
+      text-align: justify;
+      color: white;
+      text-decoration: none;
+      border: 1px solid #c59b47;
+      padding: 7px 23px 7px 23px;
+      border-radius: 29px;
+    }
+  }
+}
+
+.aboutUs {
+  background-color: black;
+
+  .section1 {
+    position: relative;
+
+    .imgS {
+      img {
+        width: 100%;
+        // filter: brightness(0.25);
+      }
+    }
+
+    .title1 {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .inTitle {
+        display: flex;
+        align-items: baseline;
+        column-gap: 20px;
+      }
+
+      h1 {
+        font-family: "Test Domaine Sans Display";
+        font-size: 200px;
+        font-weight: 400;
+        line-height: 275.2px;
+        text-align: center;
+        color: white;
+      }
+
+      span {
+        font-family: "Test Domaine Sans Display";
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 88.06px;
+        text-align: center;
+        color: white;
+      }
+    }
+  }
+
+  .section2 {
+    padding: 172px 69px 150px 85px;
+    display: flex;
+    column-gap: 80px;
+
+    .lSide {
+      img {
+        filter: brightness(0.6);
+      }
+    }
+
+    .middle {
+      margin-top: 82px;
+
+      h2 {
+        @include byekan400();
+        font-size: 40px;
+        line-height: 56.74px;
+        text-align: right;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      p {
+        @include byekan400();
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28.37px;
+        text-align: justify;
+        direction: rtl;
+        color: white;
+      }
+
+      .para {
+        position: relative;
+      }
+
+      .para::after {
+        content: "";
+        height: 2px;
+        background-color: white;
+        display: block;
+        width: 86.5px;
+        position: absolute;
+        top: 9px;
+        left: -110px;
+      }
+    }
+
+    .rSide {
+      margin-top: 172px;
+
+      img {
+        filter: brightness(0.8);
+      }
+    }
+  }
+
+  .section3 {
+    padding: 0 226px 0 206px;
+
+    .in3 {
+      // max-width: 1008px;
+      // margin: 0 auto;
+      display: flex;
+      align-items: center;
+      column-gap: 236px;
+      justify-content: space-between;
+
+      .lImg {
+        text-align: center;
+
+        .imgS {
+          width: 320px;
+          height: 320px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-bottom: 28px;
+          transition: 0.5s ease;
+
+          img {
+            width: 100%;
+            filter: brightness(0.8);
+          }
+        }
+
+        span {
+          font-family: "Yekan Bakh FaNum";
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 40.51px;
+          text-align: center;
+          color: #545454;
+        }
+
+        h5 {
+          font-family: "Yekan Bakh FaNum";
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 33.12px;
+          text-align: center;
+          color: white;
+          margin-top: 5px;
+        }
+
+        .svgS {
+          margin-top: 10px;
+        }
+      }
+
+      .rP {
+        p {
+          font-family: "Yekan Bakh FaNum";
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 27.9px;
+          text-align: center;
+          direction: rtl;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .hoverPlay {
+    audio {
+      display: none;
+    }
+
+    .svgS {
+      padding: 17.6px;
+      border-radius: 50%;
+      border: 1px solid #d0d0d09a;
+      width: fit-content;
+      margin: 0 auto;
+      display: flex;
+      align-items: baseline;
+      position: relative;
+      column-gap: 4px;
+      opacity: 0.5;
+      transition: 0.5s ease-in-out;
+
+      span {
+        width: 1px;
+        height: 19px;
+        background-color: white;
+      }
+    }
+
+    .svgS:before {
+      border-radius: 50%;
+      border-top: 1px solid #fff;
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 102%;
+    }
+
+    @keyframes scrollDownBorderAnimation {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(1turn);
+      }
+    }
+  }
+
+  .hoverPlay:hover {
+    .imgS {
+      transform: scale(1.1);
+      transition: 0.5s ease;
+    }
+
+    .svgS {
+      opacity: 1;
+      transition: 0.5s ease-in-out;
+    }
+
+    .svgS::before {
+      animation: scrollDownBorderAnimation 2s forwards;
+    }
+  }
+
+  .section4 {
+    padding: 0 226px 0 206px;
+    margin-top: 186px;
+
+    .in4 {
+      display: flex;
+      align-items: center;
+      column-gap: 236px;
+      justify-content: space-between;
+    }
+
+    .lVideo {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      video {
+        // filter: brightness(0.4);
+        width: 411px;
+        object-fit: cover;
+      }
+
+      .playbtn {
+        position: absolute;
+        cursor: pointer;
+      }
+    }
+
+    .lImg {
+      text-align: center;
+
+      .imgS {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 28px;
+        transition: 0.5s ease;
+
+        img {
+          width: 100%;
+          filter: brightness(0.8);
+        }
+      }
+
+      span {
+        font-family: "Yekan Bakh FaNum";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 40.51px;
+        text-align: center;
+        color: #545454;
+      }
+
+      h5 {
+        font-family: "Yekan Bakh FaNum";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 33.12px;
+        text-align: center;
+        color: white;
+        margin-top: 5px;
+      }
+
+      .svgS {
+        margin-top: 10px;
+      }
+    }
+
+    .lImg:hover {
+      .imgS {
+        transform: scale(1.1);
+        transition: 0.5s ease;
+      }
+    }
+  }
+
+  .section5 {
+    padding: 250px 226px 353px 206px;
+
+    .in3 {
+      // max-width: 1008px;
+      // margin: 0 auto;
+      display: flex;
+      align-items: center;
+      column-gap: 236px;
+      justify-content: space-between;
+
+      .lImg {
+        text-align: center;
+
+        .imgS {
+          width: 320px;
+          height: 320px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-bottom: 28px;
+          transition: 0.5s ease;
+
+          img {
+            width: 100%;
+            filter: brightness(0.8);
+          }
+        }
+
+        span {
+          font-family: "Yekan Bakh FaNum";
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 40.51px;
+          text-align: center;
+          color: #545454;
+        }
+
+        h5 {
+          font-family: "Yekan Bakh FaNum";
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 33.12px;
+          text-align: center;
+          color: white;
+          margin-top: 5px;
+        }
+
+        .svgS {
+          margin-top: 10px;
+        }
+      }
+
+      .lImg:hover {
+        .imgS {
+          transform: scale(1.1);
+          transition: 0.5s ease;
+        }
+      }
+
+      .rP {
+        p {
+          font-family: "Yekan Bakh FaNum";
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 27.9px;
+          text-align: center;
+          direction: rtl;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .section6 {
+    .imgS {
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .imgS::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.4) 100%
+      );
+    }
+  }
+
+  .section7 {
+    margin-top: 117px;
+
+    h3 {
+      @include byekan400();
+      font-size: 28px;
+      line-height: 39.72px;
+      text-align: center;
+      color: white;
+    }
+
+    .para {
+      margin: 0 auto;
+      margin-top: 25px;
+      max-width: 837px;
+    }
+
+    p {
+      @include byekan400();
+      font-size: 16px;
+      direction: rtl;
+
+      color: white;
+      line-height: 22.7px;
+      text-align: center;
+    }
+  }
+
+  .section8 {
+    padding: 0 74px;
+    margin-top: 56px;
+
+    .brandTop {
+      .swiper-slide {
+        opacity: 0.25;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        h4 {
+          font-family: "Test Domaine Sans Display";
+          font-size: 32px;
+          font-weight: 500;
+          line-height: 44.42px;
+          white-space: nowrap;
+          letter-spacing: -0.04em;
+          text-align: center;
+          color: white;
+        }
+      }
+
+      .swiper-slide-active {
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+      }
+    }
+
+    .brandBtm {
+      margin-top: 44px;
+      margin-bottom: 147px;
+
+      .swiper-slide {
+        .mainInfo {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          column-gap: 63px;
+
+          .right,
+          .left {
+            .imgS {
+              border-radius: 89px;
+              overflow: hidden;
+
+              img {
+              }
+            }
+          }
+
+          .mid {
+            p {
+              font-family: "Yekan Bakh FaNum";
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 31px;
+              text-align: center;
+              color: white;
+              direction: rtl;
+            }
+          }
+        }
+
+        .brandLink {
+          margin-top: 50px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .section9 {
+    padding: 0 180px 0 85px;
+    margin-top: 186px;
+
+    .in4 {
+      display: flex;
+      align-items: center;
+      column-gap: 199px;
+      justify-content: space-between;
+    }
+
+    .lVideo {
+      text-align: center;
+
+      .videoIn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      video {
+        // filter: brightness(0.6);
+        width: 524px;
+        object-fit: cover;
+      }
+
+      .playbtn {
+        position: absolute;
+        cursor: pointer;
+      }
+
+      p {
+        font-family: "Yekan Bakh FaNum";
+        direction: rtl;
+        max-width: 240px;
+        font-size: 20px;
+        font-weight: 400;
+        margin: 0 auto;
+        margin-top: 31px;
+        color: white;
+        line-height: 27.6px;
+        text-align: center;
+      }
+    }
+
+    .pR {
+      h5 {
+        @include byekan400();
+        font-size: 28px;
+        line-height: 39.72px;
+        text-align: center;
+        color: white;
+      }
+
+      .para {
+        margin-top: 21px;
+
+        p {
+          font-family: "Yekan Bakh FaNum";
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 27.9px;
+          text-align: center;
+          color: white;
+          direction: rtl;
+        }
+      }
+    }
+  }
+
+  .section10 {
+    margin-top: 150px;
+    padding-bottom: 279px;
+
+    h3 {
+      @include byekan400();
+      font-size: 28px;
+      line-height: 39.72px;
+      text-align: center;
+      color: white;
+      margin-bottom: 103px;
+    }
+
+    .certificateSlider {
+      .swiper-slide {
+        width: fit-content !important;
+      }
+
+      .slideIn {
+        .imgS {
+          border-radius: 50%;
+          width: 176.81px;
+          overflow: hidden;
+          transition: 0.5s ease-in-out;
+
+          img {
+            width: 100%;
+            filter: brightness(0.6);
+            transition: 0.5s ease-in-out;
+          }
+        }
+
+        .imgS:hover {
+          transition: 0.5s ease-in-out;
+          border-radius: 0;
+
+          img {
+            filter: brightness(1);
+            transition: 0.5s ease-in-out;
+          }
+        }
+
+        h6 {
+          @include byekan400();
+          font-size: 16px;
+          line-height: 22.7px;
+          text-align: center;
+          color: white;
+          margin-top: 33px;
+        }
+      }
+    }
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 15206598232;
+
+  .headerContaner {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 75.3px 0 56px;
+    align-items: center;
+
+    .barIcon {
+      button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        outline: none;
+        display: flex;
+        align-items: center;
+        padding: 0 16px 0 20px;
+        border-radius: 32.5px;
+        column-gap: 5px;
+        justify-content: center;
+        cursor: pointer;
+        border: 1px solid #c59b47;
+
+        span {
+          font-family: "Yekan Bakh FaNum";
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 33.02px;
+          text-align: center;
+        }
+      }
+
+      .ham {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .active .hamRotate {
+        transform: rotate(45deg);
+      }
+
+      .active .hamRotate180 {
+        transform: rotate(180deg);
+      }
+
+      .line {
+        fill: none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke: white;
+        stroke-width: 3;
+        stroke-linecap: round;
+      }
+
+      .ham7 .top {
+        stroke-dasharray: 40 82;
+      }
+
+      .ham7 .middle {
+        stroke-dasharray: 40 111;
+      }
+
+      .ham7 .bottom {
+        stroke-dasharray: 40 161;
+      }
+
+      .active .ham7 .top {
+        stroke-dasharray: 17 82;
+        stroke-dashoffset: -62px;
+      }
+
+      .active .ham7 .middle {
+        stroke-dashoffset: 23px;
+      }
+
+      .active .ham7 .bottom {
+        stroke-dashoffset: -83px;
+      }
+    }
+  }
+}
+
+header.menu2 {
+  .headerContaner .barIcon button {
+    color: black !important;
+    // background-color: white;
+  }
+
+  .headerContaner .barIcon .line {
+    stroke: black;
+  }
+}
+
+.menuContainer {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  transform: translateY(105vh);
+  transition: 1s ease-in-out;
+
+  .leftMenu {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    ul {
+      padding-left: 69px;
+
+      li {
+        overflow: hidden;
+
+        a {
+          transform: translateY(20vh);
+          display: block;
+          text-decoration: none;
+          font-family: "Test Domaine Sans Display";
+          font-size: 96px;
+          font-weight: 400;
+          line-height: 133.25px;
+          text-align: center;
+          color: white;
+          display: flex;
+          align-items: center;
+          column-gap: 107px;
+
+          .arrowContainer {
+            width: 109.2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            height: 109.2px;
+            border: 1.2px solid #c59b47;
+            transform: translateX(20px);
+            transition: 0.5s ease-in-out;
+            opacity: 0;
+          }
+
+          .maskArrow {
+            width: 42px;
+            display: block;
+
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-mask: url('data:image/svg+xml;utf8,<svg width="45" height="43" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_83_678)"><path d="M20.4967 0.5L29.6911 0.500001L44.9 21.6136L29.0122 42.5L20.4967 42.5L36.1582 21.6136L20.4967 0.5Z" fill="%23C59B47"/><path d="M36.1582 21.6136L0.500004 21.6136" stroke="%23C59B47" stroke-width="2.4" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_83_678"><rect width="42" height="44.4" fill="white" transform="translate(0.500004 42.5) rotate(-90)"/></clipPath></defs></svg>')
+              center/contain no-repeat;
+            mask: url('data:image/svg+xml;utf8,<svg width="45" height="43" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_83_678)"><path d="M20.4967 0.5L29.6911 0.500001L44.9 21.6136L29.0122 42.5L20.4967 42.5L36.1582 21.6136L20.4967 0.5Z" fill="%23C59B47"/><path d="M36.1582 21.6136L0.500004 21.6136" stroke="%23C59B47" stroke-width="2.4" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_83_678"><rect width="42" height="44.4" fill="white" transform="translate(0.500004 42.5) rotate(-90)"/></clipPath></defs></svg>')
+              center/contain no-repeat;
+            -webkit-mask-size: 42px 44px;
+            mask-size: 42px 44px;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+            transition: -webkit-mask-image 2s ease-in-out;
+            transition: mask-image 2s ease-in-out;
+            transition: mask-image 2s ease-in-out,
+              -webkit-mask-image 2s ease-in-out;
+
+            span {
+              height: 44px;
+              width: 44px;
+              background-color: #c59b47;
+              display: block;
+              transform: translateX(-100%);
+            }
+          }
+        }
+      }
+
+      li:hover {
+        a {
+          color: #c59b47;
+        }
+
+        .arrowContainer {
+          transform: translateX(0);
+          transition: 0.5s ease-in-out;
+          opacity: 1;
+
+          .maskArrow {
+            span {
+              transform: translateX(100%);
+              transition: 1s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .midLine {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1, 0);
+    transition: 1.2s ease-in-out;
+    transform-origin: bottom;
+  }
+
+  .sctivemidLine {
+    transform: scale(1, 1);
+    transition: 1.2s ease-in-out;
+    transform-origin: bottom;
+    transition-delay: 0.5s;
+  }
+
+  .rightMenu {
+    width: 50%;
+    position: relative;
+    .images {
+      position: relative;
+    }
+    .images img {
+      position: absolute;
+      height: 40vh;
+      inset: 0;
+      opacity: 0;
+      z-index: -1;
+      transform: scale(0.8);
+    }
+    
+    ul {
+      padding-right: 79px;
+      direction: rtl;
+      position: relative;
+      li {
+        overflow: hidden;
+        position: relative;
+        // span {
+        // }
+        a {
+          transform: translateY(10vh);
+          display: block;
+          font-family: "Yekan Bakh FaNum";
+          font-size: 36px;
+          font-weight: 400;
+          line-height: 73.98px;
+          text-align: right;
+          color: white;
+          text-decoration: none;
+        }
+      }
+      .blurLi{
+        a{
+
+          color: transparent;
+          text-shadow: 0 0 8px #ffffff;
+        }
+      }
+    }
+    
+
+
+  }
+
+  .overMenu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 78px;
+    justify-content: right;
+    z-index: -1;
+    opacity: 0;
+
+    .swiper-slide-active {
+      z-index: 3;
+    }
+
+    .cta {
+      padding: 12% 0;
+    }
+
+    .cta__slider-wrapper {
+      position: relative;
+      width: 530px;
+      float: left;
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .cta__slider-wrapper .block {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+
+    .cta__slider {
+      min-height: 523px;
+    }
+
+    .cta__slider .swiper-slide {
+      overflow: hidden;
+    }
+
+    .cta__slider-arrows {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    .cta__slider-arrow.cta__slider-arrow--previous {
+      left: 0;
+    }
+
+    .cta__slider-arrow.cta__slider-arrow--next {
+      left: 50%;
+    }
+
+    .cta__slider-item {
+      position: relative;
+    }
+
+    .cta__slider-item .media-wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    .cta__slider-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cta__slider-counter {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      padding: 20px 40px;
+      color: #ffffff;
+    }
+
+    .cta__cta {
+      padding-top: 12%;
+      max-width: 480px;
+    }
+  }
+
+  .overMenuActive {
+    z-index: 100;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.activeMenuContainer {
+  transform: translateY(0);
+  transition: 1s ease-in-out;
+  opacity: 1;
+  z-index: 10555500;
+}
+
+.activeMenuContainerTop {
+  opacity: 0 !important;
+
+  transform: translateY(-105vh) !important;
+  transition: 1s ease-in-out !important;
+}
+
+.cursor-follower {
+  position: fixed;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+    0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(5px, 5px);
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.innerCursor {
+  border: 1px solid #c59b47;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+
+.prevCursor {
+  padding: 20px;
+  transform: scale(0);
+
+  transition-delay: 1s;
+  transition-property: height width;
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  right: -145%;
+}
+
+.nextCursor {
+  padding: 20px;
+  transform: scale(0);
+  rotate: 180deg;
+  transition-delay: 1s;
+  transition-property: height width;
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  right: -145%;
+}
+
+.cursor-follower.activePre {
+  .innerCursor {
+    scale: 4;
+    transition: 0.5s ease-in-out;
+    transform-origin: center;
+  }
+
+  .prevCursor {
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+    transform-origin: center;
+    height: fit-content;
+    width: fit-content;
+  }
+}
+
+.cursor-follower.activeNext {
+  .innerCursor {
+    scale: 4;
+    transition: 0.5s ease-in-out;
+    transform-origin: center;
+  }
+
+  .nextCursor {
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+    transform-origin: center;
+    height: fit-content;
+    width: fit-content;
+  }
+}
+
+.cursor-follower.activeActive {
+  .innerCursor {
+    scale: 4;
+    transition: 0.5s ease-in-out;
+    transform-origin: center;
+  }
+}
+
+.cursor-follower.hovered {
+  opacity: 0.08;
+}
+.productCat {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+
+  .backSlider {
+    .backgroundSlider {
+      .swiper-slide {
+        .imgS {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          img {
+            filter: brightness(0.3);
+            scale: 1.2;
+            transition: 1s ease-in-out;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .swiper-slide-active {
+        img {
+          scale: 1 !important;
+          transition: 1s ease-in-out;
+        }
+      }
+    }
+  }
+
+  h1 {
+    position: absolute;
+    font-family: "Yekan Bakh FaNum";
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 62px;
+    letter-spacing: -0.04em;
+    text-align: right;
+    color: white;
+    top: 174px;
+    right: 82px;
+  }
+
+  .overlayCat {
+    position: absolute;
+    z-index: 10;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .overlaySlider {
+      position: relative;
+      height: 100%;
+    }
+
+    .overlaySliderContainer {
+      height: 100%;
+
+      .catSlider {
+        height: 100%;
+        width: 100vw;
+      }
+
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .slideContainer {
+          position: relative;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          column-gap: 40px;
+
+          .titleCat {
+            display: flex;
+            align-items: center;
+
+            h2 {
+              font-family: "Test Domaine Sans Display";
+              font-size: 120px;
+              font-weight: 300;
+              line-height: 166.56px;
+              text-align: center;
+              color: white;
+            }
+          }
+
+          .catListlayer {
+            width: 1027px;
+            transform: scale(0);
+            transform-origin: top;
+            transition-delay: 2s !important;
+            transition-property: transform !important;
+
+            ul {
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              justify-content: center;
+              gap: 33px;
+
+              li {
+                overflow: hidden;
+
+                button {
+                  transform: translateY(-110%);
+                  transition: 0.3s;
+                  display: flex;
+                  align-items: center;
+                  background-color: transparent;
+                  border: none;
+                  outline: none;
+                  background-color: rgba(255, 255, 255, 0.2);
+                  border-radius: 29px;
+                  padding: 7px 23px 7px 23px;
+
+                  a {
+                    display: flex;
+                    direction: rtl;
+                    align-items: center;
+                    column-gap: 20px;
+                    font-family: "Yekan Bakh FaNum";
+                    font-size: 30px;
+                    transition: 0.3s;
+                    font-weight: 400;
+                    line-height: 46.5px;
+                    text-align: justify;
+                    color: white;
+                    text-decoration: none;
+
+                    .arrowContainer {
+                      width: 17px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      height: 17px;
+                    }
+
+                    .maskArrow {
+                      width: 17px;
+                      display: block;
+                      background-color: white;
+                      background-size: cover;
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      -webkit-mask: url('data:image/svg+xml;utf8,<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_83_724)"><path d="M9.34351 17L5.82312 17L-0.000110042 8.454L6.08304 -1.42519e-07L9.34351 0L3.34699 8.454L9.34351 17Z" fill="%23C59B47"/><path d="M3.3471 8.45401L17 8.45401" stroke="%23C59B47" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_83_724"><rect width="17" height="17" fill="white" transform="translate(17) rotate(90)"/></clipPath></defs></svg>')
+                        center/contain no-repeat;
+                      mask: url('data:image/svg+xml;utf8,<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_83_724)"><path d="M9.34351 17L5.82312 17L-0.000110042 8.454L6.08304 -1.42519e-07L9.34351 0L3.34699 8.454L9.34351 17Z" fill="%23C59B47"/><path d="M3.3471 8.45401L17 8.45401" stroke="%23C59B47" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_83_724"><rect width="17" height="17" fill="white" transform="translate(17) rotate(90)"/></clipPath></defs></svg>')
+                        center/contain no-repeat;
+                      -webkit-mask-size: 17px 17px;
+                      mask-size: 17px 17px;
+                      -webkit-mask-repeat: no-repeat;
+                      mask-repeat: no-repeat;
+                      -webkit-mask-position: center;
+                      mask-position: center;
+                      transition: -webkit-mask-image 2s ease-in-out;
+                      transition: mask-image 2s ease-in-out;
+                      transition: mask-image 2s ease-in-out,
+                        -webkit-mask-image 2s ease-in-out;
+
+                      span {
+                        height: 20px;
+                        width: 20px;
+                        background-color: #c59b47;
+                        display: block;
+                        transform: translateX(100%);
+                        transition: 0.5s ease-in-out;
+                      }
+                    }
+                  }
+                }
+
+                button:hover {
+                  a {
+                    color: #c59b47;
+                    transition: 0.3s ease-in-out;
+                  }
+
+                  .maskArrow {
+                    span {
+                      transform: translateX(0);
+                      transition: 0.5s ease-in-out;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .swiper-slide-active {
+        .catListlayer {
+          transform: scale(1) !important;
+          transform-origin: top;
+          transition-delay: 2s !important;
+          transition-property: transform !important;
+
+          button {
+            transform: translateY(0) !important;
+            transition: 1s ease-in-out;
+            transition-delay: 2s !important;
+            transition-property: transform !important;
+          }
+        }
+      }
+    }
+  }
+}
