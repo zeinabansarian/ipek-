@@ -1,103 +1,84 @@
 @charset "UTF-8";
-footer .brmFooter,
-footer .footerIn {
-  border-top: 1px solid rgba(182, 182, 182, 0.6156862745);
-  margin: 0 78px;
-}
-.projectList,
-.projectList .projectListSection {
-  height: 100vh;
-}
-.blogShow,
-.home,
-body {
-  overflow-x: hidden;
-}
-.nextCursor,
-.prevCursor {
-  padding: 20px;
-  right: -145%;
-}
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
+html,
 body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
 div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
+span,
+applet,
+object,
+iframe,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-header,
-hgroup,
-html,
-i,
-iframe,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
 img,
 ins,
 kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
 q,
-ruby,
 s,
 samp,
-section,
 small,
-span,
 strike,
 strong,
 sub,
-summary,
 sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
 tt,
-u,
-ul,
 var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
 video {
   margin: 0;
   padding: 0;
@@ -106,6 +87,8 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
+/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -119,37 +102,39 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
   padding: 0;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
-blockquote:after,
+
 blockquote:before,
-q:after,
-q:before {
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 @font-face {
   font-family: "Test Domaine Sans Display";
   src: url("../_fonts/domaine-sans-display-light.eot");
-  src: url("../_fonts/domaine-sans-display-light.eot?#iefix")
-      format("embedded-opentype"),
-    url("../_fonts/domaine-sans-display-light.woff") format("woff"),
-    url("../_fonts/domaine-sans-display-light.woff2") format("woff2"),
-    url("../_fonts/domaine-sans-display-light.ttf") format("truetype");
+  src: url("../_fonts/domaine-sans-display-light.eot?#iefix") format("embedded-opentype"), url("../_fonts/domaine-sans-display-light.woff") format("woff"), url("../_fonts/domaine-sans-display-light.woff2") format("woff2"), url("../_fonts/domaine-sans-display-light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -157,11 +142,7 @@ table {
 @font-face {
   font-family: "Test Domaine Sans Display";
   src: url("../_fonts/TestDomaineSansDisplay-Regular.eot");
-  src: url("../_fonts/TestDomaineSansDisplay-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../_fonts/TestDomaineSansDisplay-Regular.woff") format("woff"),
-    url("../_fonts/TestDomaineSansDisplay-Regular.woff2") format("woff2"),
-    url("../_fonts/TestDomaineSansDisplay-Regular.ttf") format("truetype");
+  src: url("../_fonts/TestDomaineSansDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("../_fonts/TestDomaineSansDisplay-Regular.woff") format("woff"), url("../_fonts/TestDomaineSansDisplay-Regular.woff2") format("woff2"), url("../_fonts/TestDomaineSansDisplay-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -169,34 +150,23 @@ table {
 @font-face {
   font-family: "Test Domaine Sans Display";
   src: url("../_fonts/Domaine Sans Display Medium.eot");
-  src: url("../_fonts/Domaine Sans Display Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("../_fonts/Domaine Sans Display Medium.woff") format("woff"),
-    url("../_fonts/Domaine Sans Display Medium.woff2") format("woff2"),
-    url("../_fonts/Domaine Sans Display Medium.ttf") format("truetype");
+  src: url("../_fonts/Domaine Sans Display Medium.eot?#iefix") format("embedded-opentype"), url("../_fonts/Domaine Sans Display Medium.woff") format("woff"), url("../_fonts/Domaine Sans Display Medium.woff2") format("woff2"), url("../_fonts/Domaine Sans Display Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: Byekan;
+  font-family: "Byekan";
   src: url("../_fonts/B YekanplusRegular.eot");
-  src: url("../_fonts/B YekanplusRegular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../_fonts/B YekanplusRegular.woff") format("woff"),
-    url("../_fonts/B YekanplusRegular.woff2") format("woff2"),
-    url("../_fonts/B YekanplusRegular.ttf") format("truetype");
+  src: url("../_fonts/B YekanplusRegular.eot?#iefix") format("embedded-opentype"), url("../_fonts/B YekanplusRegular.woff") format("woff"), url("../_fonts/B YekanplusRegular.woff2") format("woff2"), url("../_fonts/B YekanplusRegular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: Byekan;
+  font-family: "Byekan";
   src: url("../_fonts/B Yekanplus Bold.eot");
-  src: url("../_fonts/B Yekanplus Bold.eot?#iefix") format("embedded-opentype"),
-    url("../_fonts/B Yekanplus Bold.woff") format("woff"),
-    url("../_fonts/B Yekanplus Bold.woff2") format("woff2"),
-    url("../_fonts/B Yekanplus Bold.ttf") format("truetype");
+  src: url("../_fonts/B Yekanplus Bold.eot?#iefix") format("embedded-opentype"), url("../_fonts/B Yekanplus Bold.woff") format("woff"), url("../_fonts/B Yekanplus Bold.woff2") format("woff2"), url("../_fonts/B Yekanplus Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -204,49 +174,35 @@ table {
 @font-face {
   font-family: "Yekan Bakh FaNum";
   src: url("../_fonts/Yekan Bakh FA 04 Regular.eot");
-  src: url("../_fonts/Yekan Bakh FA 04 Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../_fonts/Yekan Bakh FA 04 Regular.woff") format("woff"),
-    url("../_fonts/Yekan Bakh FA 04 Regular.ttf") format("truetype");
+  src: url("../_fonts/Yekan Bakh FA 04 Regular.eot?#iefix") format("embedded-opentype"), url("../_fonts/Yekan Bakh FA 04 Regular.woff") format("woff"), url("../_fonts/Yekan Bakh FA 04 Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Yekan Bakh FaNum";
-  src: url("../_fonts/YekanBakh-Light.woff2") format("woff2"),
-    url("../_fonts/YekanBakh-Light.woff") format("woff"),
-    url("../_fonts/YekanBakh-Light.ttf") format("truetype");
+  src: url("../_fonts/YekanBakh-Light.woff2") format("woff2"), url("../_fonts/YekanBakh-Light.woff") format("woff"), url("../_fonts/YekanBakh-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: Assistant;
+  font-family: "Assistant";
   src: url("../_fonts/Assistant-Regular.eot");
-  src: url("../_fonts/Assistant-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../_fonts/Assistant-Regular.woff2") format("woff2"),
-    url("../_fonts/Assistant-Regular.woff") format("woff"),
-    url("../_fonts/Assistant-Regular.ttf") format("truetype");
+  src: url("../_fonts/Assistant-Regular.eot?#iefix") format("embedded-opentype"), url("../_fonts/Assistant-Regular.woff2") format("woff2"), url("../_fonts/Assistant-Regular.woff") format("woff"), url("../_fonts/Assistant-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: DaxlinePro;
+  font-family: "DaxlinePro";
   src: url("../_fonts/DaxlinePro-Regular.eot");
-  src: url("../_fonts/DaxlinePro-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../_fonts/DaxlinePro-Regular.woff2") format("woff2"),
-    url("../_fonts/DaxlinePro-Regular.woff") format("woff"),
-    url("../_fonts/DaxlinePro-Regular.ttf") format("truetype");
+  src: url("../_fonts/DaxlinePro-Regular.eot?#iefix") format("embedded-opentype"), url("../_fonts/DaxlinePro-Regular.woff2") format("woff2"), url("../_fonts/DaxlinePro-Regular.woff") format("woff"), url("../_fonts/DaxlinePro-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Yekan Bakh FaNum";
-  src: url("../_fonts/Yekan Bakh FA 06 Bold.woff") format("woff"),
-    url("../_fonts/Yekan Bakh FA 06 Bold.woff2") format("woff2"),
-    url("../_fonts/Yekan Bakh FA 06 Bold.ttf") format("truetype");
+  src: url("../_fonts/Yekan Bakh FA 06 Bold.woff") format("woff"), url("../_fonts/Yekan Bakh FA 06 Bold.woff2") format("woff2"), url("../_fonts/Yekan Bakh FA 06 Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -255,44 +211,43 @@ table {
   font-family: "IRANSansWeb(FaNum)";
   font-weight: 800;
   font-style: bold;
-  src: url("../_fonts/IRANSansWeb(FaNum).eot") format("embedded-opentype"),
-    url("../_fonts/IRANSansWeb(FaNum).woff") format("woff"),
-    url("../_fonts/IRANSansWeb(FaNum).ttf") format("truetype");
+  src: url("../_fonts/IRANSansWeb(FaNum).eot") format("embedded-opentype"), url("../_fonts/IRANSansWeb(FaNum).woff") format("woff"), url("../_fonts/IRANSansWeb(FaNum).ttf") format("truetype");
 }
 .faNum,
 .faNump p {
   font-family: "IRANSansWeb(FaNum)" !important;
 }
+
 ::-webkit-scrollbar {
   width: 10px;
   background-color: transparent;
   display: none;
 }
+
 ::-webkit-scrollbar-track {
-  background-color: #b3b3b3;
+  background-color: rgb(179, 179, 179);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: #6d6d6d;
 }
-.aboutUs,
-.blog,
-.downloads,
-.projectList,
-.service {
-  background-color: #000;
-}
+
 .activeMenu2 span {
-  color: #fff !important;
+  color: white !important;
   transition: 1s ease-in-out;
 }
 .activeMenu2 path {
   stroke: white !important;
   transition: 1s ease-in-out;
 }
+
+.downloads {
+  background-color: black;
+}
 .downloads .section1 {
-  padding: 204px 0 123px;
+  padding: 204px 0 123px 0;
 }
 .downloads .section1 h1 {
   font-family: "Test Domaine Sans Display";
@@ -308,14 +263,7 @@ table {
   font-weight: 300;
   line-height: 31px;
   text-align: center;
-  color: #fff;
-}
-.architect .section1 .archiTitle h1,
-.projectList .title h1 {
-  font-size: 40px;
-  line-height: 56.74px;
-  font-weight: 400;
-  font-family: Byekan;
+  color: #ffffff;
 }
 .downloads .section1 .filters {
   margin-top: 61px;
@@ -326,18 +274,19 @@ table {
   align-items: center;
   justify-content: center;
   -moz-column-gap: 28px;
-  column-gap: 28px;
+       column-gap: 28px;
 }
 .downloads .section1 .filters ul li button {
   background-color: transparent;
-  color: #fff;
-  outline: 0;
+  color: white;
+  outline: none;
   width: 168px;
+  text-align: center;
   height: 50px;
   cursor: pointer;
   text-align: center;
   border-radius: 26.1px;
-  border: 1px solid #fff;
+  border: 1px solid white;
   position: relative;
   font-family: "Test Domaine Sans Display";
   font-size: 24px;
@@ -349,7 +298,7 @@ table {
   content: attr(data-text);
   height: 100%;
   left: 0;
-  right: 0;
+  right: 0px;
   opacity: 0;
   position: absolute;
   transform: translateY(40%);
@@ -384,9 +333,9 @@ table {
   margin: 0 151px;
 }
 .downloads .section2 ul li h2 {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
-  color: #fff;
+  color: white;
   font-size: 36.51px;
   line-height: 51.78px;
   text-align: right;
@@ -397,17 +346,20 @@ table {
   justify-content: center;
   padding-bottom: 105px;
 }
+
 footer {
   background-color: #0d0d0d;
 }
 footer .footerIn {
+  border-top: 1px solid rgba(182, 182, 182, 0.6156862745);
   display: flex;
   justify-content: space-between;
+  margin: 0 78px;
   align-items: center;
   padding: 0 50px;
 }
 footer .footerIn .info {
-  padding: 62px 0 51px;
+  padding: 62px 0 51px 0;
 }
 footer .footerIn .info p {
   font-family: "Yekan Bakh FaNum";
@@ -416,24 +368,31 @@ footer .footerIn .info p {
   line-height: 22px;
   text-align: right;
   direction: rtl;
-  color: #fff;
+  color: white;
 }
+footer .footerIn .info h5,
 footer .footerIn .info h3,
-footer .footerIn .info h5 {
+footer .footerIn .info p {
   font-family: "Yekan Bakh FaNum";
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
   text-align: right;
-  color: #fff;
+  color: white;
 }
-footer .footerIn .info .fax,
 footer .footerIn .info .location,
 footer .footerIn .info .phone {
   display: flex;
   align-items: center;
   -moz-column-gap: 16px;
-  column-gap: 16px;
+       column-gap: 16px;
+  direction: rtl;
+}
+footer .footerIn .info .fax {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
   direction: rtl;
 }
 footer .footerIn .info .mid {
@@ -443,12 +402,6 @@ footer .footerIn .info .mid {
   direction: rtl;
   margin-top: 24px;
 }
-.contact .overlayInfo .btmContact .company h5,
-.contact .overlayInfo .btmContact .company i,
-.contact .overlayInfo .btmContact .company span,
-.contact .overlayInfo .btmContact .office h5,
-.contact .overlayInfo .btmContact .office i,
-.contact .overlayInfo .btmContact .office span,
 footer .footerIn .info .mid h3 {
   direction: ltr;
 }
@@ -461,19 +414,21 @@ footer .footerIn .info .socials {
 }
 footer .footerIn .info .socials ul {
   -moz-column-gap: 30px;
-  column-gap: 30px;
+       column-gap: 30px;
   display: flex;
   align-items: center;
   direction: rtl;
 }
 footer .brmFooter {
+  border-top: 1px solid rgba(182, 182, 182, 0.6156862745);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 78px;
   direction: rtl;
 }
 footer .brmFooter p {
-  font-family: Assistant;
+  font-family: "Assistant";
   font-size: 14px;
   font-weight: 400;
   direction: ltr;
@@ -485,8 +440,8 @@ footer .brmFooter .copyNamaSite {
   display: flex;
   direction: ltr;
   -moz-column-gap: 7px;
-  column-gap: 7px;
-  padding: 22px 0 17px;
+       column-gap: 7px;
+  padding: 22px 0 17px 0;
   align-items: center;
 }
 footer .brmFooter .copyNamaSite span {
@@ -495,14 +450,17 @@ footer .brmFooter .copyNamaSite span {
   font-weight: 300;
   line-height: 31.39px;
   text-align: right;
-  color: #fff;
+  color: white;
 }
+
 .projectList {
   display: flex;
   align-items: center;
   direction: rtl;
+  height: 100vh;
+  background-color: black;
   -moz-column-gap: 112px;
-  column-gap: 112px;
+       column-gap: 112px;
   justify-content: end;
 }
 .projectList .title {
@@ -511,8 +469,15 @@ footer .brmFooter .copyNamaSite span {
   width: 100%;
 }
 .projectList .title h1 {
+  font-family: "Byekan";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 56.74px;
   text-align: right;
   color: #c59b47;
+}
+.projectList .projectListSection {
+  height: 100vh;
 }
 .projectList .projectListSection .projectListSlider {
   padding-left: 50px;
@@ -536,38 +501,30 @@ footer .brmFooter .copyNamaSite span {
 }
 .projectList .projectListSection .projectListSlider .swiper-slide a {
   display: block;
+  position: relative;
   transform: scale(1);
   transition: 0.4s ease-in-out;
   position: relative;
   text-decoration: none;
 }
-.projectList
-  .projectListSection
-  .projectListSlider
-  .swiper-slide
-  a
-  .projectTitle {
+.projectList .projectListSection .projectListSlider .swiper-slide a .projectTitle {
   position: absolute;
   bottom: 26px;
   right: 0;
   left: 0;
   padding-right: 27px;
-  opacity: 0;
-  transition: 0.3s ease-in-out;
 }
 .projectList .projectListSection .projectListSlider .swiper-slide a .imgS {
   transition: 0.3s ease-in-out;
 }
-.projectList
-  .projectListSection
-  .projectListSlider
-  .swiper-slide
-  a
-  .projectTitle
-  h2 {
-  font-family: Byekan;
+.projectList .projectListSection .projectListSlider .swiper-slide a .projectTitle {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.projectList .projectListSection .projectListSlider .swiper-slide a .projectTitle h2 {
+  font-family: "Byekan";
   font-size: 24px;
-  color: #fff;
+  color: white;
   font-weight: 700;
   line-height: 34.04px;
   text-align: right;
@@ -579,11 +536,7 @@ footer .brmFooter .copyNamaSite span {
   transform: scale(1.2);
   transition: 0.4s ease-in-out;
 }
-.projectList
-  .projectListSection
-  .projectListSlider
-  .swiper-slide:hover
-  .projectTitle {
+.projectList .projectListSection .projectListSlider .swiper-slide:hover .projectTitle {
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
@@ -599,7 +552,7 @@ footer .brmFooter .copyNamaSite span {
   direction: ltr;
   z-index: 10000;
   -moz-column-gap: 21.67px;
-  column-gap: 21.67px;
+       column-gap: 21.67px;
 }
 .projectList .projectListSection .btns .nextBtn,
 .projectList .projectListSection .btns .prevBtn {
@@ -610,15 +563,12 @@ footer .brmFooter .copyNamaSite span {
 .projectList .projectListSection .btns .swiper-button-disabled {
   opacity: 0;
   visibility: hidden;
+  transition-delay: visibility 0.3s;
   transition: 0.3s ease-in-out;
 }
+
 .architect {
   background-color: #181818;
-}
-.blogShow,
-.home,
-.menuContainer {
-  background-color: #000;
 }
 .architect .section1 {
   max-width: 1286px;
@@ -634,16 +584,7 @@ footer .brmFooter .copyNamaSite span {
   overflow: hidden;
   filter: brightness(0.6);
 }
-.aboutUs .section1 .imgS img,
-.aboutUs .section6 .imgS img,
-.architect .section1 img,
-.architect .section3 ul li .archItem .imgS img,
-.blogShow .section1 .imgBanner img,
-.blogShow .section6 .imgS img,
-.productShow .Pin-Wrapp .section5 form [data-bc-answer-container],
-.productShow .Pin-Wrapp .section5 form [data-bc-part-container],
-.productShow .Pin-Wrapp .section8 .modal form [data-bc-answer-container],
-.productShow .Pin-Wrapp .section8 .modal form [data-bc-part-container] {
+.architect .section1 img {
   width: 100%;
 }
 .architect .section1 .archiTitle {
@@ -656,22 +597,25 @@ footer .brmFooter .copyNamaSite span {
   justify-content: center;
 }
 .architect .section1 .archiTitle h1 {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 56.74px;
   text-align: center;
-  color: #fff;
+  color: white;
 }
 .architect .section2 {
-  padding: 114px 0 133px;
+  padding: 114px 0 133px 0;
   max-width: 1286px;
   margin: 0 auto;
 }
-.architect .section2 p,
-.service .section2 p {
-  font-family: Byekan;
+.architect .section2 p {
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
   line-height: 28.37px;
   text-align: justify;
-  color: #fff;
+  color: white;
   direction: rtl;
 }
 .architect .section3 {
@@ -679,18 +623,10 @@ footer .brmFooter .copyNamaSite span {
   margin: 0 auto;
   padding-bottom: 344px;
 }
-.blogShow .section1 .data,
-.blogShow .section2,
-.blogShow .section3,
-.blogShow .section4,
-.blogShow .section6,
-.blogShow .section8,
-.blogShow .section9 {
-  padding: 0 75px 0 85px;
-}
 .architect .section3 h2 {
+  text-align: center;
   font-size: 28px;
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 700;
   line-height: 39.72px;
   text-align: center;
@@ -701,11 +637,11 @@ footer .brmFooter .copyNamaSite span {
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 123px;
-  column-gap: 123px;
+       column-gap: 123px;
 }
 .architect .section3 ul li {
   width: 26%;
-  padding: 36px 0 30px;
+  padding: 36px 0 30px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.596);
 }
 .architect .section3 ul li .archItem .imgS {
@@ -714,6 +650,9 @@ footer .brmFooter .copyNamaSite span {
   width: 348px;
   transition: 0.4s ease-in-out;
   height: 348px;
+}
+.architect .section3 ul li .archItem .imgS img {
+  width: 100%;
 }
 .architect .section3 ul li .archItem .imgS:hover {
   border-radius: 16px;
@@ -724,20 +663,27 @@ footer .brmFooter .copyNamaSite span {
   margin-top: 43px;
 }
 .architect .section3 ul li .archItem .arTitle span {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 700;
   font-size: 20px;
   line-height: 28.37px;
   text-align: center;
-  color: #fff;
+  text-align: center;
+  color: white;
 }
 .architect .section3 ul li .archItem .arTitle h3 {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
-  color: #fff;
+  text-align: center;
+  color: white;
   font-size: 24px;
   line-height: 34.04px;
   text-align: center;
+}
+
+.blogShow {
+  background-color: black;
+  overflow-x: hidden;
 }
 .blogShow .section1 .imgBanner {
   display: flex;
@@ -747,13 +693,17 @@ footer .brmFooter .copyNamaSite span {
   overflow: hidden;
   filter: brightness(0.25);
 }
+.blogShow .section1 .imgBanner img {
+  width: 100%;
+}
 .blogShow .section1 .data {
   display: flex;
+  padding: 0 75px 0 85px;
   justify-content: space-between;
   align-items: center;
 }
 .blogShow .section1 .data span {
-  color: #fff;
+  color: white;
   font-family: "Yekan Bakh FaNum";
   font-weight: 400;
   direction: rtl;
@@ -761,22 +711,23 @@ footer .brmFooter .copyNamaSite span {
   line-height: 31px;
   text-align: right;
 }
-.blogShow .section1 .data .calender,
 .blogShow .section1 .data .share,
+.blogShow .section1 .data .calender,
 .blogShow .section1 .data .writer {
   display: flex;
   align-items: center;
   -moz-column-gap: 12px;
-  column-gap: 12px;
+       column-gap: 12px;
 }
 .blogShow .section1 .data .info {
   display: flex;
   align-items: center;
   -moz-column-gap: 49px;
-  column-gap: 49px;
+       column-gap: 49px;
   margin-top: 17px;
 }
 .blogShow .section2 {
+  padding: 0 75px 0 85px;
   margin-top: 88px;
 }
 .blogShow .section2 h1 {
@@ -788,19 +739,21 @@ footer .brmFooter .copyNamaSite span {
   text-align: right;
   margin-bottom: 63px;
 }
-.blogShow .section2 p,
-.blogShow .section3 p {
+.blogShow .section2 p {
   font-size: 20px;
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   line-height: 28.37px;
   text-align: justify;
-  color: #fff;
+  color: white;
   direction: rtl;
+}
+.blogShow .section3 {
+  padding: 0 75px 0 85px;
 }
 .blogShow .section3 h2 {
   font-size: 28px;
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   line-height: 39.72px;
   text-align: right;
@@ -808,7 +761,17 @@ footer .brmFooter .copyNamaSite span {
   margin-top: 50px;
   color: #c59b47;
 }
+.blogShow .section3 p {
+  font-size: 20px;
+  font-family: "Byekan";
+  font-weight: 400;
+  line-height: 28.37px;
+  text-align: justify;
+  color: white;
+  direction: rtl;
+}
 .blogShow .section4 {
+  padding: 0 75px 0 85px;
   margin: 68px 0;
 }
 .blogShow .section4 .imgS {
@@ -816,37 +779,13 @@ footer .brmFooter .copyNamaSite span {
   height: 689px;
   overflow: hidden;
 }
-.blog .section2 .blogContainer .blogItem a .imgS img,
-.blogShow .section4 .imgS img,
-.productShow
-  .Pin-Wrapp
-  .section5
-  .in5
-  .topSec
-  .gallerySlider
-  .swiper-slide
-  img {
+.blogShow .section4 .imgS img {
   width: 100%;
+  transition: 0.5s ease-in-out;
   transition: 1s ease-in-out;
   transform: scale(1.15);
 }
-.blog .section2 .blogContainer .blogItem a .imgS:hover img,
-.blogShow .section4 .imgS:hover img,
-.home .section2 .rightSlider .serviceSlider .swiper-slide .imgS:hover img,
-.productShow .Pin-Wrapp .section3 .imgS:hover img,
-.productShow
-  .Pin-Wrapp
-  .section5
-  .in5
-  .topSec
-  .gallerySlider
-  .swiper-slide
-  .imgS:hover
-  img,
-.productShow .Pin-Wrapp .section6 .vertImgs .imgS:hover img,
-.productShow .Pin-Wrapp .section8 .imgS:hover img,
-.projectShow .Pin-Wrapp .section2 .imgS:hover img,
-.projectShow .Pin-Wrapp .section5 .imgS:hover img {
+.blogShow .section4 .imgS:hover img {
   transform: scale(1.01);
   transition: 1s ease-in-out;
 }
@@ -857,15 +796,104 @@ footer .brmFooter .copyNamaSite span {
 }
 .blogShow .section5 p,
 .blogShow .section7 p {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
   line-height: 45.75px;
   text-align: justify;
   direction: rtl;
+  color: white;
+}
+.blogShow .section75 {
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.blogShow .section75 blockquote {
+  font-weight: 100;
+  font-size: 22px;
+  max-width: 600px;
+  line-height: 1.4;
+  position: relative;
+  direction: rtl;
+  margin: 0;
+  font-family: "Byekan";
+  font-weight: 400;
+  padding: 0.5rem;
+  margin-bottom: 20px;
+}
+.blogShow .section75 blockquote:before,
+.blogShow .section75 blockquote:after {
+  position: absolute;
+  color: #f1efe6;
+  font-size: 8rem;
+  width: 4rem;
+  height: 4rem;
+}
+.blogShow .section75 blockquote:before {
+  content: "“";
+  left: -5rem;
+  bottom: 1rem;
+}
+.blogShow .section75 blockquote:after {
+  content: "”";
+  top: -2rem;
+  right: -5rem;
+}
+.blogShow .section75 .btn {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
   color: #fff;
+  border: none;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  padding: 1rem 3rem;
+  border-radius: 100px;
+  background: white; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #c59b47, transparent); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.5s ease;
+  position: relative;
+}
+.blogShow .section75 .btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.blogShow .section75 .btn > * {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s cubic-bezier(0.51, -0.6, 0.45, 1.6);
+}
+.blogShow .section75 .btn__invisible {
+  padding: 2rem 0;
+  position: absolute;
+  top: -102%;
+  left: 0;
+  text-align: center;
+}
+.blogShow .section75 .btn:focus {
+  outline: none;
+}
+.blogShow .section75 .btn:hover {
+  background: white; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #c59b47, transparent); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.blogShow .section75 .btn:hover .btn__invisible {
+  top: 26%;
+  padding: 0;
+  left: 0;
+}
+.blogShow .section75 .btn:hover .btn__visible {
+  transform: translateY(200%);
 }
 .blogShow .section6 {
+  padding: 0 75px 0 85px;
   margin-bottom: 64px;
 }
 .blogShow .section6 .imgS {
@@ -873,8 +901,14 @@ footer .brmFooter .copyNamaSite span {
   height: 495px;
   overflow: hidden;
 }
+.blogShow .section6 .imgS img {
+  width: 100%;
+}
 .blogShow .section7 {
   margin-bottom: 80px;
+}
+.blogShow .section8 {
+  padding: 0 75px 0 85px;
 }
 .blogShow .section8 .in8 {
   padding-bottom: 105px;
@@ -882,14 +916,14 @@ footer .brmFooter .copyNamaSite span {
   display: flex;
   align-items: center;
   -moz-column-gap: 83px;
-  column-gap: 83px;
+       column-gap: 83px;
   direction: rtl;
   margin: 0 auto;
   justify-content: space-between;
 }
 .blogShow .section8 h3,
-.blogShow .section9 h3 {
-  font-family: Byekan;
+.blogShow .section8 p {
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 28px;
   line-height: 38.16px;
@@ -897,19 +931,12 @@ footer .brmFooter .copyNamaSite span {
   white-space: nowrap;
   color: #c59b47;
 }
-.blog .elseBlog p,
-.blog .section1 h1 {
-  line-height: 99.2px;
-  font-family: "Yekan Bakh FaNum";
-}
-.blogShow .section8 .relatedBlog,
-.blogShow .section9 .relatedProducts {
+.blogShow .section8 .relatedBlog {
   width: 72.431vw;
   min-width: 900px;
   overflow: hidden;
 }
-.blogShow .section8 .relatedBlog .swiper-slide,
-.blogShow .section9 .relatedProducts .swiper-slide {
+.blogShow .section8 .relatedBlog .swiper-slide {
   min-width: -moz-fit-content !important;
   min-width: fit-content !important;
 }
@@ -925,8 +952,7 @@ footer .brmFooter .copyNamaSite span {
   width: -moz-fit-content;
   width: fit-content;
 }
-.blogShow .section8 .relatedBlog .swiper-slide .title,
-.blogShow .section9 .relatedProducts .swiper-slide .title {
+.blogShow .section8 .relatedBlog .swiper-slide .title {
   position: absolute;
   width: 100%;
   z-index: -1;
@@ -943,26 +969,23 @@ footer .brmFooter .copyNamaSite span {
   transition: 0.3s ease-in-out;
 }
 .blogShow .section8 .relatedBlog .swiper-slide .title h4,
-.blogShow .section9 .relatedProducts .swiper-slide .title h4 {
+.blogShow .section8 .relatedBlog .swiper-slide .title p {
   font-size: 20px;
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 700;
-  color: #fff;
+  color: white;
   line-height: 27.26px;
   text-align: center;
 }
-.blogShow .section8 .relatedBlog .swiper-slide img,
-.blogShow .section9 .relatedProducts .swiper-slide img {
+.blogShow .section8 .relatedBlog .swiper-slide img {
   transition: 0.5s ease-in-out;
 }
-.blogShow .section8 .relatedBlog .swiper-slide:hover .title,
-.blogShow .section9 .relatedProducts .swiper-slide:hover .title {
+.blogShow .section8 .relatedBlog .swiper-slide:hover .title {
   z-index: 10;
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
-.blogShow .section8 .relatedBlog .swiper-slide:hover img,
-.blogShow .section9 .relatedProducts .swiper-slide:hover img {
+.blogShow .section8 .relatedBlog .swiper-slide:hover img {
   transform: scale(1.1);
   transition: 0.5s ease-in-out;
 }
@@ -971,9 +994,11 @@ footer .brmFooter .copyNamaSite span {
   bottom: -5px;
   height: 5px;
 }
-.blogShow .section8 .swiper-scrollbar-drag,
-.blogShow .section9 .swiper-scrollbar-drag {
+.blogShow .section8 .swiper-scrollbar-drag {
   background-color: #c59b47;
+}
+.blogShow .section9 {
+  padding: 0 75px 0 85px;
 }
 .blogShow .section9 .in8 {
   padding-bottom: 177px;
@@ -981,27 +1006,73 @@ footer .brmFooter .copyNamaSite span {
   display: flex;
   align-items: center;
   -moz-column-gap: 83px;
-  column-gap: 83px;
+       column-gap: 83px;
   direction: rtl;
   margin: 0 auto;
   justify-content: space-between;
+}
+.blogShow .section9 h3,
+.blogShow .section9 p {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38.16px;
+  text-align: right;
+  white-space: nowrap;
+  color: #c59b47;
+}
+.blogShow .section9 .relatedProducts {
+  width: 72.431vw;
+  min-width: 900px;
+  overflow: hidden;
+}
+.blogShow .section9 .relatedProducts .swiper-slide {
+  min-width: -moz-fit-content !important;
+  min-width: fit-content !important;
 }
 .blogShow .section9 .relatedProducts .swiper-slide a {
   position: relative;
   text-decoration: none;
 }
-.blog .section2 .blogContainer .blogItem a .imgS,
-.blogShow .section9 .relatedProducts .swiper-slide .imgS,
-.productShow
-  .Pin-Wrapp
-  .section5
-  .in5
-  .topSec
-  .gallerySlider
-  .swiper-slide
-  .imgS,
-.projectShow .Pin-Wrapp .section2 .imgS {
+.blogShow .section9 .relatedProducts .swiper-slide .imgS {
   overflow: hidden;
+}
+.blogShow .section9 .relatedProducts .swiper-slide .title {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  height: 100%;
+  background-color: rgba(69, 50, 12, 0.6980392157);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.blogShow .section9 .relatedProducts .swiper-slide .title h4,
+.blogShow .section9 .relatedProducts .swiper-slide .title p {
+  font-size: 20px;
+  font-family: "Byekan";
+  font-weight: 700;
+  color: white;
+  line-height: 27.26px;
+  text-align: center;
+}
+.blogShow .section9 .relatedProducts .swiper-slide img {
+  transition: 0.5s ease-in-out;
+}
+.blogShow .section9 .relatedProducts .swiper-slide:hover .title {
+  z-index: 10;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+.blogShow .section9 .relatedProducts .swiper-slide:hover img {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
 }
 .blogShow .section9 .swiper-scrollbar-relatedProducts {
   background-color: #d9d9d9;
@@ -1009,14 +1080,114 @@ footer .brmFooter .copyNamaSite span {
   height: 5px;
   position: relative;
 }
+.blogShow .section9 .swiper-scrollbar-drag {
+  background-color: #c59b47;
+}
+.blogShow .section98 {
+  padding: 0 60px;
+  white-space: nowrap;
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 300;
+  font-size: 0.8em;
+  direction: rtl;
+  text-align: right;
+  line-height: 36.35px;
+  color: white;
+}
+.blogShow .section98 .line {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.blogShow .section98 h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.blogShow .section98 .keyWord {
+  margin-top: 20px;
+}
+.blogShow .section10 {
+  padding: 0 75px 0 85px;
+  direction: rtl;
+  margin-bottom: 100px;
+}
+.blogShow .section10 h5 {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38.16px;
+  text-align: right;
+  white-space: nowrap;
+  color: #c59b47;
+  margin-bottom: 30px;
+}
+.blogShow .section10 .commentP {
+  width: 70%;
+}
+.blogShow .section10 .commentP .userInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.blogShow .section10 .commentP input {
+  width: 48%;
+}
+.blogShow .section10 .commentP textarea {
+  width: 97%;
+}
+.blogShow .section10 .commentP input,
+.blogShow .section10 .commentP textarea {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 10px;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 16px;
+}
+.blogShow .section10 .commentP .submitComment {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 25px;
+  background-color: transparent;
+  border: 1px solid #c59b47;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.blogShow .section10 .messageSend {
+  font-family: "Byekan";
+  font-weight: 400;
+  margin-top: 10px;
+  font-size: 18px;
+  color: white;
+  direction: rtl;
+}
+
 .pause {
   opacity: 1;
 }
+
 .play {
   opacity: 0;
   display: none;
 }
-.productShow #PinSection,
+
+@media only screen and (max-height: 750px) {
+  .projectShow .share,
+  .productShow .share {
+    bottom: 457px !important;
+    z-index: 1000;
+  }
+}
 .projectShow #PinSection {
   height: 100vh;
   overflow: hidden;
@@ -1025,12 +1196,10 @@ footer .brmFooter .copyNamaSite span {
   direction: rtl;
   position: relative;
 }
-.productShow .Pin-Wrapp,
 .projectShow .Pin-Wrapp {
   display: flex;
   direction: rtl;
 }
-.productShow .line,
 .projectShow .Pin-Wrapp .line {
   transform: translateY(80%);
   opacity: 0;
@@ -1051,23 +1220,20 @@ footer .brmFooter .copyNamaSite span {
   display: flex;
   align-items: center;
   -moz-column-gap: 6px;
-  column-gap: 6px;
+       column-gap: 6px;
   position: absolute;
   bottom: 568px;
   left: 214px;
 }
 .projectShow .Pin-Wrapp .section1 .share span {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
   line-height: 28.37px;
   text-align: right;
-  color: #000;
+  color: black;
 }
-.contact .overlayInfo .topContact .socials ul,
-.productShow .Pin-Wrapp .section2 .share .share__wrapper,
-.projectShow .Pin-Wrapp .section1 .share .share__wrapper,
-.service .section3 .leftItems ul {
+.projectShow .Pin-Wrapp .section1 .share .share__wrapper {
   direction: rtl;
 }
 .projectShow .Pin-Wrapp .section1 h1 {
@@ -1087,7 +1253,7 @@ footer .brmFooter .copyNamaSite span {
   text-align: right;
 }
 .projectShow .Pin-Wrapp .section1 .para p {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 22px;
   line-height: 28.54px;
@@ -1097,9 +1263,15 @@ footer .brmFooter .copyNamaSite span {
   display: flex;
   align-items: end;
 }
-.productShow .Pin-Wrapp .section3 .imgS img,
+.projectShow .Pin-Wrapp .section2 .imgS {
+  overflow: hidden;
+}
 .projectShow .Pin-Wrapp .section2 .imgS img {
   transform: scale(1.2);
+  transition: 1s ease-in-out;
+}
+.projectShow .Pin-Wrapp .section2 .imgS:hover img {
+  transform: scale(1.01);
   transition: 1s ease-in-out;
 }
 .projectShow .Pin-Wrapp .section3 {
@@ -1117,15 +1289,12 @@ footer .brmFooter .copyNamaSite span {
 }
 .projectShow .Pin-Wrapp .section3 .para p {
   font-size: 20px;
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   line-height: 28.37px;
   text-align: justify;
   direction: rtl;
 }
-.aboutUs .section4 .lVideo,
-.aboutUs .section9 .lVideo .videoIn,
-.productShow .Pin-Wrapp .section7,
 .projectShow .Pin-Wrapp .section4 {
   position: relative;
   display: flex;
@@ -1135,13 +1304,10 @@ footer .brmFooter .copyNamaSite span {
 .projectShow .Pin-Wrapp .section4 video {
   height: 100vh;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   width: 1375px;
   filter: brightness(0.8);
 }
-.aboutUs .section4 .lVideo .playbtn,
-.aboutUs .section9 .lVideo .playbtn,
-.productShow .Pin-Wrapp .section7 .playbtn,
 .projectShow .Pin-Wrapp .section4 .playbtn {
   position: absolute;
   cursor: pointer;
@@ -1154,53 +1320,48 @@ footer .brmFooter .copyNamaSite span {
   width: max-content;
   padding: 0 124px 0 138px;
   -moz-column-gap: 69px;
-  column-gap: 69px;
+       column-gap: 69px;
 }
-.productShow .Pin-Wrapp .section8 .rightP,
 .projectShow .Pin-Wrapp .section5 .rightP {
   margin-top: 10vh;
   width: 417px;
 }
 .projectShow .Pin-Wrapp .section5 p {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
   line-height: 36.35px;
   text-align: justify;
   direction: rtl;
 }
-.productShow .Pin-Wrapp .section2 h1 span,
-.projectShow .Pin-Wrapp .section5 p span,
-.service .section3 .leftItems ul li .activeBtn {
+.projectShow .Pin-Wrapp .section5 p span {
   font-weight: 700;
   color: #c59b47;
 }
-.productShow .Pin-Wrapp .section8 .leftP,
 .projectShow .Pin-Wrapp .section5 .leftP {
   width: 358px;
   margin-top: -205px;
 }
-.productShow .Pin-Wrapp .section8 img,
 .projectShow .Pin-Wrapp .section5 img {
   filter: brightness(0.8);
   transform: scale(1.15);
   transition: 1s ease-in-out;
 }
-.productShow .Pin-Wrapp .section8 .imgS,
 .projectShow .Pin-Wrapp .section5 .imgS {
   margin-top: 50px;
   overflow: hidden;
 }
-.productShow .Pin-Wrapp .section9,
+.projectShow .Pin-Wrapp .section5 .imgS:hover img {
+  transform: scale(1.01);
+  transition: 1s ease-in-out;
+}
 .projectShow .Pin-Wrapp .section6 {
   margin-left: 309px;
 }
-.productShow .Pin-Wrapp .section9 img,
 .projectShow .Pin-Wrapp .section6 img {
   height: 100vh;
   filter: brightness(0.8);
 }
-.productShow .Pin-Wrapp .section10 a,
 .projectShow .Pin-Wrapp .section7 a {
   position: relative;
   display: flex;
@@ -1208,12 +1369,10 @@ footer .brmFooter .copyNamaSite span {
   justify-content: center;
   text-decoration: none;
 }
-.productShow .Pin-Wrapp .section10 a .imgS img,
 .projectShow .Pin-Wrapp .section7 a .imgS img {
   filter: brightness(0.5);
   height: 100vh;
 }
-.productShow .Pin-Wrapp .section10 a .titleOverlay,
 .projectShow .Pin-Wrapp .section7 a .titleOverlay {
   position: absolute;
   inset: 0;
@@ -1223,12 +1382,11 @@ footer .brmFooter .copyNamaSite span {
   justify-content: end;
   flex-direction: column;
 }
-.productShow .Pin-Wrapp .section10 a .titleOverlay h2,
 .projectShow .Pin-Wrapp .section7 a .titleOverlay h3 {
   width: 219px;
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 700;
-  color: #fff;
+  color: white;
   margin-top: 20px;
   font-size: 28px;
   line-height: 39.72px;
@@ -1238,14 +1396,85 @@ footer .brmFooter .copyNamaSite span {
   margin-top: 121px;
   margin-bottom: 147px;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide
-  .slideContainer
-  .titleCat,
-.productShow .Pin-Wrapp .section1,
-.productShow .Pin-Wrapp .section5 .in5 .btmSec .btms .swiper-slide {
+.projectShow .section98 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+  white-space: nowrap;
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 300;
+  font-size: 0.8em;
+  line-height: 36.35px;
+}
+.projectShow .section98 .line {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.projectShow .section98 h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.projectShow .section98 .keyWord {
+  margin-top: 20px;
+}
+
+.productShow h1 {
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 36.35px;
+}
+.productShow h2 {
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 36.35px;
+}
+.productShow h3 {
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 400;
+  font-size: 1.3em;
+  line-height: 36.35px;
+}
+.productShow h4 {
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 36.35px;
+}
+.productShow h5 {
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 300;
+  font-size: 0.8em;
+  line-height: 36.35px;
+}
+.productShow h6 {
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 300;
+  font-size: 0.7em;
+  line-height: 36.35px;
+}
+.productShow .line {
+  transform: translateY(80%);
+  opacity: 0;
+}
+.productShow #PinSection {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  right: 0;
+  direction: rtl;
+  position: relative;
+}
+.productShow p a {
+  color: #c59b47;
+}
+.productShow .Pin-Wrapp {
+  display: flex;
+  direction: rtl;
+}
+.productShow .Pin-Wrapp .section1 {
   display: flex;
   align-items: center;
 }
@@ -1263,7 +1492,7 @@ footer .brmFooter .copyNamaSite span {
   display: flex;
   align-items: center;
   -moz-column-gap: 6px;
-  column-gap: 6px;
+       column-gap: 6px;
   margin-bottom: 45px;
   cursor: pointer;
   position: absolute;
@@ -1271,12 +1500,15 @@ footer .brmFooter .copyNamaSite span {
   bottom: 525px;
   z-index: 11000;
 }
+.productShow .Pin-Wrapp .section2 .share .share__wrapper {
+  direction: rtl;
+}
 .productShow .Pin-Wrapp .section2 .share span {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
   line-height: 28.37px;
-  color: #000;
+  color: black;
   text-align: right;
 }
 .productShow .Pin-Wrapp .section2 h1 {
@@ -1287,11 +1519,15 @@ footer .brmFooter .copyNamaSite span {
   text-align: right;
   margin-bottom: 47px;
 }
+.productShow .Pin-Wrapp .section2 h1 span {
+  font-weight: 700;
+  color: #c59b47;
+}
 .productShow .Pin-Wrapp .section2 .para {
   width: 860px;
 }
 .productShow .Pin-Wrapp .section2 .para p {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 22px;
   line-height: 30.45px;
@@ -1307,6 +1543,14 @@ footer .brmFooter .copyNamaSite span {
   width: 571px;
   height: 597px;
 }
+.productShow .Pin-Wrapp .section3 .imgS img {
+  transform: scale(1.2);
+  transition: 1s ease-in-out;
+}
+.productShow .Pin-Wrapp .section3 .imgS:hover img {
+  transform: scale(1.01);
+  transition: 1s ease-in-out;
+}
 .productShow .Pin-Wrapp .section4 {
   display: flex;
   align-items: center;
@@ -1321,7 +1565,7 @@ footer .brmFooter .copyNamaSite span {
   width: 360px;
 }
 .productShow .Pin-Wrapp .section4 .para p {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
   line-height: 28.37px;
@@ -1336,34 +1580,28 @@ footer .brmFooter .copyNamaSite span {
 .productShow .Pin-Wrapp .section5 .modal {
   position: absolute !important;
 }
-.productShow .Pin-Wrapp .section5 .modal .modal-dialog,
-.productShow .Pin-Wrapp .section8 .modal .modal-dialog {
+.productShow .Pin-Wrapp .section5 .modal .modal-dialog {
   margin-top: 115px !important;
 }
-.productShow .Pin-Wrapp .section5 .modal .close,
-.productShow .Pin-Wrapp .section8 .modal .close {
+.productShow .Pin-Wrapp .section5 .modal .close {
   float: left !important;
   font-size: 35px;
 }
-.productShow .Pin-Wrapp .section5 .modal .modal-content,
-.productShow .Pin-Wrapp .section8 .modal .modal-content {
+.productShow .Pin-Wrapp .section5 .modal .modal-content {
   background: #f4f4f4;
 }
-.productShow .Pin-Wrapp .section5 .modal .modal-header,
-.productShow .Pin-Wrapp .section8 .modal .modal-header {
+.productShow .Pin-Wrapp .section5 .modal .modal-header {
   border: none;
 }
-.productShow .Pin-Wrapp .section5 .modal .modal-header h4,
-.productShow .Pin-Wrapp .section8 .modal .modal-header h4 {
-  font-family: Byekan;
+.productShow .Pin-Wrapp .section5 .modal .modal-header h4 {
+  font-family: "Byekan";
   font-weight: 700;
   font-size: 22px;
   line-height: 32.39px;
   text-align: right;
 }
-.productShow .Pin-Wrapp .section5 .modal .modal-body,
-.productShow .Pin-Wrapp .section8 .modal .modal-body {
-  font-family: Byekan;
+.productShow .Pin-Wrapp .section5 .modal .modal-body {
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
   line-height: 36.35px;
@@ -1383,20 +1621,27 @@ footer .brmFooter .copyNamaSite span {
 .productShow .Pin-Wrapp .section5 .in5 .topSec {
   display: flex;
   -moz-column-gap: 72px;
-  column-gap: 72px;
+       column-gap: 72px;
   align-items: center;
 }
 .productShow .Pin-Wrapp .section5 .in5 .topSec .gallerySlider {
   width: 360px;
   overflow: hidden;
 }
-.productShow
-  .Pin-Wrapp
-  .section5
-  .in5
-  .topSec
-  .gallerySlider
-  .swiper-pagination {
+.productShow .Pin-Wrapp .section5 .in5 .topSec .gallerySlider .swiper-slide .imgS {
+  overflow: hidden;
+}
+.productShow .Pin-Wrapp .section5 .in5 .topSec .gallerySlider .swiper-slide img {
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  transition: 1s ease-in-out;
+  transform: scale(1.15);
+}
+.productShow .Pin-Wrapp .section5 .in5 .topSec .gallerySlider .swiper-slide .imgS:hover img {
+  transform: scale(1.01);
+  transition: 1s ease-in-out;
+}
+.productShow .Pin-Wrapp .section5 .in5 .topSec .gallerySlider .swiper-pagination {
   display: flex;
   justify-content: left;
   bottom: 34px;
@@ -1404,28 +1649,14 @@ footer .brmFooter .copyNamaSite span {
   align-items: center;
   direction: ltr;
 }
-.productShow
-  .Pin-Wrapp
-  .section5
-  .in5
-  .topSec
-  .gallerySlider
-  .swiper-pagination
-  .swiper-pagination-bullet {
+.productShow .Pin-Wrapp .section5 .in5 .topSec .gallerySlider .swiper-pagination .swiper-pagination-bullet {
   opacity: 1;
   background-color: #d9d9d9;
   width: 5px;
   height: 5px;
   transition: 0.5s ease-in-out;
 }
-.productShow
-  .Pin-Wrapp
-  .section5
-  .in5
-  .topSec
-  .gallerySlider
-  .swiper-pagination
-  .swiper-pagination-bullet-active {
+.productShow .Pin-Wrapp .section5 .in5 .topSec .gallerySlider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #c59b47;
   width: 11px;
   height: 11px;
@@ -1442,7 +1673,7 @@ footer .brmFooter .copyNamaSite span {
   border-bottom: 1px solid rgba(197, 155, 71, 0.6156862745);
 }
 .productShow .Pin-Wrapp .section5 .in5 .topSec .infoList ul li h4 {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
   line-height: 36.35px;
@@ -1452,7 +1683,7 @@ footer .brmFooter .copyNamaSite span {
   display: flex;
   align-items: center;
   -moz-column-gap: 16.18px;
-  column-gap: 16.18px;
+       column-gap: 16.18px;
 }
 .productShow .Pin-Wrapp .section5 .in5 .topSec .infoList ul li .colors span {
   width: 25.55px;
@@ -1468,33 +1699,33 @@ footer .brmFooter .copyNamaSite span {
   display: flex;
   align-items: center;
   -moz-column-gap: 11px;
-  column-gap: 11px;
+       column-gap: 11px;
 }
 .productShow .Pin-Wrapp .section5 .in5 .topSec .infoList ul .download a {
   display: flex;
   align-items: center;
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
   line-height: 36.35px;
-  color: #000;
+  color: black;
   -moz-column-gap: 11px;
-  column-gap: 11px;
+       column-gap: 11px;
 }
 .productShow .Pin-Wrapp .section5 .in5 .topSec .infoList ul .orderBtn {
   display: flex;
   align-items: center;
   -moz-column-gap: 20px;
-  column-gap: 20px;
-  font-family: Byekan;
+       column-gap: 20px;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
   line-height: 28.37px;
   text-align: justify;
-  color: #000;
+  color: black;
   text-decoration: none;
   border: 1px solid #c59b47;
-  padding: 7px 23px;
+  padding: 7px 23px 7px 23px;
   border-radius: 29px;
 }
 .productShow .Pin-Wrapp .section5 .in5 .btmSec {
@@ -1504,7 +1735,7 @@ footer .brmFooter .copyNamaSite span {
   display: flex;
   align-items: center;
   -moz-column-gap: 65px;
-  column-gap: 65px;
+       column-gap: 65px;
   margin-bottom: 23px;
 }
 .productShow .Pin-Wrapp .section5 .in5 .btmSec .tops .fragm {
@@ -1512,7 +1743,7 @@ footer .brmFooter .copyNamaSite span {
   width: -moz-fit-content;
   width: fit-content;
   direction: ltr;
-  font-family: DaxlinePro;
+  font-family: "DaxlinePro";
   font-size: 24px;
   font-weight: 400;
   line-height: 33.64px;
@@ -1530,7 +1761,7 @@ footer .brmFooter .copyNamaSite span {
   transform: translateX(-2px);
 }
 .productShow .Pin-Wrapp .section5 .in5 .btmSec .tops p {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 700;
   font-size: 22px;
   line-height: 32.39px;
@@ -1540,7 +1771,7 @@ footer .brmFooter .copyNamaSite span {
 .productShow .Pin-Wrapp .section5 .in5 .btmSec .btms {
   display: flex;
   -moz-column-gap: 36px;
-  column-gap: 36px;
+       column-gap: 36px;
 }
 .productShow .Pin-Wrapp .section5 .in5 .btmSec .btms .btns {
   display: flex;
@@ -1551,13 +1782,13 @@ footer .brmFooter .copyNamaSite span {
 .productShow .Pin-Wrapp .section5 .in5 .btmSec .btms .btns .swiper-button-lock {
   display: block !important;
 }
-.home .section1 .slider4 .btns .nexBtn,
-.home .section1 .slider4 .btns .preBtn,
-.home .section2 .rightSlider .serviceSlider .btns .nextBtn,
-.home .section2 .rightSlider .serviceSlider .btns .prevBtn,
-.productShow .Pin-Wrapp .section5 .in5 .btmSec .btms .btns .nextBtn,
-.productShow .Pin-Wrapp .section5 .in5 .btmSec .btms .btns .prevBtn {
+.productShow .Pin-Wrapp .section5 .in5 .btmSec .btms .btns .prevBtn,
+.productShow .Pin-Wrapp .section5 .in5 .btmSec .btms .btns .nextBtn {
   cursor: pointer;
+}
+.productShow .Pin-Wrapp .section5 .in5 .btmSec .btms .swiper-slide {
+  display: flex;
+  align-items: center;
 }
 .productShow .Pin-Wrapp .section5 .in5 .btmSec .btms .descriptionSlider {
   height: 100px;
@@ -1565,7 +1796,7 @@ footer .brmFooter .copyNamaSite span {
   margin: 0;
 }
 .productShow .Pin-Wrapp .section5 .in5 .btmSec .btms .descriptionSlider p {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
   line-height: 29.45px;
@@ -1575,64 +1806,55 @@ footer .brmFooter .copyNamaSite span {
   color: #69374e;
   margin-left: 10px;
 }
-.aboutUs .hoverPlay audio,
-.contact .overlayInfo .btmContact .company h5:nth-child(2) span,
-.contact .overlayInfo .btmContact .office h5:nth-child(2) span,
-.modal-backdrop,
-.productShow .Pin-Wrapp .section5 form [data-bc-title-container],
-.productShow .Pin-Wrapp .section5 form legend,
-.productShow .Pin-Wrapp .section8 .modal form [data-bc-title-container],
-.productShow .Pin-Wrapp .section8 .modal form legend {
+.productShow .Pin-Wrapp .section5 form legend {
   display: none;
 }
-.productShow .Pin-Wrapp .section5 form [data-bc-question],
-.productShow .Pin-Wrapp .section8 .modal form [data-bc-question] {
+.productShow .Pin-Wrapp .section5 form [data-bc-title-container] {
+  display: none;
+}
+.productShow .Pin-Wrapp .section5 form [data-bc-answer-container] {
+  width: 100%;
+}
+.productShow .Pin-Wrapp .section5 form [data-bc-part-container] {
+  width: 100%;
+}
+.productShow .Pin-Wrapp .section5 form [data-bc-question] {
   text-align: left;
 }
-.productShow .Pin-Wrapp .section5 form input,
-.productShow .Pin-Wrapp .section8 .modal form input {
+.productShow .Pin-Wrapp .section5 form input {
   border: none;
-  border-bottom: 1px solid #000;
-  background: 0 0;
+  border-bottom: 1px solid black;
+  background: transparent;
   border-radius: 0;
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 16px;
-  color: #000;
+  color: black;
 }
-.productShow .Pin-Wrapp .section5 form .msg,
-.productShow .Pin-Wrapp .section8 .modal form .msg {
-  color: #009c00;
+.productShow .Pin-Wrapp .section5 form .msg {
+  color: rgb(0, 156, 0);
   direction: rtl;
   text-align: right;
 }
-.productShow .Pin-Wrapp .section5 form .captchaContainerclass.captcha-sefaresh2,
-.productShow
-  .Pin-Wrapp
-  .section8
-  .modal
-  form
-  .captchaContainerclass.captcha-sefaresh2 {
+.productShow .Pin-Wrapp .section5 form .captchaContainerclass.captcha-sefaresh2 {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   -moz-column-gap: 25px;
-  column-gap: 25px;
+       column-gap: 25px;
   padding: 10px 15px 10px 20px;
 }
-.productShow .Pin-Wrapp .section5 form button,
-.productShow .Pin-Wrapp .section8 .modal form button {
+.productShow .Pin-Wrapp .section5 form button {
   background-color: transparent;
   border: 1px solid #c59b47;
   color: #c59b47;
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 15px;
-  padding: 0 20px;
+  padding: 0px 20px;
   border-radius: 5px;
 }
-.productShow .Pin-Wrapp .section5 button,
-.productShow .Pin-Wrapp .section8 .modal button {
+.productShow .Pin-Wrapp .section5 button {
   opacity: 1;
   color: #c59b47;
 }
@@ -1640,7 +1862,7 @@ footer .brmFooter .copyNamaSite span {
   display: flex;
   padding: 0 116px 0 165px;
   -moz-column-gap: 27px;
-  column-gap: 27px;
+       column-gap: 27px;
 }
 .productShow .Pin-Wrapp .section6 .paraTitle {
   margin-top: 163px;
@@ -1676,15 +1898,30 @@ footer .brmFooter .copyNamaSite span {
   overflow: hidden;
 }
 .productShow .Pin-Wrapp .section6 .vertImgs img {
+  transition: 0.5s ease-in-out;
   transition: 1s ease-in-out;
   transform: scale(1.15);
+}
+.productShow .Pin-Wrapp .section6 .vertImgs .imgS:hover img {
+  transform: scale(1.01);
+  transition: 1s ease-in-out;
+}
+.productShow .Pin-Wrapp .section7 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .productShow .Pin-Wrapp .section7 video {
   height: 100vh;
   width: 1375px;
   filter: brightness(0.8);
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
+}
+.productShow .Pin-Wrapp .section7 .playbtn {
+  position: absolute;
+  cursor: pointer;
 }
 .productShow .Pin-Wrapp .section8 {
   display: flex;
@@ -1694,8 +1931,36 @@ footer .brmFooter .copyNamaSite span {
   width: max-content;
   padding: 0 124px 0 138px;
   -moz-column-gap: 69px;
-  column-gap: 69px;
+       column-gap: 69px;
   position: relative;
+}
+.productShow .Pin-Wrapp .section8 .midSection .para {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 55vh;
+  width: -moz-max-content;
+  width: max-content;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+}
+.productShow .Pin-Wrapp .section8 .midSection .para p {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36.35px;
+  text-align: justify;
+  direction: rtl;
+  display: inline-block;
+  width: 350px;
+}
+.productShow .Pin-Wrapp .section8 .midSection .para h1,
+.productShow .Pin-Wrapp .section8 .midSection .para h2,
+.productShow .Pin-Wrapp .section8 .midSection .para h3,
+.productShow .Pin-Wrapp .section8 .midSection .para h4,
+.productShow .Pin-Wrapp .section8 .midSection .para h5,
+.productShow .Pin-Wrapp .section8 .midSection .para h6 {
+  width: 350px;
 }
 .productShow .Pin-Wrapp .section8 .modal {
   position: absolute !important;
@@ -1705,42 +1970,134 @@ footer .brmFooter .copyNamaSite span {
   transform: translateY(0);
   opacity: 1;
 }
+.productShow .Pin-Wrapp .section8 .modal .modal-dialog {
+  margin-top: 115px !important;
+}
+.productShow .Pin-Wrapp .section8 .modal .close {
+  float: left !important;
+  font-size: 35px;
+}
+.productShow .Pin-Wrapp .section8 .modal .modal-content {
+  background: #f4f4f4;
+}
+.productShow .Pin-Wrapp .section8 .modal .modal-header {
+  border: none;
+}
+.productShow .Pin-Wrapp .section8 .modal .modal-header h4 {
+  font-family: "Byekan";
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32.39px;
+  text-align: right;
+}
+.productShow .Pin-Wrapp .section8 .modal .modal-body {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36.35px;
+  text-align: right;
+  direction: rtl;
+}
+.productShow .Pin-Wrapp .section8 .modal form legend {
+  display: none;
+}
+.productShow .Pin-Wrapp .section8 .modal form [data-bc-title-container] {
+  display: none;
+}
+.productShow .Pin-Wrapp .section8 .modal form [data-bc-answer-container] {
+  width: 100%;
+}
+.productShow .Pin-Wrapp .section8 .modal form [data-bc-part-container] {
+  width: 100%;
+}
+.productShow .Pin-Wrapp .section8 .modal form [data-bc-question] {
+  text-align: left;
+}
+.productShow .Pin-Wrapp .section8 .modal form input {
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  border-radius: 0;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+}
+.productShow .Pin-Wrapp .section8 .modal form .msg {
+  color: rgb(0, 156, 0);
+  direction: rtl;
+  text-align: right;
+}
+.productShow .Pin-Wrapp .section8 .modal form .captchaContainerclass.captcha-sefaresh2 {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+  padding: 10px 15px 10px 20px;
+}
+.productShow .Pin-Wrapp .section8 .modal form button {
+  background-color: transparent;
+  border: 1px solid #c59b47;
+  color: #c59b47;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 15px;
+  padding: 0px 20px;
+  border-radius: 5px;
+}
+.productShow .Pin-Wrapp .section8 .modal button {
+  opacity: 1;
+  color: #c59b47;
+}
+.productShow .Pin-Wrapp .section8 .rightP {
+  margin-top: 10vh;
+  width: 417px;
+}
 .productShow .Pin-Wrapp .section8 .downSection {
   display: flex;
   direction: ltr;
   justify-content: right;
   margin-top: 30px;
   -moz-column-gap: 32px;
-  column-gap: 32px;
+       column-gap: 32px;
   align-items: end;
 }
-.productShow .Pin-Wrapp .section8 .download a,
 .productShow .Pin-Wrapp .section8 .order a {
-  align-items: center;
-  color: #000;
-  text-align: justify;
-  text-decoration: none;
-  font-family: Byekan;
-  font-weight: 400;
   display: flex;
-  direction: rtl;
-  font-size: 24px;
-}
-.productShow .Pin-Wrapp .section8 .order a {
   -moz-column-gap: 20px;
-  column-gap: 20px;
+       column-gap: 20px;
+  align-items: center;
+  direction: rtl;
   border: 1px solid #c59b47;
   border-radius: 29px;
-  padding: 7px 23px;
+  padding: 7px 23px 7px 23px;
+  text-decoration: none;
+  color: black;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 24px;
   line-height: 34.04px;
+  text-align: justify;
+  white-space: nowrap;
 }
 .productShow .Pin-Wrapp .section8 .download a {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  direction: rtl;
   -moz-column-gap: 6px;
-  column-gap: 6px;
+       column-gap: 6px;
+  text-decoration: none;
+  color: black;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 24px;
   line-height: 43.62px;
+  text-align: justify;
 }
 .productShow .Pin-Wrapp .section8 p {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
   line-height: 36.35px;
@@ -1753,9 +2110,163 @@ footer .brmFooter .copyNamaSite span {
   display: inline-block;
   color: #c59b47;
 }
+.productShow .Pin-Wrapp .section8 .leftP {
+  width: 358px;
+  margin-top: -205px;
+}
+.productShow .Pin-Wrapp .section8 img {
+  filter: brightness(0.8);
+  transform: scale(1.15);
+  transition: 1s ease-in-out;
+}
+.productShow .Pin-Wrapp .section8 .imgS {
+  margin-top: 50px;
+  overflow: hidden;
+}
+.productShow .Pin-Wrapp .section8 .imgS:hover img {
+  transform: scale(1.01);
+  transition: 1s ease-in-out;
+}
+.productShow .Pin-Wrapp .section9 {
+  margin-left: 309px;
+}
+.productShow .Pin-Wrapp .section9 img {
+  height: 100vh;
+  filter: brightness(0.8);
+}
+.productShow .Pin-Wrapp .section91 {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 60px;
+  flex-direction: column;
+  justify-content: center;
+}
+.productShow .Pin-Wrapp .section91 h5 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+.productShow .Pin-Wrapp .section91 textarea {
+  width: 100%;
+}
+.productShow .Pin-Wrapp .section91 .userInfo {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.productShow .Pin-Wrapp .section91 input,
+.productShow .Pin-Wrapp .section91 textarea {
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  border-radius: 0;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+}
+.productShow .Pin-Wrapp .section91 .msg {
+  margin: 25px 0;
+}
+.productShow .Pin-Wrapp .section91 .messageSend {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 16px;
+  direction: rtl;
+}
+.productShow .Pin-Wrapp .section91 .submitComment {
+  display: flex;
+  align-items: center;
+  direction: rtl;
+  border: 1px solid #c59b47;
+  border-radius: 29px;
+  text-decoration: none;
+  color: black;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 34.04px;
+  width: 100px;
+  text-align: center;
+  justify-content: center;
+  background-color: transparent;
+  transform: translateY(-25px);
+  white-space: nowrap;
+}
+.productShow .Pin-Wrapp .section98 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+  white-space: nowrap;
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 300;
+  font-size: 0.8em;
+  line-height: 36.35px;
+}
+.productShow .Pin-Wrapp .section98 .line {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.productShow .Pin-Wrapp .section98 h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.productShow .Pin-Wrapp .section98 .keyWord {
+  margin-top: 20px;
+}
+.productShow .Pin-Wrapp .section10 {
+  min-width: 300px;
+  background: #bfbfbf;
+}
+.productShow .Pin-Wrapp .section10 a {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.productShow .Pin-Wrapp .section10 a .imgS img {
+  filter: brightness(0.5);
+  height: 100vh;
+}
+.productShow .Pin-Wrapp .section10 a .titleOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+}
+.productShow .Pin-Wrapp .section10 a .titleOverlay .line {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.productShow .Pin-Wrapp .section10 a .titleOverlay h2,
+.productShow .Pin-Wrapp .section10 a .titleOverlay p {
+  width: 219px;
+  font-family: "Byekan";
+  font-weight: 700;
+  color: white;
+  margin-top: 20px;
+  font-size: 28px;
+  line-height: 39.72px;
+  text-align: center;
+}
 .productShow .Pin-Wrapp .section10 a .titleOverlay .nextArrow {
   margin-top: 121px;
   margin-bottom: 144px;
+}
+
+.modal-backdrop {
+  display: none;
+}
+
+.blog {
+  background-color: black;
 }
 .blog .elseBlog {
   text-align: center;
@@ -1765,21 +2276,25 @@ footer .brmFooter .copyNamaSite span {
   justify-content: center;
 }
 .blog .elseBlog p {
+  font-family: "Yekan Bakh FaNum";
   font-size: 22px;
   font-weight: 400;
+  line-height: 99.2px;
   width: 200px;
   text-align: center;
-  color: #fff;
+  color: white;
 }
 .blog .section1 {
   padding-top: 185px;
   margin-bottom: 75px;
 }
 .blog .section1 h1 {
+  font-family: "Yekan Bakh FaNum";
   font-size: 64px;
   font-weight: 400;
+  line-height: 99.2px;
   text-align: center;
-  color: #fff;
+  color: white;
 }
 .blog .section2 {
   padding-bottom: 116px;
@@ -1817,16 +2332,28 @@ footer .brmFooter .copyNamaSite span {
 .blog .section2 .blogContainer .blogItem .date span {
   writing-mode: vertical-lr;
   color: #c59b47;
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 700;
   font-size: 16px;
   transform: rotate(180deg);
   line-height: 22.7px;
   text-align: right;
 }
-.blog .section2 .blogContainer .blogItem a,
-.home .section1 .overlayItems .items ul a {
+.blog .section2 .blogContainer .blogItem a {
   text-decoration: none;
+}
+.blog .section2 .blogContainer .blogItem a .imgS {
+  overflow: hidden;
+}
+.blog .section2 .blogContainer .blogItem a .imgS img {
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  transition: 1s ease-in-out;
+  transform: scale(1.15);
+}
+.blog .section2 .blogContainer .blogItem a .imgS:hover img {
+  transform: scale(1.01);
+  transition: 1s ease-in-out;
 }
 .blog .section2 .blogContainer .blogItem a h2 {
   font-family: "Yekan Bakh FaNum";
@@ -1835,21 +2362,16 @@ footer .brmFooter .copyNamaSite span {
   line-height: 31px;
   margin-top: 25px;
   text-align: right;
-  color: #fff;
+  color: white;
 }
+
 @media only screen and (max-height: 750px) {
-  .productShow .share,
-  .projectShow .share {
-    bottom: 457px !important;
-    z-index: 1000;
-  }
   .btmContact {
     margin-bottom: 3.642vh !important;
     margin-top: 70px !important;
   }
 }
-.contact,
-.productCat {
+.contact {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -1874,19 +2396,19 @@ footer .brmFooter .copyNamaSite span {
   text-align: center;
 }
 .contact .overlayInfo .topContact h1 {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 40px;
-  color: #fff;
+  color: white;
   line-height: 56.74px;
   text-align: center;
   margin-bottom: 19px;
 }
 .contact .overlayInfo .topContact p {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 22px;
-  color: #fff;
+  color: white;
   margin: 0 auto;
   line-height: 31.21px;
   text-align: center;
@@ -1894,6 +2416,9 @@ footer .brmFooter .copyNamaSite span {
 }
 .contact .overlayInfo .topContact .socials {
   margin-top: 23.8px;
+}
+.contact .overlayInfo .topContact .socials ul {
+  direction: rtl;
 }
 .contact .overlayInfo .topContact .socials ul li {
   display: inline-block;
@@ -1907,7 +2432,7 @@ footer .brmFooter .copyNamaSite span {
   position: relative;
   direction: rtl;
   -moz-column-gap: 196px;
-  column-gap: 196px;
+       column-gap: 196px;
   margin-bottom: 9.642vh;
   margin-top: 89px;
   padding: 0 75px 0 83px;
@@ -1920,20 +2445,20 @@ footer .brmFooter .copyNamaSite span {
   left: 50%;
   background-color: rgba(255, 255, 255, 0.5);
 }
-.contact .overlayInfo .btmContact .company,
-.contact .overlayInfo .btmContact .office {
+.contact .overlayInfo .btmContact .office,
+.contact .overlayInfo .btmContact .company {
   width: 50%;
   direction: rtl;
 }
-.contact .overlayInfo .btmContact .company li,
-.contact .overlayInfo .btmContact .office li {
+.contact .overlayInfo .btmContact .office li,
+.contact .overlayInfo .btmContact .company li {
   display: flex;
   align-items: center;
   direction: rtl;
   flex-wrap: wrap;
 }
-.contact .overlayInfo .btmContact .company h2,
-.contact .overlayInfo .btmContact .office h2 {
+.contact .overlayInfo .btmContact .office h2,
+.contact .overlayInfo .btmContact .company h2 {
   font-family: "Yekan Bakh FaNum";
   font-size: 24px;
   font-weight: 700;
@@ -1942,43 +2467,62 @@ footer .brmFooter .copyNamaSite span {
   color: #c59b47;
   direction: ltr;
 }
+.contact .overlayInfo .btmContact .office h3,
+.contact .overlayInfo .btmContact .office p,
+.contact .overlayInfo .btmContact .office span,
+.contact .overlayInfo .btmContact .office i,
 .contact .overlayInfo .btmContact .company h3,
-.contact .overlayInfo .btmContact .company i,
 .contact .overlayInfo .btmContact .company p,
 .contact .overlayInfo .btmContact .company span,
-.contact .overlayInfo .btmContact .office h3,
-.contact .overlayInfo .btmContact .office i,
-.contact .overlayInfo .btmContact .office p,
-.contact .overlayInfo .btmContact .office span {
+.contact .overlayInfo .btmContact .company i {
   font-family: "Yekan Bakh FaNum";
   font-size: 24px;
-  color: #fff;
+  color: white;
   font-weight: 400;
   line-height: 45.89px;
   text-align: right;
 }
-.contact .overlayInfo .btmContact .company h5,
-.contact .overlayInfo .btmContact .office h5 {
+.contact .overlayInfo .btmContact .office i,
+.contact .overlayInfo .btmContact .office span,
+.contact .overlayInfo .btmContact .office h5,
+.contact .overlayInfo .btmContact .company i,
+.contact .overlayInfo .btmContact .company span,
+.contact .overlayInfo .btmContact .company h5 {
+  direction: ltr;
+}
+.contact .overlayInfo .btmContact .office h5:nth-child(2) span,
+.contact .overlayInfo .btmContact .company h5:nth-child(2) span {
+  display: none;
+}
+.contact .overlayInfo .btmContact .office h5,
+.contact .overlayInfo .btmContact .company h5 {
   font-family: "Yekan Bakh FaNum";
   font-size: 24px;
   font-weight: 400;
   line-height: 33.02px;
   text-align: right;
-  color: #fff;
+  color: white;
 }
-.contact .overlayInfo .btmContact .company p,
-.contact .overlayInfo .btmContact .office p {
+.contact .overlayInfo .btmContact .office p,
+.contact .overlayInfo .btmContact .company p {
   display: contents;
 }
+
+body {
+  overflow-x: hidden;
+}
+
 .home {
+  background-color: black;
   width: 100vw;
+  overflow-x: hidden;
 }
 .home .section1 video {
   filter: brightness(0.35);
   width: 100vw;
   height: 100vh;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .home .section1 img {
   width: 100%;
@@ -1988,12 +2532,10 @@ footer .brmFooter .copyNamaSite span {
   position: relative;
   width: 100vw;
 }
-.home .section1 .swiper-slide-active,
-.menuContainer .overMenu .swiper-slide-active {
+.home .section1 .swiper-slide-active {
   z-index: 3;
 }
-.home .section1 .cta,
-.menuContainer .overMenu .cta {
+.home .section1 .cta {
   padding: 12% 0;
 }
 .home .section1 .cta__slider-wrapper {
@@ -2013,10 +2555,7 @@ footer .brmFooter .copyNamaSite span {
 .home .section1 .cta__slider {
   min-height: 50vh;
 }
-.home .section1 .cta__slider .swiper-slide,
-.home .section1 .overlayItems .items,
-.home .section2 .rightSlider .serviceSlider .swiper-slide .imgS,
-.menuContainer .leftMenu ul li {
+.home .section1 .cta__slider .swiper-slide {
   overflow: hidden;
 }
 .home .section1 .cta__slider-arrows {
@@ -2040,17 +2579,13 @@ footer .brmFooter .copyNamaSite span {
 .home .section1 .cta__slider-arrow.cta__slider-arrow--next {
   left: 50%;
 }
-.aboutUs .section1,
-.aboutUs .section2 .middle .para,
-.aboutUs .section6 .imgS,
-.home .section1 .cta__slider-item,
-.menuContainer .rightMenu .images {
+.home .section1 .cta__slider-item {
   position: relative;
 }
 .home .section1 .cta__slider-item .title {
   position: absolute;
   z-index: 5;
-  left: 0;
+  left: 0%;
   right: 0;
   top: 43%;
   overflow: hidden;
@@ -2060,19 +2595,18 @@ footer .brmFooter .copyNamaSite span {
   font-size: 75px;
   font-weight: 300;
   line-height: 88.83px;
+  text-align: center;
   white-space: nowrap;
   direction: rtl;
   text-align: center;
-  color: #fff;
+  color: white;
   transform: translateY(100%);
   transition: 0.4s ease-in-out;
 }
-.home .section1 .cta__slider-item .title p span,
-.menuContainer .leftMenu ul li:hover a {
+.home .section1 .cta__slider-item .title p span {
   color: #c59b47;
 }
-.home .section1 .goDown,
-.home .section2 .goDown {
+.home .section1 .goDown {
   position: absolute;
   bottom: -30px;
   left: 0;
@@ -2085,8 +2619,7 @@ footer .brmFooter .copyNamaSite span {
   z-index: 100;
   cursor: pointer;
 }
-.home .section1 .goDown .goIcon,
-.home .section2 .goDown .goIcon {
+.home .section1 .goDown .goIcon {
   position: relative;
   width: 259.2px;
   display: flex;
@@ -2096,12 +2629,10 @@ footer .brmFooter .copyNamaSite span {
   height: 259.2px;
   border-radius: 50%;
 }
-.home .section1 .goDown .goIcon:hover::before,
-.home .section2 .goDown .goIcon:hover::before {
-  animation: 1s forwards scrollDownBorderAnimation;
+.home .section1 .goDown .goIcon:hover::before {
+  animation: scrollDownBorderAnimation 1s forwards;
 }
-.home .section1 .goDown .goIcon:before,
-.home .section2 .goDown .goIcon:before {
+.home .section1 .goDown .goIcon:before {
   border-radius: 50%;
   border-top: 1px solid #fff;
   content: "";
@@ -2112,40 +2643,44 @@ footer .brmFooter .copyNamaSite span {
   top: 0;
   width: 100%;
 }
-.home .section1 .goDown .maskArrow,
-.home .section2 .goDown .maskArrow {
+.home .section1 .goDown .maskArrow {
   width: 49px;
   display: block;
   height: 50px;
-  background-color: #fff;
+  background-color: white;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-mask: url('data:image/svg+xml;utf8,<svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_216_232)"><path d="M50.2 23.4988V33.9357L25.316 51.1999L0.699951 33.1651V23.4988L25.316 41.2767L50.2 23.4988Z" fill="%23D0D0D0"/><path d="M25.3162 41.2766V0.799805" stroke="%23D0D0D0" stroke-width="1.8" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_216_232"><rect width="49.5" height="50.4" fill="white" transform="translate(0.700195 0.799805)"/></clipPath></defs></svg>')
-    center/contain no-repeat;
-  mask: url('data:image/svg+xml;utf8,<svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_216_232)"><path d="M50.2 23.4988V33.9357L25.316 51.1999L0.699951 33.1651V23.4988L25.316 41.2767L50.2 23.4988Z" fill="%23D0D0D0"/><path d="M25.3162 41.2766V0.799805" stroke="%23D0D0D0" stroke-width="1.8" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_216_232"><rect width="49.5" height="50.4" fill="white" transform="translate(0.700195 0.799805)"/></clipPath></defs></svg>')
-    center/contain no-repeat;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_216_232)"><path d="M50.2 23.4988V33.9357L25.316 51.1999L0.699951 33.1651V23.4988L25.316 41.2767L50.2 23.4988Z" fill="%23D0D0D0"/><path d="M25.3162 41.2766V0.799805" stroke="%23D0D0D0" stroke-width="1.8" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_216_232"><rect width="49.5" height="50.4" fill="white" transform="translate(0.700195 0.799805)"/></clipPath></defs></svg>') center/contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_216_232)"><path d="M50.2 23.4988V33.9357L25.316 51.1999L0.699951 33.1651V23.4988L25.316 41.2767L50.2 23.4988Z" fill="%23D0D0D0"/><path d="M25.3162 41.2766V0.799805" stroke="%23D0D0D0" stroke-width="1.8" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_216_232"><rect width="49.5" height="50.4" fill="white" transform="translate(0.700195 0.799805)"/></clipPath></defs></svg>') center/contain no-repeat;
   -webkit-mask-size: 49px 50px;
   mask-size: 49px 50px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
+  transition: -webkit-mask-image 2s ease-in-out;
   transition: mask-image 2s ease-in-out;
   transition: mask-image 2s ease-in-out, -webkit-mask-image 2s ease-in-out;
 }
-.home .section1 .goDown .maskArrow span,
-.home .section2 .goDown .maskArrow span {
+.home .section1 .goDown .maskArrow span {
   height: 50px;
   width: 50px;
   background-color: #c59b47;
   display: block;
   transform: translateY(-100%);
 }
-.home .section1 .goDown:hover .maskArrow span,
-.home .section2 .goDown:hover .maskArrow span {
+.home .section1 .goDown:hover .maskArrow span {
   transform: translateY(100%);
   transition: 0.5s ease-in-out;
+}
+@keyframes scrollDownBorderAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
 }
 .home .section1 .cta__slider-item .media-wrapper {
   position: absolute;
@@ -2158,7 +2693,7 @@ footer .brmFooter .copyNamaSite span {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   transition: 1.3s ease-in-out;
 }
 .home .section1 .hoverImg {
@@ -2172,10 +2707,9 @@ footer .brmFooter .copyNamaSite span {
   left: 0;
   z-index: 3;
   padding: 20px 40px;
-  color: #fff;
+  color: #ffffff;
 }
-.home .section1 .cta__cta,
-.menuContainer .overMenu .cta__cta {
+.home .section1 .cta__cta {
   padding-top: 12%;
   max-width: 480px;
 }
@@ -2188,7 +2722,8 @@ footer .brmFooter .copyNamaSite span {
   justify-content: center;
   overflow: hidden;
 }
-.home .section1 .overlayItems h2 {
+.home .section1 .overlayItems h2,
+.home .section1 .overlayItems p {
   opacity: 0;
   font-family: "Yekan Bakh FaNum";
   font-size: 57.6px;
@@ -2197,22 +2732,26 @@ footer .brmFooter .copyNamaSite span {
   line-height: 89.28px;
   letter-spacing: -0.04em;
   text-align: center;
-  color: #fff;
+  color: white;
 }
-.home .section1 .overlayItems h2 span {
+.home .section1 .overlayItems h2 span,
+.home .section1 .overlayItems p span {
   font-family: "Test Domaine Sans Display";
   font-size: 57.6px;
   font-weight: 500;
   line-height: 79.95px;
   letter-spacing: -0.04em;
   text-align: center;
-  color: #fff;
+  color: white;
+}
+.home .section1 .overlayItems .items {
+  overflow: hidden;
 }
 .home .section1 .overlayItems .items ul {
   display: flex;
   justify-content: center;
   -moz-column-gap: 46px;
-  column-gap: 46px;
+       column-gap: 46px;
 }
 .home .section1 .overlayItems .items ul li {
   overflow: hidden;
@@ -2220,13 +2759,16 @@ footer .brmFooter .copyNamaSite span {
   transform: translateY(100%);
   min-width: 100px;
 }
+.home .section1 .overlayItems .items ul a {
+  text-decoration: none;
+}
 .home .section1 .overlayItems .items ul h4 {
   font-family: "Yekan Bakh FaNum";
   font-size: 28px;
   font-weight: 400;
   line-height: 43.4px;
   text-align: center;
-  color: #fff;
+  color: white;
   transform: translateY(0);
   transition: 0.4s ease-in-out;
 }
@@ -2245,53 +2787,88 @@ footer .brmFooter .copyNamaSite span {
   left: 0;
   right: 0;
 }
-.home .section1 .overlayItems .items ul h6,
-.home .section1 .overlayItems .items ul span {
-  font-size: 35.2px;
-  font-weight: 300;
-  line-height: 48.86px;
+.home .section1 .overlayItems .items ul a:hover h5 {
+  opacity: 1;
   transition: 0.4s ease-in-out;
-  transform: translateY(0);
-  text-align: center;
-  font-family: "Test Domaine Sans Display";
+  transform: translateY(-100%);
 }
-.home .section1 .overlayItems .items ul a:hover h5,
+.home .section1 .overlayItems .items ul a:hover h4 {
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+  transform: translateY(-100%);
+}
 .home .section1 .overlayItems .items ul a:hover span {
   opacity: 1;
   transition: 0.4s ease-in-out;
   transform: translateY(-100%);
 }
-.home .section1 .overlayItems .items ul a:hover h4,
 .home .section1 .overlayItems .items ul a:hover h6 {
   opacity: 0;
   transition: 0.4s ease-in-out;
   transform: translateY(-100%);
 }
 .home .section1 .overlayItems .items ul h6 {
-  color: #fff;
+  font-family: "Test Domaine Sans Display";
+  font-size: 35.2px;
+  font-weight: 300;
+  line-height: 48.86px;
+  text-align: center;
+  color: white;
+  transform: translateY(0);
+  transition: 0.4s ease-in-out;
   min-width: 100px;
 }
 .home .section1 .overlayItems .items ul span {
+  font-family: "Test Domaine Sans Display";
+  font-size: 35.2px;
+  font-weight: 300;
+  line-height: 48.86px;
+  text-align: center;
+  transform: translateY(0);
+  transition: 0.4s ease-in-out;
   color: #c59b47;
+  transform: translateY(0);
   opacity: 0;
+  transition: 0.4s ease-in-out;
   position: absolute;
   left: 0;
   right: 0;
 }
 .home .section1 .slider2.swiper-slide-active h2,
-.home .section1 .slider3.swiper-slide-active h2 {
+.home .section1 .slider2.swiper-slide-active p {
   opacity: 1 !important;
-  transition: opacity 1s ease-in-out 0.25;
+  transition: 1s ease-in-out;
+  transition-delay: 0.25;
+  transition-property: opacity;
 }
-.home .section1 .slider2.swiper-slide-active .items li,
-.home .section1 .slider3.swiper-slide-active .items li,
-.home .section1 .slider4.swiper-slide-active h1 {
+.home .section1 .slider2.swiper-slide-active .items li {
   transform: translateY(0) !important;
-  transition: transform 1s ease-in-out 0.25;
+  transition: 1s ease-in-out;
+  transition-delay: 0.25;
+  transition-property: transform;
+}
+.home .section1 .slider3.swiper-slide-active h2,
+.home .section1 .slider3.swiper-slide-active p {
+  opacity: 1 !important;
+  transition: 1s ease-in-out;
+  transition-delay: 0.25;
+  transition-property: opacity;
+}
+.home .section1 .slider3.swiper-slide-active .items li {
+  transform: translateY(0) !important;
+  transition: 1s ease-in-out;
+  transition-delay: 0.25;
+  transition-property: transform;
 }
 .home .section1 .innerSlider {
   height: 100vh;
   position: relative;
+}
+.home .section1 .slider4.swiper-slide-active h1 {
+  transform: translateY(0) !important;
+  transition: 1s ease-in-out;
+  transition-delay: 0.25;
+  transition-property: transform;
 }
 .home .section1 .slider4 .title4 {
   position: absolute;
@@ -2301,8 +2878,7 @@ footer .brmFooter .copyNamaSite span {
   z-index: 100;
   overflow: hidden;
 }
-.home .section1 .slider4 .imgS,
-.productCat .overlayCat .overlaySliderContainer {
+.home .section1 .slider4 .imgS {
   height: 100%;
 }
 .home .section1 .slider4 .imgS img {
@@ -2314,18 +2890,16 @@ footer .brmFooter .copyNamaSite span {
   font-weight: 400;
   line-height: 89.9px;
   text-align: center;
-  color: #fff;
+  color: white;
   transform: translateY(100%);
 }
-.aboutUs .section7 h3,
-.aboutUs .section9 .pR h5,
 .home .section1 .slider4 h4 {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 28px;
   line-height: 39.72px;
   text-align: center;
-  color: #fff;
+  color: white;
 }
 .home .section1 .slider4 .btns {
   position: absolute;
@@ -2335,6 +2909,10 @@ footer .brmFooter .copyNamaSite span {
   justify-content: space-between;
   z-index: 100;
   direction: rtl;
+}
+.home .section1 .slider4 .btns .nexBtn,
+.home .section1 .slider4 .btns .preBtn {
+  cursor: pointer;
 }
 .home .section1 .slider4 .btns .nexBtn {
   margin-right: 71px;
@@ -2350,7 +2928,8 @@ footer .brmFooter .copyNamaSite span {
   z-index: 100;
   transform: translateY(40%);
   opacity: 0;
-  transition: 1s ease-in-out 1s;
+  transition: 1s ease-in-out;
+  transition-delay: 1s;
   overflow: hidden;
 }
 .home .section1 .slider4 .swiper-slide .sliderTitle h4 {
@@ -2362,11 +2941,19 @@ footer .brmFooter .copyNamaSite span {
   opacity: 1;
   transition: 1s ease-in-out;
 }
-.home .section1 .slider1.swiper-slide-active .title p,
 .home .section1 .slider4.swiper-slide-active h4 {
   transform: translateY(0) !important;
-  transition: transform 1s ease-in-out 0.25;
+  transition: 1s ease-in-out;
+  transition-delay: 0.25;
+  transition-property: transform;
   opacity: 1 !important;
+}
+.home .section1 .slider1.swiper-slide-active .title p {
+  transform: translateY(0) !important;
+  transition: 1s ease-in-out;
+  opacity: 1 !important;
+  transition-delay: 0.25;
+  transition-property: transform;
 }
 .home .section1 .swiper-pagination {
   padding-left: 79px;
@@ -2374,7 +2961,7 @@ footer .brmFooter .copyNamaSite span {
   justify-content: flex-start;
   align-items: center;
   -moz-column-gap: 20px;
-  column-gap: 20px;
+       column-gap: 20px;
   z-index: 100000000;
   bottom: 116px;
 }
@@ -2386,12 +2973,7 @@ footer .brmFooter .copyNamaSite span {
   background-color: #d9d9d9;
   transition: 0.3s ease-in-out;
 }
-.home .section1 .swiper-pagination .swiper-pagination-bullet-active,
-.service
-  .section3
-  .rightSliders
-  .swiper-pagination
-  .swiper-pagination-bullet-active {
+.home .section1 .swiper-pagination .swiper-pagination-bullet-active {
   width: 11px;
   height: 11px;
   background-color: #c59b47;
@@ -2404,8 +2986,31 @@ footer .brmFooter .copyNamaSite span {
   direction: rtl;
   position: relative;
   -moz-column-gap: 75px;
-  column-gap: 75px;
+       column-gap: 75px;
   justify-content: space-between;
+}
+.home .section2 .goDown {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+}
+.home .section2 .goDown .goIcon {
+  position: relative;
+  width: 259.2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(208, 208, 208, 0.6039215686);
+  height: 259.2px;
+  border-radius: 50%;
 }
 .home .section2 .goDown .goIcon .clipMask {
   width: 40px;
@@ -2415,6 +3020,51 @@ footer .brmFooter .copyNamaSite span {
   mask-image: url(../images/لوگو\ سفید\ 2.png);
   -webkit-mask-repeat: repeat;
 }
+.home .section2 .goDown .goIcon:hover::before {
+  animation: scrollDownBorderAnimation 1s forwards;
+}
+.home .section2 .goDown .goIcon:before {
+  border-radius: 50%;
+  border-top: 1px solid #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.home .section2 .goDown .maskArrow {
+  width: 49px;
+  display: block;
+  height: 50px;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_216_232)"><path d="M50.2 23.4988V33.9357L25.316 51.1999L0.699951 33.1651V23.4988L25.316 41.2767L50.2 23.4988Z" fill="%23D0D0D0"/><path d="M25.3162 41.2766V0.799805" stroke="%23D0D0D0" stroke-width="1.8" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_216_232"><rect width="49.5" height="50.4" fill="white" transform="translate(0.700195 0.799805)"/></clipPath></defs></svg>') center/contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg width="51" height="52" viewBox="0 0 51 52" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_216_232)"><path d="M50.2 23.4988V33.9357L25.316 51.1999L0.699951 33.1651V23.4988L25.316 41.2767L50.2 23.4988Z" fill="%23D0D0D0"/><path d="M25.3162 41.2766V0.799805" stroke="%23D0D0D0" stroke-width="1.8" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_216_232"><rect width="49.5" height="50.4" fill="white" transform="translate(0.700195 0.799805)"/></clipPath></defs></svg>') center/contain no-repeat;
+  -webkit-mask-size: 49px 50px;
+  mask-size: 49px 50px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  transition: -webkit-mask-image 2s ease-in-out;
+  transition: mask-image 2s ease-in-out;
+  transition: mask-image 2s ease-in-out, -webkit-mask-image 2s ease-in-out;
+}
+.home .section2 .goDown .maskArrow span {
+  height: 50px;
+  width: 50px;
+  background-color: #c59b47;
+  display: block;
+  transform: translateY(-100%);
+}
+.home .section2 .goDown:hover .maskArrow span {
+  transform: translateY(100%);
+  transition: 0.5s ease-in-out;
+}
 .home .section2 .rightSlider {
   margin-top: 91px;
 }
@@ -2423,11 +3073,19 @@ footer .brmFooter .copyNamaSite span {
   overflow: hidden;
   position: relative;
 }
+.home .section2 .rightSlider .serviceSlider .swiper-slide .imgS {
+  overflow: hidden;
+}
 .home .section2 .rightSlider .serviceSlider .swiper-slide .imgS img {
   width: 100%;
+  transition: 0.5s ease-in-out;
   transition: 1s ease-in-out;
   filter: brightness(0.55);
   transform: scale(1.15);
+}
+.home .section2 .rightSlider .serviceSlider .swiper-slide .imgS:hover img {
+  transform: scale(1.01);
+  transition: 1s ease-in-out;
 }
 .home .section2 .rightSlider .serviceSlider .swiper-pagination-service {
   text-align: right;
@@ -2456,20 +3114,19 @@ footer .brmFooter .copyNamaSite span {
 }
 .home .section2 .rightSlider .serviceSlider .btns {
   position: absolute;
+  top: 0;
   z-index: 100;
   display: flex;
   left: 32px;
   direction: rtl;
   top: 26px;
   -moz-column-gap: 11.32px;
-  column-gap: 11.32px;
+       column-gap: 11.32px;
   align-items: center;
 }
-.home .section2 .leftServices a,
-.service .section4 a {
-  -moz-column-gap: 20px;
-  padding: 7px 23px;
-  text-decoration: none;
+.home .section2 .rightSlider .serviceSlider .btns .prevBtn,
+.home .section2 .rightSlider .serviceSlider .btns .nextBtn {
+  cursor: pointer;
 }
 .home .section2 .leftServices {
   padding-left: 79px;
@@ -2480,7 +3137,7 @@ footer .brmFooter .copyNamaSite span {
   font-weight: 700;
   line-height: 62px;
   text-align: right;
-  color: #fff;
+  color: white;
   margin-bottom: 22px;
 }
 .home .section2 .leftServices p {
@@ -2489,17 +3146,12 @@ footer .brmFooter .copyNamaSite span {
   font-weight: 400;
   line-height: 31px;
   text-align: justify;
-  color: #fff;
-}
-.home .section2 .leftServices a,
-.home .section6 h3,
-.share span {
-  font-family: Byekan;
-  font-weight: 400;
-  color: #fff;
+  color: white;
 }
 .home .section2 .leftServices a {
+  text-decoration: none;
   display: flex;
+  padding: 7px 23px 7px 23px;
   border: 1px solid #c59b47;
   border-radius: 29px;
   width: -moz-fit-content;
@@ -2507,35 +3159,37 @@ footer .brmFooter .copyNamaSite span {
   align-items: center;
   float: left;
   margin-top: 40px;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  font-family: "Byekan";
+  font-weight: 400;
   font-size: 24px;
   line-height: 34.04px;
   text-align: justify;
+  color: white;
 }
 .home .section6 {
   max-width: 1019px;
-  margin: 76px auto 80px;
-}
-.share,
-.share .toggle-button {
-  margin-top: 25px;
-  display: flex;
+  margin: 0 auto;
+  margin-top: 76px;
+  margin-bottom: 80px;
 }
 .home .section6 h3 {
+  font-family: "Byekan";
+  font-weight: 400;
   font-size: 40px;
   line-height: 56.74px;
   text-align: center;
+  color: white;
   margin-bottom: 22px;
 }
-.aboutUs .section8 .brandBtm .swiper-slide .mainInfo .mid p,
-.home .section6 p,
-.home .section7 .brandBtm .swiper-slide .mainInfo .mid p {
+.home .section6 p {
   font-family: "Yekan Bakh FaNum";
   font-size: 20px;
   font-weight: 400;
   line-height: 31px;
   text-align: center;
-  color: #fff;
+  color: white;
   direction: rtl;
 }
 .home .section7 {
@@ -2548,7 +3202,6 @@ footer .brmFooter .copyNamaSite span {
   justify-content: center;
   cursor: pointer;
 }
-.aboutUs .section8 .brandTop .swiper-slide h4,
 .home .section7 .brandTop .swiper-slide h4 {
   font-family: "Test Domaine Sans Display";
   font-size: 32px;
@@ -2557,47 +3210,55 @@ footer .brmFooter .copyNamaSite span {
   white-space: nowrap;
   letter-spacing: -0.04em;
   text-align: center;
-  color: #fff;
+  color: white;
 }
-.aboutUs .hoverPlay:hover .svgS,
-.aboutUs .section8 .brandTop .swiper-slide-active,
 .home .section7 .brandTop .swiper-slide-active {
   opacity: 1;
   transition: 0.5s ease-in-out;
 }
-.aboutUs .section8 .brandBtm,
 .home .section7 .brandBtm {
   margin-top: 44px;
   margin-bottom: 147px;
 }
-.aboutUs .section8 .brandBtm .swiper-slide .mainInfo,
 .home .section7 .brandBtm .swiper-slide .mainInfo {
   display: flex;
   align-items: center;
   justify-content: space-between;
   -moz-column-gap: 63px;
-  column-gap: 63px;
+       column-gap: 63px;
 }
-.aboutUs .section8 .brandBtm .swiper-slide .mainInfo .left .imgS,
-.aboutUs .section8 .brandBtm .swiper-slide .mainInfo .right .imgS,
-.home .section7 .brandBtm .swiper-slide .mainInfo .left .imgS,
-.home .section7 .brandBtm .swiper-slide .mainInfo .right .imgS {
+.home .section7 .brandBtm .swiper-slide .mainInfo .right .imgS,
+.home .section7 .brandBtm .swiper-slide .mainInfo .left .imgS {
   border-radius: 89px;
   overflow: hidden;
 }
-.aboutUs .section8 .brandBtm .swiper-slide .brandLink,
+.home .section7 .brandBtm .swiper-slide .mainInfo .mid p {
+  font-family: "Yekan Bakh FaNum";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 31px;
+  text-align: center;
+  color: white;
+  direction: rtl;
+}
 .home .section7 .brandBtm .swiper-slide .brandLink {
   margin-top: 50px;
   text-align: center;
 }
+
 .share {
   direction: rtl;
+  display: flex;
   align-items: end;
   -moz-column-gap: 6px;
-  column-gap: 6px;
+       column-gap: 6px;
+  margin-top: 25px;
   justify-content: end;
 }
 .share span {
+  font-family: "Byekan";
+  font-weight: 400;
+  color: white;
   font-size: 20px;
   line-height: 28.37px;
   text-align: right;
@@ -2612,18 +3273,20 @@ footer .brmFooter .copyNamaSite span {
 }
 .share .toggle-button {
   cursor: pointer;
+  display: flex;
   white-space: nowrap;
   align-items: center;
   -moz-column-gap: 10px;
-  column-gap: 10px;
+       column-gap: 10px;
   position: relative;
   direction: ltr;
+  margin-top: 25px;
 }
 .share .toggle-button:focus {
   outline: 0;
 }
-.share .toggle-button:after,
-.share .toggle-button:before {
+.share .toggle-button:before,
+.share .toggle-button:after {
   content: "";
   position: absolute;
 }
@@ -2632,28 +3295,28 @@ footer .brmFooter .copyNamaSite span {
   left: 0;
   width: 100%;
   height: 100%;
-  transition: 0.2s;
+  transition: all 0.2s ease;
 }
 .share .social-link {
   visibility: hidden;
   border-radius: 50%;
-  transition: 0.1s;
+  transition: all 0.1s ease;
   margin-left: 15px;
 }
 .share .share__wrapper--open-left .social-link {
-  animation: 1s forwards right;
+  animation: 1s right forwards;
   opacity: 0;
   will-change: animation;
 }
 .share .share__wrapper--active .social-link {
   visibility: visible;
-  animation: 0.1s forwards left;
+  animation: 0.1s left forwards;
 }
-.share .share__wrapper--active .social-link:first-child {
-  animation-delay: 75ms;
+.share .share__wrapper--active .social-link:nth-child(1) {
+  animation-delay: 0.075s;
 }
 .share .share__wrapper--active .social-link:nth-child(2) {
-  animation-delay: 50ms;
+  animation-delay: 0.05s;
 }
 @keyframes shareClose {
   0% {
@@ -2689,8 +3352,8 @@ footer .brmFooter .copyNamaSite span {
   width: 1px;
   height: 1px;
 }
-.share li,
-.share ul {
+.share ul,
+.share li {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -2701,7 +3364,7 @@ footer .brmFooter .copyNamaSite span {
   padding: 0;
   width: auto;
   overflow: visible;
-  background: 0 0;
+  background: transparent;
   color: inherit;
   font: inherit;
   line-height: normal;
@@ -2709,12 +3372,9 @@ footer .brmFooter .copyNamaSite span {
   -moz-osx-font-smoothing: inherit;
   -webkit-appearance: none;
 }
-.service .section1 .overlayText p,
-.service .section2 h1 {
-  font-family: Byekan;
-  font-size: 40px;
-  line-height: 56.74px;
-  font-weight: 400;
+
+.service {
+  background-color: black;
 }
 .service .section1 {
   padding: 161px 61px 0 85px;
@@ -2743,7 +3403,11 @@ footer .brmFooter .copyNamaSite span {
   z-index: 10;
 }
 .service .section1 .overlayText p {
-  color: #fff;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+  line-height: 56.74px;
   text-align: center;
   direction: rtl;
 }
@@ -2752,32 +3416,45 @@ footer .brmFooter .copyNamaSite span {
   padding: 0 69px 0 85px;
 }
 .service .section2 h1 {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 56.74px;
   text-align: right;
   color: #c59b47;
   margin-bottom: 27px;
 }
-.service .section3 h2,
-.service .section4 p {
-  font-size: 28px;
-  line-height: 39.72px;
-  font-family: Byekan;
+.service .section2 p {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28.37px;
+  text-align: justify;
+  color: white;
   direction: rtl;
 }
 .service .section3 {
   padding: 0 65px 0 85px;
 }
 .service .section3 h2 {
+  font-family: "Byekan";
   font-weight: 400;
+  font-size: 28px;
+  line-height: 39.72px;
   text-align: right;
   color: #c59b47;
   margin-top: 40px;
+  direction: rtl;
 }
 .service .section3 .in3 {
   display: flex;
   justify-content: right;
   margin-top: 15px;
   -moz-column-gap: 87px;
-  column-gap: 87px;
+       column-gap: 87px;
+}
+.service .section3 .leftItems ul {
+  direction: rtl;
 }
 .service .section3 .leftItems ul li button {
   background-color: transparent;
@@ -2786,20 +3463,16 @@ footer .brmFooter .copyNamaSite span {
   font-weight: 400;
   line-height: 47.54px;
   text-align: right;
-  color: #fff;
+  color: white;
   border: none;
   direction: rtl;
   cursor: pointer;
 }
-.service .section3 .rightSliders .sliderSection,
-.service .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide,
-.service
-  .section3
-  .rightSliders
-  .sliderSection
-  .verticalSlider
-  .verticalSlide
-  .topSection {
+.service .section3 .leftItems ul li .activeBtn {
+  font-weight: 700;
+  color: #c59b47;
+}
+.service .section3 .rightSliders .sliderSection {
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -2810,36 +3483,25 @@ footer .brmFooter .copyNamaSite span {
   width: fit-content;
   position: relative;
 }
-.service
-  .section3
-  .rightSliders
-  .sliderSection
-  .verticalSlider
-  .verticalSlide
-  .imgS {
+.service .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.service .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide .topSection {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.service .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide .imgS {
   width: -moz-fit-content;
   width: fit-content;
   filter: brightness(0.8);
 }
-.service
-  .section3
-  .rightSliders
-  .sliderSection
-  .verticalSlider
-  .verticalSlide
-  .descriptionSection {
+.service .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide .descriptionSection {
   width: 756px;
 }
-.service
-  .section3
-  .rightSliders
-  .sliderSection
-  .verticalSlider
-  .verticalSlide
-  .descriptionSection
-  h4 {
-  margin: 37px 0 28px;
-  font-family: Byekan;
+.service .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide .descriptionSection h4 {
+  margin: 37px 0 28px 0;
+  font-family: "Byekan";
   font-weight: 700;
   font-size: 28px;
   line-height: 55.46px;
@@ -2847,20 +3509,14 @@ footer .brmFooter .copyNamaSite span {
   direction: rtl;
   color: #c59b47;
 }
-.service
-  .section3
-  .rightSliders
-  .sliderSection
-  .verticalSlider
-  .verticalSlide
-  .descriptionSection
-  p {
-  font-family: Byekan;
+.service .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide .descriptionSection p {
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 20px;
+  color: white;
   line-height: 40.4px;
   text-align: justify;
-  color: #fff;
+  color: white;
   direction: rtl;
 }
 .service .section3 .rightSliders .swiper-pagination {
@@ -2870,7 +3526,7 @@ footer .brmFooter .copyNamaSite span {
   top: 50%;
   transform: none;
   -moz-column-gap: 17px;
-  column-gap: 17px;
+       column-gap: 17px;
   align-items: center;
   height: -moz-fit-content;
   height: fit-content;
@@ -2884,13 +3540,23 @@ footer .brmFooter .copyNamaSite span {
   background-color: #d9d9d9;
   border-radius: 50%;
 }
+.service .section3 .rightSliders .swiper-pagination .swiper-pagination-bullet-active {
+  width: 11px;
+  height: 11px;
+  background-color: #c59b47;
+  transition: 0.3s ease-in-out;
+}
+.service .section3 .rightSliders .button-next,
+.service .section3 .rightSliders .button-prev {
+  cursor: pointer;
+}
 .service .section3 .rightSliders .btns {
   position: absolute;
   left: 44px;
   top: 47%;
   z-index: 10000;
   -moz-column-gap: 11.5px;
-  column-gap: 11.5px;
+       column-gap: 11.5px;
   display: flex;
 }
 .service .section4 {
@@ -2898,26 +3564,44 @@ footer .brmFooter .copyNamaSite span {
   text-align: center;
 }
 .service .section4 p {
+  font-family: "Byekan";
   font-weight: 400;
+  font-size: 28px;
+  line-height: 39.72px;
   text-align: center;
-  color: #fff;
+  direction: rtl;
+  color: white;
 }
 .service .section4 a {
   display: flex;
   align-items: center;
   direction: rtl;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 65px auto 0;
-  font-family: Byekan;
+  margin: 0 auto;
+  margin-top: 65px;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 24px;
   line-height: 34.04px;
   text-align: justify;
-  color: #fff;
+  color: white;
+  text-decoration: none;
   border: 1px solid #c59b47;
+  padding: 7px 23px 7px 23px;
   border-radius: 29px;
+}
+
+.aboutUs {
+  background-color: black;
+}
+.aboutUs .section1 {
+  position: relative;
+}
+.aboutUs .section1 .imgS img {
+  width: 100%;
 }
 .aboutUs .section1 .title1 {
   position: absolute;
@@ -2930,7 +3614,7 @@ footer .brmFooter .copyNamaSite span {
   display: flex;
   align-items: baseline;
   -moz-column-gap: 20px;
-  column-gap: 20px;
+       column-gap: 20px;
 }
 .aboutUs .section1 .title1 h1 {
   font-family: "Test Domaine Sans Display";
@@ -2938,7 +3622,7 @@ footer .brmFooter .copyNamaSite span {
   font-weight: 400;
   line-height: 275.2px;
   text-align: center;
-  color: #fff;
+  color: white;
 }
 .aboutUs .section1 .title1 span {
   font-family: "Test Domaine Sans Display";
@@ -2946,17 +3630,13 @@ footer .brmFooter .copyNamaSite span {
   font-weight: 400;
   line-height: 88.06px;
   text-align: center;
-  color: #fff;
+  color: white;
 }
 .aboutUs .section2 {
   padding: 172px 69px 150px 85px;
   display: flex;
   -moz-column-gap: 80px;
-  column-gap: 80px;
-}
-.aboutUs .section3,
-.aboutUs .section4 {
-  padding: 0 226px 0 206px;
+       column-gap: 80px;
 }
 .aboutUs .section2 .lSide img {
   filter: brightness(0.6);
@@ -2965,27 +3645,31 @@ footer .brmFooter .copyNamaSite span {
   margin-top: 82px;
 }
 .aboutUs .section2 .middle h2 {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 40px;
   line-height: 56.74px;
   text-align: right;
   margin-bottom: 30px;
-  color: #fff;
+  color: white;
 }
 .aboutUs .section2 .middle p {
-  font-family: Byekan;
+  font-family: "Byekan";
+  font-weight: 400;
   font-size: 20px;
   font-weight: 400;
   line-height: 28.37px;
   text-align: justify;
   direction: rtl;
-  color: #fff;
+  color: white;
+}
+.aboutUs .section2 .middle .para {
+  position: relative;
 }
 .aboutUs .section2 .middle .para::after {
   content: "";
   height: 2px;
-  background-color: #fff;
+  background-color: white;
   display: block;
   width: 86.5px;
   position: absolute;
@@ -2998,40 +3682,32 @@ footer .brmFooter .copyNamaSite span {
 .aboutUs .section2 .rSide img {
   filter: brightness(0.8);
 }
-.aboutUs .section3 .in3,
-.aboutUs .section4 .in4,
-.aboutUs .section5 .in3 {
+.aboutUs .section3 {
+  padding: 0 226px 0 206px;
+}
+.aboutUs .section3 .in3 {
   display: flex;
   align-items: center;
   -moz-column-gap: 236px;
-  column-gap: 236px;
+       column-gap: 236px;
   justify-content: space-between;
 }
-.aboutUs .section3 .in3 .lImg,
-.aboutUs .section4 .lImg,
-.aboutUs .section5 .in3 .lImg,
-.aboutUs .section9 .lVideo {
+.aboutUs .section3 .in3 .lImg {
   text-align: center;
 }
-.aboutUs .section3 .in3 .lImg .imgS,
-.aboutUs .section4 .lImg .imgS,
-.aboutUs .section5 .in3 .lImg .imgS {
+.aboutUs .section3 .in3 .lImg .imgS {
   width: 320px;
   height: 320px;
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 28px;
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
-.aboutUs .section3 .in3 .lImg .imgS img,
-.aboutUs .section4 .lImg .imgS img,
-.aboutUs .section5 .in3 .lImg .imgS img {
+.aboutUs .section3 .in3 .lImg .imgS img {
   width: 100%;
   filter: brightness(0.8);
 }
-.aboutUs .section3 .in3 .lImg span,
-.aboutUs .section4 .lImg span,
-.aboutUs .section5 .in3 .lImg span {
+.aboutUs .section3 .in3 .lImg span {
   font-family: "Yekan Bakh FaNum";
   font-size: 24px;
   font-weight: 400;
@@ -3039,32 +3715,29 @@ footer .brmFooter .copyNamaSite span {
   text-align: center;
   color: #545454;
 }
-.aboutUs .section3 .in3 .lImg h5,
-.aboutUs .section4 .lImg h5,
-.aboutUs .section5 .in3 .lImg h5 {
+.aboutUs .section3 .in3 .lImg h5 {
   font-family: "Yekan Bakh FaNum";
   font-size: 24px;
   font-weight: 400;
   line-height: 33.12px;
   text-align: center;
-  color: #fff;
+  color: white;
   margin-top: 5px;
 }
-.aboutUs .section3 .in3 .rP p,
-.aboutUs .section5 .in3 .rP p,
-.aboutUs .section9 .pR .para p {
-  font-size: 18px;
-  line-height: 27.9px;
-  color: #fff;
+.aboutUs .section3 .in3 .lImg .svgS {
+  margin-top: 10px;
+}
+.aboutUs .section3 .in3 .rP p {
   font-family: "Yekan Bakh FaNum";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27.9px;
   text-align: center;
   direction: rtl;
-  font-weight: 400;
+  color: white;
 }
-.aboutUs .section3 .in3 .lImg .svgS,
-.aboutUs .section4 .lImg .svgS,
-.aboutUs .section5 .in3 .lImg .svgS {
-  margin-top: 10px;
+.aboutUs .hoverPlay audio {
+  display: none;
 }
 .aboutUs .hoverPlay .svgS {
   padding: 17.6px;
@@ -3077,14 +3750,14 @@ footer .brmFooter .copyNamaSite span {
   align-items: baseline;
   position: relative;
   -moz-column-gap: 4px;
-  column-gap: 4px;
+       column-gap: 4px;
   opacity: 0.5;
   transition: 0.5s ease-in-out;
 }
 .aboutUs .hoverPlay .svgS span {
   width: 1px;
   height: 19px;
-  background-color: #fff;
+  background-color: white;
 }
 .aboutUs .hoverPlay .svgS:before {
   border-radius: 50%;
@@ -3099,55 +3772,180 @@ footer .brmFooter .copyNamaSite span {
 }
 @keyframes scrollDownBorderAnimation {
   0% {
-    transform: rotate(0);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(1turn);
   }
 }
-.aboutUs .hoverPlay:hover .imgS,
-.aboutUs .section4 .lImg:hover .imgS,
-.aboutUs .section5 .in3 .lImg:hover .imgS {
+.aboutUs .hoverPlay:hover .imgS {
   transform: scale(1.1);
-  transition: 0.5s;
+  transition: 0.5s ease;
+}
+.aboutUs .hoverPlay:hover .svgS {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
 }
 .aboutUs .hoverPlay:hover .svgS::before {
-  animation: 2s forwards scrollDownBorderAnimation;
+  animation: scrollDownBorderAnimation 2s forwards;
 }
 .aboutUs .section4 {
+  padding: 0 226px 0 206px;
   margin-top: 186px;
+}
+.aboutUs .section4 .in4 {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 236px;
+       column-gap: 236px;
+  justify-content: space-between;
+}
+.aboutUs .section4 .lVideo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .aboutUs .section4 .lVideo video {
   width: 411px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
+}
+.aboutUs .section4 .lVideo .playbtn {
+  position: absolute;
+  cursor: pointer;
+}
+.aboutUs .section4 .lImg {
+  text-align: center;
+}
+.aboutUs .section4 .lImg .imgS {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 28px;
+  transition: 0.5s ease;
+}
+.aboutUs .section4 .lImg .imgS img {
+  width: 100%;
+  filter: brightness(0.8);
+}
+.aboutUs .section4 .lImg span {
+  font-family: "Yekan Bakh FaNum";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40.51px;
+  text-align: center;
+  color: #545454;
+}
+.aboutUs .section4 .lImg h5 {
+  font-family: "Yekan Bakh FaNum";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33.12px;
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+}
+.aboutUs .section4 .lImg .svgS {
+  margin-top: 10px;
+}
+.aboutUs .section4 .lImg:hover .imgS {
+  transform: scale(1.1);
+  transition: 0.5s ease;
 }
 .aboutUs .section5 {
   padding: 250px 226px 353px 206px;
+}
+.aboutUs .section5 .in3 {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 236px;
+       column-gap: 236px;
+  justify-content: space-between;
+}
+.aboutUs .section5 .in3 .lImg {
+  text-align: center;
+}
+.aboutUs .section5 .in3 .lImg .imgS {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 28px;
+  transition: 0.5s ease;
+}
+.aboutUs .section5 .in3 .lImg .imgS img {
+  width: 100%;
+  filter: brightness(0.8);
+}
+.aboutUs .section5 .in3 .lImg span {
+  font-family: "Yekan Bakh FaNum";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 40.51px;
+  text-align: center;
+  color: #545454;
+}
+.aboutUs .section5 .in3 .lImg h5 {
+  font-family: "Yekan Bakh FaNum";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 33.12px;
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+}
+.aboutUs .section5 .in3 .lImg .svgS {
+  margin-top: 10px;
+}
+.aboutUs .section5 .in3 .lImg:hover .imgS {
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
+.aboutUs .section5 .in3 .rP p {
+  font-family: "Yekan Bakh FaNum";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27.9px;
+  text-align: center;
+  direction: rtl;
+  color: white;
+}
+.aboutUs .section6 .imgS {
+  position: relative;
+}
+.aboutUs .section6 .imgS img {
+  width: 100%;
 }
 .aboutUs .section6 .imgS::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(0, 0, 0, 0) 0,
-    rgba(0, 0, 0, 0.4) 100%
-  );
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
 }
 .aboutUs .section7 {
   margin-top: 117px;
 }
+.aboutUs .section7 h3 {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39.72px;
+  text-align: center;
+  color: white;
+}
 .aboutUs .section7 .para {
-  margin: 25px auto 0;
+  margin: 0 auto;
+  margin-top: 25px;
   max-width: 837px;
 }
 .aboutUs .section7 p {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 16px;
   direction: rtl;
-  color: #fff;
+  color: white;
   line-height: 22.7px;
   text-align: center;
 }
@@ -3160,6 +3958,49 @@ footer .brmFooter .copyNamaSite span {
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
+.aboutUs .section8 .brandTop .swiper-slide h4 {
+  font-family: "Test Domaine Sans Display";
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 44.42px;
+  white-space: nowrap;
+  letter-spacing: -0.04em;
+  text-align: center;
+  color: white;
+}
+.aboutUs .section8 .brandTop .swiper-slide-active {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+.aboutUs .section8 .brandBtm {
+  margin-top: 44px;
+  margin-bottom: 147px;
+}
+.aboutUs .section8 .brandBtm .swiper-slide .mainInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 63px;
+       column-gap: 63px;
+}
+.aboutUs .section8 .brandBtm .swiper-slide .mainInfo .right .imgS,
+.aboutUs .section8 .brandBtm .swiper-slide .mainInfo .left .imgS {
+  border-radius: 89px;
+  overflow: hidden;
+}
+.aboutUs .section8 .brandBtm .swiper-slide .mainInfo .mid p {
+  font-family: "Yekan Bakh FaNum";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 31px;
+  text-align: center;
+  color: white;
+  direction: rtl;
+}
+.aboutUs .section8 .brandBtm .swiper-slide .brandLink {
+  margin-top: 50px;
+  text-align: center;
+}
 .aboutUs .section9 {
   padding: 0 180px 0 85px;
   margin-top: 186px;
@@ -3168,13 +4009,26 @@ footer .brmFooter .copyNamaSite span {
   display: flex;
   align-items: center;
   -moz-column-gap: 199px;
-  column-gap: 199px;
+       column-gap: 199px;
   justify-content: space-between;
+}
+.aboutUs .section9 .lVideo {
+  text-align: center;
+}
+.aboutUs .section9 .lVideo .videoIn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .aboutUs .section9 .lVideo video {
   width: 524px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
+}
+.aboutUs .section9 .lVideo .playbtn {
+  position: absolute;
+  cursor: pointer;
 }
 .aboutUs .section9 .lVideo p {
   font-family: "Yekan Bakh FaNum";
@@ -3182,25 +4036,43 @@ footer .brmFooter .copyNamaSite span {
   max-width: 240px;
   font-size: 20px;
   font-weight: 400;
-  margin: 31px auto 0;
-  color: #fff;
+  margin: 0 auto;
+  margin-top: 31px;
+  color: white;
   line-height: 27.6px;
   text-align: center;
 }
+.aboutUs .section9 .pR h5 {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39.72px;
+  text-align: center;
+  color: white;
+}
 .aboutUs .section9 .pR .para {
   margin-top: 21px;
+}
+.aboutUs .section9 .pR .para p {
+  font-family: "Yekan Bakh FaNum";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27.9px;
+  text-align: center;
+  color: white;
+  direction: rtl;
 }
 .aboutUs .section10 {
   margin-top: 150px;
   padding-bottom: 279px;
 }
 .aboutUs .section10 h3 {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 28px;
   line-height: 39.72px;
   text-align: center;
-  color: #fff;
+  color: white;
   margin-bottom: 103px;
 }
 .aboutUs .section10 .certificateSlider .swiper-slide {
@@ -3227,14 +4099,15 @@ footer .brmFooter .copyNamaSite span {
   transition: 0.5s ease-in-out;
 }
 .aboutUs .section10 .certificateSlider .slideIn h6 {
-  font-family: Byekan;
+  font-family: "Byekan";
   font-weight: 400;
   font-size: 16px;
   line-height: 22.7px;
   text-align: center;
-  color: #fff;
+  color: white;
   margin-top: 33px;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -3249,17 +4122,18 @@ header .headerContaner {
 }
 header .headerContaner .barIcon button {
   background-color: transparent;
-  border: 1px solid #c59b47;
-  color: #fff;
-  outline: 0;
+  border: none;
+  color: white;
+  outline: none;
   display: flex;
   align-items: center;
   padding: 0 16px 0 20px;
   border-radius: 32.5px;
   -moz-column-gap: 5px;
-  column-gap: 5px;
+       column-gap: 5px;
   justify-content: center;
   cursor: pointer;
+  border: 1px solid #c59b47;
 }
 header .headerContaner .barIcon button span {
   font-family: "Yekan Bakh FaNum";
@@ -3271,7 +4145,7 @@ header .headerContaner .barIcon button span {
 header .headerContaner .barIcon .ham {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 0.4s;
+  transition: transform 400ms;
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
@@ -3284,7 +4158,7 @@ header .headerContaner .barIcon .active .hamRotate180 {
 }
 header .headerContaner .barIcon .line {
   fill: none;
-  transition: stroke-dasharray 0.4s, stroke-dashoffset 0.4s;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
   stroke: white;
   stroke-width: 3;
   stroke-linecap: round;
@@ -3308,16 +4182,19 @@ header .headerContaner .barIcon .active .ham7 .middle {
 header .headerContaner .barIcon .active .ham7 .bottom {
   stroke-dashoffset: -83px;
 }
+
 header.menu2 .headerContaner .barIcon button {
-  color: #000 !important;
+  color: black !important;
 }
 header.menu2 .headerContaner .barIcon .line {
   stroke: black;
 }
+
 .menuContainer {
   position: fixed;
   top: 0;
   width: 100vw;
+  background-color: black;
   height: 100vh;
   display: flex;
   opacity: 0;
@@ -3333,6 +4210,9 @@ header.menu2 .headerContaner .barIcon .line {
 .menuContainer .leftMenu ul {
   padding-left: 69px;
 }
+.menuContainer .leftMenu ul li {
+  overflow: hidden;
+}
 .menuContainer .leftMenu ul li a {
   transform: translateY(20vh);
   display: block;
@@ -3342,17 +4222,11 @@ header.menu2 .headerContaner .barIcon .line {
   font-weight: 400;
   line-height: 133.25px;
   text-align: center;
-  color: #fff;
+  color: white;
   display: flex;
   align-items: center;
   -moz-column-gap: 107px;
-  column-gap: 107px;
-}
-.menuContainer .rightMenu ul li a,
-.productCat h1 {
-  text-align: right;
-  font-family: "Yekan Bakh FaNum";
-  color: #fff;
+       column-gap: 107px;
 }
 .menuContainer .leftMenu ul li a .arrowContainer {
   width: 109.2px;
@@ -3369,20 +4243,19 @@ header.menu2 .headerContaner .barIcon .line {
 .menuContainer .leftMenu ul li a .maskArrow {
   width: 42px;
   display: block;
-  background-color: #fff;
+  background-color: white;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-mask: url('data:image/svg+xml;utf8,<svg width="45" height="43" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_83_678)"><path d="M20.4967 0.5L29.6911 0.500001L44.9 21.6136L29.0122 42.5L20.4967 42.5L36.1582 21.6136L20.4967 0.5Z" fill="%23C59B47"/><path d="M36.1582 21.6136L0.500004 21.6136" stroke="%23C59B47" stroke-width="2.4" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_83_678"><rect width="42" height="44.4" fill="white" transform="translate(0.500004 42.5) rotate(-90)"/></clipPath></defs></svg>')
-    center/contain no-repeat;
-  mask: url('data:image/svg+xml;utf8,<svg width="45" height="43" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_83_678)"><path d="M20.4967 0.5L29.6911 0.500001L44.9 21.6136L29.0122 42.5L20.4967 42.5L36.1582 21.6136L20.4967 0.5Z" fill="%23C59B47"/><path d="M36.1582 21.6136L0.500004 21.6136" stroke="%23C59B47" stroke-width="2.4" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_83_678"><rect width="42" height="44.4" fill="white" transform="translate(0.500004 42.5) rotate(-90)"/></clipPath></defs></svg>')
-    center/contain no-repeat;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg width="45" height="43" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_83_678)"><path d="M20.4967 0.5L29.6911 0.500001L44.9 21.6136L29.0122 42.5L20.4967 42.5L36.1582 21.6136L20.4967 0.5Z" fill="%23C59B47"/><path d="M36.1582 21.6136L0.500004 21.6136" stroke="%23C59B47" stroke-width="2.4" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_83_678"><rect width="42" height="44.4" fill="white" transform="translate(0.500004 42.5) rotate(-90)"/></clipPath></defs></svg>') center/contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg width="45" height="43" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_83_678)"><path d="M20.4967 0.5L29.6911 0.500001L44.9 21.6136L29.0122 42.5L20.4967 42.5L36.1582 21.6136L20.4967 0.5Z" fill="%23C59B47"/><path d="M36.1582 21.6136L0.500004 21.6136" stroke="%23C59B47" stroke-width="2.4" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_83_678"><rect width="42" height="44.4" fill="white" transform="translate(0.500004 42.5) rotate(-90)"/></clipPath></defs></svg>') center/contain no-repeat;
   -webkit-mask-size: 42px 44px;
   mask-size: 42px 44px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
+  transition: -webkit-mask-image 2s ease-in-out;
   transition: mask-image 2s ease-in-out;
   transition: mask-image 2s ease-in-out, -webkit-mask-image 2s ease-in-out;
 }
@@ -3392,6 +4265,9 @@ header.menu2 .headerContaner .barIcon .line {
   background-color: #c59b47;
   display: block;
   transform: translateX(-100%);
+}
+.menuContainer .leftMenu ul li:hover a {
+  color: #c59b47;
 }
 .menuContainer .leftMenu ul li:hover .arrowContainer {
   transform: translateX(0);
@@ -3415,11 +4291,15 @@ header.menu2 .headerContaner .barIcon .line {
 }
 .menuContainer .sctivemidLine {
   transform: scale(1, 1);
-  transition: 1.2s ease-in-out 0.5s;
+  transition: 1.2s ease-in-out;
   transform-origin: bottom;
+  transition-delay: 0.5s;
 }
 .menuContainer .rightMenu {
   width: 50%;
+  position: relative;
+}
+.menuContainer .rightMenu .images {
   position: relative;
 }
 .menuContainer .rightMenu .images img {
@@ -3442,14 +4322,22 @@ header.menu2 .headerContaner .barIcon .line {
 .menuContainer .rightMenu ul li a {
   transform: translateY(10vh);
   display: block;
+  font-family: "Yekan Bakh FaNum";
   font-size: 36px;
   font-weight: 400;
   line-height: 73.98px;
+  text-align: right;
+  color: white;
   text-decoration: none;
 }
 .menuContainer .rightMenu ul .blurLi a {
   color: transparent;
-  text-shadow: 0 0 8px #fff;
+  text-shadow: 0 0 8px #ffffff;
+}
+@media only screen and (max-height: 661px) {
+  .menuContainer .rightMenu ul a {
+    line-height: 58.98px !important;
+  }
 }
 .menuContainer .overMenu {
   position: absolute;
@@ -3463,6 +4351,12 @@ header.menu2 .headerContaner .barIcon .line {
   justify-content: right;
   z-index: -1;
   opacity: 0;
+}
+.menuContainer .overMenu .swiper-slide-active {
+  z-index: 3;
+}
+.menuContainer .overMenu .cta {
+  padding: 12% 0;
 }
 .menuContainer .overMenu .cta__slider-wrapper {
   position: relative;
@@ -3483,15 +4377,7 @@ header.menu2 .headerContaner .barIcon .line {
 .menuContainer .overMenu .cta__slider {
   min-height: 523px;
 }
-.menuContainer .overMenu .cta__slider .swiper-slide,
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide
-  .slideContainer
-  .catListlayer
-  ul
-  li {
+.menuContainer .overMenu .cta__slider .swiper-slide {
   overflow: hidden;
 }
 .menuContainer .overMenu .cta__slider-arrows {
@@ -3523,7 +4409,7 @@ header.menu2 .headerContaner .barIcon .line {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .menuContainer .overMenu .cta__slider-counter {
   width: 100%;
@@ -3532,34 +4418,41 @@ header.menu2 .headerContaner .barIcon .line {
   left: 0;
   z-index: 3;
   padding: 20px 40px;
-  color: #fff;
+  color: #ffffff;
+}
+.menuContainer .overMenu .cta__cta {
+  padding-top: 12%;
+  max-width: 480px;
 }
 .menuContainer .overMenuActive {
   z-index: 100;
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
+
 .activeMenuContainer {
   transform: translateY(0);
   transition: 1s ease-in-out;
   opacity: 1;
   z-index: 10555500;
 }
+
 .activeMenuContainerTop {
   opacity: 0 !important;
   transform: translateY(-105vh) !important;
   transition: 1s ease-in-out !important;
 }
+
 .cursor-follower {
   position: fixed;
   background-color: transparent;
   width: 20px;
   height: 20px;
-  transition: transform 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33),
-    opacity 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33);
+  z-index: 1;
+  transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   pointer-events: none;
   z-index: 10000;
   transform: translate(5px, 5px);
@@ -3567,6 +4460,7 @@ header.menu2 .headerContaner .barIcon .line {
   align-items: center;
   justify-self: center;
 }
+
 .innerCursor {
   border: 1px solid #c59b47;
   width: 100%;
@@ -3574,25 +4468,33 @@ header.menu2 .headerContaner .barIcon .line {
   border-radius: 100%;
   transition: 0.5s;
 }
+
 .prevCursor {
+  padding: 20px;
   transform: scale(0);
+  transition-delay: 1s;
+  transition-property: height width;
   transition: 0.5s ease-in-out;
   position: absolute;
+  right: -145%;
 }
+
 .nextCursor {
+  padding: 20px;
   transform: scale(0);
   rotate: 180deg;
+  transition-delay: 1s;
+  transition-property: height width;
   transition: 0.5s ease-in-out;
   position: absolute;
+  right: -145%;
 }
-.cursor-follower.activeActive .innerCursor,
-.cursor-follower.activeNext .innerCursor,
+
 .cursor-follower.activePre .innerCursor {
   scale: 4;
   transition: 0.5s ease-in-out;
   transform-origin: center;
 }
-.cursor-follower.activeNext .nextCursor,
 .cursor-follower.activePre .prevCursor {
   transform: scale(1);
   transition: 0.5s ease-in-out;
@@ -3602,8 +4504,37 @@ header.menu2 .headerContaner .barIcon .line {
   width: -moz-fit-content;
   width: fit-content;
 }
+
+.cursor-follower.activeNext .innerCursor {
+  scale: 4;
+  transition: 0.5s ease-in-out;
+  transform-origin: center;
+}
+.cursor-follower.activeNext .nextCursor {
+  transform: scale(1);
+  transition: 0.5s ease-in-out;
+  transform-origin: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.cursor-follower.activeActive .innerCursor {
+  scale: 4;
+  transition: 0.5s ease-in-out;
+  transform-origin: center;
+}
+
 .cursor-follower.hovered {
   opacity: 0.08;
+}
+
+.productCat {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 .productCat .backSlider .backgroundSlider .swiper-slide .imgS {
   width: 100%;
@@ -3615,7 +4546,7 @@ header.menu2 .headerContaner .barIcon .line {
   scale: 1.2;
   transition: 1s ease-in-out;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 .productCat .backSlider .backgroundSlider .swiper-slide-active img {
   scale: 1 !important;
@@ -3623,10 +4554,13 @@ header.menu2 .headerContaner .barIcon .line {
 }
 .productCat h1 {
   position: absolute;
+  font-family: "Yekan Bakh FaNum";
   font-size: 40px;
   font-weight: 700;
   line-height: 62px;
   letter-spacing: -0.04em;
+  text-align: right;
+  color: white;
   top: 174px;
   right: 82px;
 }
@@ -3641,6 +4575,9 @@ header.menu2 .headerContaner .barIcon .line {
 }
 .productCat .overlayCat .overlaySlider {
   position: relative;
+  height: 100%;
+}
+.productCat .overlayCat .overlaySliderContainer {
   height: 100%;
 }
 .productCat .overlayCat .overlaySliderContainer .catSlider {
@@ -3660,149 +4597,92 @@ header.menu2 .headerContaner .barIcon .line {
   flex-direction: column;
   justify-content: center;
   -moz-column-gap: 40px;
-  column-gap: 40px;
+       column-gap: 40px;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide
-  .slideContainer
-  .titleCat
-  h2 {
+.productCat .overlayCat .overlaySliderContainer .swiper-slide .slideContainer .titleCat {
+  display: flex;
+  align-items: center;
+}
+.productCat .overlayCat .overlaySliderContainer .swiper-slide .slideContainer .titleCat h2 {
   font-family: "Test Domaine Sans Display";
   font-size: 120px;
   font-weight: 300;
   line-height: 166.56px;
   text-align: center;
-  color: #fff;
+  color: white;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide
-  .slideContainer
-  .catListlayer {
+.productCat .overlayCat .overlaySliderContainer .swiper-slide .slideContainer .catListlayer {
   width: 1027px;
   transform: scale(0);
   transform-origin: top;
   transition-delay: 2s !important;
   transition-property: transform !important;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide
-  .slideContainer
-  .catListlayer
-  ul {
+.productCat .overlayCat .overlaySliderContainer .swiper-slide .slideContainer .catListlayer ul {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  direction: rtl;
   gap: 33px;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide
-  .slideContainer
-  .catListlayer
-  ul
-  li
-  button {
+.productCat .overlayCat .overlaySliderContainer .swiper-slide .slideContainer .catListlayer ul li {
+  overflow: hidden;
+}
+.productCat .overlayCat .overlaySliderContainer .swiper-slide .slideContainer .catListlayer ul li button {
   transform: translateY(-110%);
   transition: 0.3s;
   display: flex;
   align-items: center;
+  background-color: transparent;
   border: none;
-  outline: 0;
+  outline: none;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 29px;
-  padding: 7px 23px;
+  padding: 7px 23px 7px 23px;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide
-  .slideContainer
-  .catListlayer
-  ul
-  li
-  button
-  a {
+.productCat .overlayCat .overlaySliderContainer .swiper-slide .slideContainer .catListlayer ul li button a {
   display: flex;
   direction: rtl;
   align-items: center;
   -moz-column-gap: 20px;
-  column-gap: 20px;
+       column-gap: 20px;
   font-family: "Yekan Bakh FaNum";
   font-size: 30px;
   transition: 0.3s;
   font-weight: 400;
   line-height: 46.5px;
   text-align: justify;
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide
-  .slideContainer
-  .catListlayer
-  ul
-  li
-  button
-  a
-  .arrowContainer {
+.productCat .overlayCat .overlaySliderContainer .swiper-slide .slideContainer .catListlayer ul li button a .arrowContainer {
   width: 17px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 17px;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide
-  .slideContainer
-  .catListlayer
-  ul
-  li
-  button
-  a
-  .maskArrow {
+.productCat .overlayCat .overlaySliderContainer .swiper-slide .slideContainer .catListlayer ul li button a .maskArrow {
   width: 17px;
   display: block;
-  background-color: #fff;
+  background-color: white;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-mask: url('data:image/svg+xml;utf8,<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_83_724)"><path d="M9.34351 17L5.82312 17L-0.000110042 8.454L6.08304 -1.42519e-07L9.34351 0L3.34699 8.454L9.34351 17Z" fill="%23C59B47"/><path d="M3.3471 8.45401L17 8.45401" stroke="%23C59B47" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_83_724"><rect width="17" height="17" fill="white" transform="translate(17) rotate(90)"/></clipPath></defs></svg>')
-    center/contain no-repeat;
-  mask: url('data:image/svg+xml;utf8,<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_83_724)"><path d="M9.34351 17L5.82312 17L-0.000110042 8.454L6.08304 -1.42519e-07L9.34351 0L3.34699 8.454L9.34351 17Z" fill="%23C59B47"/><path d="M3.3471 8.45401L17 8.45401" stroke="%23C59B47" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_83_724"><rect width="17" height="17" fill="white" transform="translate(17) rotate(90)"/></clipPath></defs></svg>')
-    center/contain no-repeat;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_83_724)"><path d="M9.34351 17L5.82312 17L-0.000110042 8.454L6.08304 -1.42519e-07L9.34351 0L3.34699 8.454L9.34351 17Z" fill="%23C59B47"/><path d="M3.3471 8.45401L17 8.45401" stroke="%23C59B47" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_83_724"><rect width="17" height="17" fill="white" transform="translate(17) rotate(90)"/></clipPath></defs></svg>') center/contain no-repeat;
+  mask: url('data:image/svg+xml;utf8,<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_83_724)"><path d="M9.34351 17L5.82312 17L-0.000110042 8.454L6.08304 -1.42519e-07L9.34351 0L3.34699 8.454L9.34351 17Z" fill="%23C59B47"/><path d="M3.3471 8.45401L17 8.45401" stroke="%23C59B47" stroke-miterlimit="10"/></g><defs><clipPath id="clip0_83_724"><rect width="17" height="17" fill="white" transform="translate(17) rotate(90)"/></clipPath></defs></svg>') center/contain no-repeat;
   -webkit-mask-size: 17px 17px;
   mask-size: 17px 17px;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
+  transition: -webkit-mask-image 2s ease-in-out;
   transition: mask-image 2s ease-in-out;
   transition: mask-image 2s ease-in-out, -webkit-mask-image 2s ease-in-out;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide
-  .slideContainer
-  .catListlayer
-  ul
-  li
-  button
-  a
-  .maskArrow
-  span {
+.productCat .overlayCat .overlaySliderContainer .swiper-slide .slideContainer .catListlayer ul li button a .maskArrow span {
   height: 20px;
   width: 20px;
   background-color: #c59b47;
@@ -3810,51 +4690,634 @@ header.menu2 .headerContaner .barIcon .line {
   transform: translateX(100%);
   transition: 0.5s ease-in-out;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide
-  .slideContainer
-  .catListlayer
-  ul
-  li
-  button:hover
-  a {
+.productCat .overlayCat .overlaySliderContainer .swiper-slide .slideContainer .catListlayer ul li button:hover a {
   color: #c59b47;
   transition: 0.3s ease-in-out;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide
-  .slideContainer
-  .catListlayer
-  ul
-  li
-  button:hover
-  .maskArrow
-  span {
+.productCat .overlayCat .overlaySliderContainer .swiper-slide .slideContainer .catListlayer ul li button:hover .maskArrow span {
   transform: translateX(0);
   transition: 0.5s ease-in-out;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide-active
-  .catListlayer {
+.productCat .overlayCat .overlaySliderContainer .swiper-slide-active {
+  z-index: 10;
+}
+.productCat .overlayCat .overlaySliderContainer .swiper-slide-active .catListlayer {
   transform: scale(1) !important;
   transform-origin: top;
   transition-delay: 2s !important;
   transition-property: transform !important;
 }
-.productCat
-  .overlayCat
-  .overlaySliderContainer
-  .swiper-slide-active
-  .catListlayer
-  button {
+.productCat .overlayCat .overlaySliderContainer .swiper-slide-active .catListlayer button {
   transform: translateY(0) !important;
   transition: 1s ease-in-out;
   transition-delay: 2s !important;
   transition-property: transform !important;
 }
+
+.errorPage {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  direction: rtl;
+  text-align: center;
+}
+.errorPage h1 {
+  font-family: "Byekan";
+  font-weight: 700;
+  font-size: 200px;
+  color: white;
+}
+.errorPage .para {
+  margin: 10px 0;
+}
+.errorPage .para p {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 18px;
+  color: white;
+}
+.errorPage .backmainPage {
+  text-decoration: none;
+  color: #c59b47;
+  border: 1px solid #c59b47;
+  border-radius: 10px;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 18px;
+  display: block;
+  transition: 0.5s ease;
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+.errorPage .backmainPage:hover {
+  background-color: #c59b47;
+  color: black;
+}
+
+.landing {
+  background-color: black;
+}
+.landing a {
+  text-decoration: none;
+  color: #c59b47;
+}
+.landing p {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28.37px;
+  text-align: justify;
+  color: white;
+  direction: rtl;
+}
+.landing h1 {
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 36.35px;
+  color: #c59b47;
+  direction: rtl;
+}
+.landing h2 {
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 36.35px;
+  color: #c59b47;
+  direction: rtl;
+}
+.landing h3 {
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 400;
+  font-size: 1.3em;
+  line-height: 36.35px;
+  color: #c59b47;
+  direction: rtl;
+}
+.landing h4 {
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 36.35px;
+  color: #c59b47;
+  direction: rtl;
+}
+.landing h5 {
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 300;
+  font-size: 0.8em;
+  line-height: 36.35px;
+  color: #c59b47;
+  direction: rtl;
+}
+.landing h6 {
+  font-family: "Yekan Bakh FaNum";
+  font-weight: 300;
+  font-size: 0.7em;
+  direction: rtl;
+  line-height: 36.35px;
+  color: #c59b47;
+}
+.landing .tableOc {
+  padding: 0 69px 0 85px;
+  margin: 50px 0;
+}
+.landing #toc {
+  direction: rtl;
+  color: #c59b47;
+  font-family: "IRANSansWeb(FaNum)";
+  /* Adding counters on the TOC LIs */
+  counter-reset: nav0;
+}
+.landing #toc a {
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #c59b47;
+  display: inline-block;
+}
+.landing #toc h2 {
+  counter-reset: countH3;
+  counter-increment: countH2;
+}
+.landing #toc h3 {
+  counter-reset: countH4;
+  counter-increment: countH3;
+}
+.landing #toc h4 {
+  counter-reset: countH5;
+  counter-increment: countH4;
+}
+.landing #toc h5 {
+  counter-reset: countH6;
+  counter-increment: countH5;
+}
+.landing #toc h6 {
+  counter-increment: countH6;
+}
+.landing #toc h2::before {
+  content: counter(countH2) " - ";
+}
+.landing #toc h3::before {
+  content: counter(countH2) "." counter(countH3) " - ";
+}
+.landing #toc h4::before {
+  content: counter(countH2) "." counter(countH3) "." counter(countH4) " - ";
+}
+.landing #toc h5::before {
+  content: counter(countH2) "." counter(countH3) "." counter(countH4) "." counter(countH5) " - ";
+}
+.landing #toc h6::before {
+  content: counter(countH2) "." counter(countH3) "." counter(countH4) "." counter(countH5) "." counter(countH6) " - ";
+}
+.landing #toc ul {
+  list-style-type: none;
+}
+.landing #toc > li {
+  counter-increment: nav0;
+  counter-reset: nav1;
+}
+.landing #toc > li li {
+  counter-increment: nav1;
+  counter-reset: nav2;
+}
+.landing #toc > li li li {
+  counter-increment: nav2;
+  counter-reset: nav3;
+}
+.landing #toc > li li li li {
+  counter-increment: nav3;
+  counter-reset: nav4;
+}
+.landing #toc > li li li li li {
+  counter-increment: nav4;
+  counter-reset: nav5;
+}
+.landing #toc > li li li li li li {
+  counter-increment: nav5;
+  counter-reset: nav6;
+}
+.landing #toc > li::before {
+  content: counter(nav0) " - ";
+}
+.landing #toc > li li::before {
+  content: counter(nav0) "." counter(nav1) " - ";
+}
+.landing #toc > li li li::before {
+  content: counter(nav0) "." counter(nav1) "." counter(nav2) " - ";
+}
+.landing #toc > li li li li::before {
+  content: counter(nav0) "." counter(nav1) "." counter(nav2) "." counter(nav3) " - ";
+}
+.landing #toc > li li li li li::before {
+  content: counter(nav0) "." counter(nav1) "." counter(nav2) "." counter(nav3) "." counter(nav4) " - ";
+}
+.landing #toc > li li li li li li::before {
+  content: counter(nav0) "." counter(nav1) "." counter(nav2) "." counter(nav3) "." counter(nav4) "." counter(nav5) " - ";
+}
+.landing #toc > li li li li li li li::before {
+  content: counter(nav0) "." counter(nav1) "." counter(nav2) "." counter(nav3) "." counter(nav4) "." counter(nav5) "." counter(nav6) " - ";
+}
+.landing .section1 {
+  padding: 161px 61px 0 85px;
+}
+.landing .section1 .imgBack {
+  position: relative;
+  width: 100%;
+  height: 570px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.landing .section1 .imgBack::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.landing .section1 .overlayText {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.landing .section1 .overlayText p {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 40px;
+  color: white;
+  line-height: 56.74px;
+  text-align: center;
+  direction: rtl;
+}
+.landing .section2 {
+  margin-top: 51px;
+  padding: 0 69px 0 85px;
+}
+.landing .section2 h1 {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 56.74px;
+  text-align: right;
+  color: #c59b47;
+  margin-bottom: 27px;
+}
+.landing .section2 p {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28.37px;
+  text-align: justify;
+  color: white;
+  direction: rtl;
+}
+.landing .section2 h2 {
+  margin: 20px 0;
+}
+.landing .productListSection h1 {
+  margin-bottom: 30px;
+}
+.landing .productListSection .detailPro {
+  padding: 0 65px 0 85px;
+  margin-bottom: 80px;
+}
+.landing .productListSection .titleCat p {
+  font-family: "Test Domaine Sans Display";
+  font-size: 120px;
+  font-weight: 300;
+  line-height: 166.56px;
+  text-align: center;
+  color: white;
+}
+.landing .productListSection .para p {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28.37px;
+  text-align: justify;
+  color: white;
+  direction: rtl;
+}
+.landing .section3 {
+  padding: 0 65px 0 85px;
+}
+.landing .section3 h2 {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39.72px;
+  text-align: right;
+  color: #c59b47;
+  margin-top: 40px;
+  direction: rtl;
+}
+.landing .section3 .in3 {
+  display: flex;
+  justify-content: right;
+  margin-top: 15px;
+  -moz-column-gap: 87px;
+       column-gap: 87px;
+}
+.landing .section3 .leftItems ul {
+  direction: rtl;
+}
+.landing .section3 .leftItems ul li button {
+  background-color: transparent;
+  font-family: "Yekan Bakh FaNum";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 47.54px;
+  text-align: right;
+  color: white;
+  border: none;
+  direction: rtl;
+  cursor: pointer;
+}
+.landing .section3 .leftItems ul li .activeBtn {
+  font-weight: 700;
+  color: #c59b47;
+}
+.landing .section3 .rightSliders .sliderSection {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.landing .section3 .rightSliders .sliderSection .verticalSlider {
+  height: 900px;
+  overflow: hidden;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.landing .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.landing .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide .topSection {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.landing .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide .imgS {
+  width: -moz-fit-content;
+  width: fit-content;
+  filter: brightness(0.8);
+}
+.landing .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide .descriptionSection {
+  width: 756px;
+}
+.landing .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide .descriptionSection .title p {
+  margin: 37px 0 28px 0;
+  font-family: "Byekan";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 55.46px;
+  text-align: right;
+  direction: rtl;
+  color: #c59b47;
+}
+.landing .section3 .rightSliders .sliderSection .verticalSlider .verticalSlide .descriptionSection .para p {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+  line-height: 40.4px;
+  text-align: justify;
+  color: white;
+  direction: rtl;
+}
+.landing .section3 .rightSliders .swiper-pagination {
+  display: flex;
+  right: 44px;
+  position: absolute;
+  top: 50%;
+  transform: none;
+  -moz-column-gap: 17px;
+       column-gap: 17px;
+  align-items: center;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.landing .section3 .rightSliders .swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  width: 5px;
+  height: 5px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+.landing .section3 .rightSliders .swiper-pagination .swiper-pagination-bullet-active {
+  width: 11px;
+  height: 11px;
+  background-color: #c59b47;
+  transition: 0.3s ease-in-out;
+}
+.landing .section3 .rightSliders .button-next,
+.landing .section3 .rightSliders .button-prev {
+  cursor: pointer;
+}
+.landing .section3 .rightSliders .btns {
+  position: absolute;
+  left: 44px;
+  top: 47%;
+  z-index: 10000;
+  -moz-column-gap: 11.5px;
+       column-gap: 11.5px;
+  display: flex;
+}
+.landing .section4 {
+  padding: 110px 0;
+  text-align: center;
+}
+.landing .section4 p {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39.72px;
+  text-align: center;
+  direction: rtl;
+  color: white;
+}
+.landing .section4 a {
+  display: flex;
+  align-items: center;
+  direction: rtl;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 65px;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34.04px;
+  text-align: justify;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #c59b47;
+  padding: 7px 23px 7px 23px;
+  border-radius: 29px;
+}
+.landing .loaded {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  display: none;
+}
+.landing .blogListSection h1 {
+  padding: 0 65px 0 85px;
+}
+.landing .blogListSection .loadMore {
+  display: flex;
+  align-items: center;
+  direction: rtl;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 65px;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34.04px;
+  text-align: justify;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #c59b47;
+  padding: 7px 23px 7px 23px;
+  border-radius: 29px;
+}
+.landing .blogListSection .loadMore svg {
+  transform: rotate(-90deg);
+}
+.landing .blogListSection .blog .blogItem:nth-child(3) ~ .blogItem {
+  display: none;
+}
+.landing .blogListSection .blog .blogItem a p {
+  font-family: "Yekan Bakh FaNum";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 31px;
+  margin-top: 25px;
+  text-align: right;
+  color: white;
+}
+.landing .faq {
+  padding: 0 65px 0 85px;
+  margin-top: 100px;
+}
+.landing .faq h1 {
+  margin-bottom: 50px;
+}
+.landing .faq .container {
+  color: black;
+  border-radius: 20px;
+  box-shadow: 0 0px 8px 0 #c59b47;
+  margin: 20px 0;
+}
+.landing .faq .question {
+  padding: 20px 20px 20px 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 39.72px;
+  text-align: center;
+  direction: rtl;
+  color: white;
+}
+.landing .faq .question::after {
+  content: "+";
+  font-size: 2.2rem;
+  position: absolute;
+  left: 20px;
+  transition: 0.2s;
+}
+.landing .faq .question.active::after {
+  transform: rotate(45deg);
+}
+.landing .faq .answercont {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.landing .faq .answer {
+  padding: 0 20px 20px;
+  line-height: 1.5rem;
+}
+.landing .commentSection {
+  direction: rtl;
+  padding: 0 65px 0 85px;
+  margin-top: 100px;
+}
+.landing .commentSection .header_small {
+  margin-bottom: 30px;
+}
+.landing .commentSection .header_small p {
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39.72px;
+  direction: rtl;
+  color: #c59b47;
+}
+.landing .commentSection .commentP {
+  width: 70%;
+}
+.landing .commentSection .commentP .userInfo {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.landing .commentSection .commentP .userInfo input {
+  width: 48%;
+}
+.landing .commentSection .commentP textarea {
+  width: calc(100% - 30px);
+  margin-top: 20px;
+}
+.landing .commentSection .commentP input,
+.landing .commentSection .commentP textarea {
+  background-color: transparent;
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 1px solid white;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+}
+.landing .commentSection .commentP button {
+  display: flex;
+  align-items: center;
+  direction: rtl;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 65px;
+  font-family: "Byekan";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 34.04px;
+  text-align: justify;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #c59b47;
+  padding: 3px 23px;
+  border-radius: 29px;
+  background-color: transparent;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

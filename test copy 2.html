@@ -1,0 +1,956 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member name="blogshow1" type="view"/>
+  </basis>
+    <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="[##cms.query.id##]">
+    <member  type="list"  name="gallery" format="4"></member>
+    </basis>
+    <basis core="dbsource" source="media" name="db" lid="1" sourcemid="1" usedforid="[##cms.query.id##]">
+        <member type="list" name="gallery" format="4" ></member>
+    </basis>
+    
+  <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1"  usedforid="[##cms.query.id##]">
+    <member name="blogshow" type="view" postsql="select * from [db.blogshow] where TypeID=250"/>
+  </basis>
+  <basis core="dbsource" source="basiscore" mid="1" name="db" lid="1" usedforid="[##cms.query.id##]">
+    <member name="list1" type="list" request="groupid"></member>
+  </basis>
+  
+  <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member name="related-blog" size="443x310" type="list" blgid="222" propertyid="7249,7244"
+         postsql=" select *,  SUBSTR(prp_7244, 1,200-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 200)))) || '...' as substr from [db.related-blog]"></member>
+    </basis>
+  <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member name="related-pro" size="443x310" type="list" blgid="221" propertyid="7249,7244"
+         postsql=" select *,  SUBSTR(prp_7244, 1,200-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 200)))) || '...' as substr from [db.related-pro]"></member>
+    </basis>
+    <basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+        <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
+    </basis>
+
+    <basis core="dbsource" source="userbehavior" name="list" usedforid="[##cms.query.id##]">
+        <member name="comment" type="list" request="listcomment" />
+    </basis>
+    <!DOCTYPE html>
+    <html lang="fa">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <basis core="print" datamembername="db.seolist">
+            <face>
+                <title>[##cms.seo.title|db.seolist.title##]</title>
+                <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
+            </face>
+        </basis>
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/animate.min.css" rel="stylesheet" />  
+ 
+<style>
+    .articlePara p{
+    font-family: 'pfont'!important;
+    font-size: 16px!important;
+    }
+    .mb--15px{
+        margin-bottom: 15px!important;
+    }
+    .commentP{
+        width: 60%;
+        margin-bottom: 40px;
+    }
+    .commentP input   {
+        width: 48%;
+        background: transparent;
+        border: 1px solid var(--medium_gray);
+        padding: 10px;
+        border-radius: 5px;
+        margin-left: 10px;
+        color: #ffffff9e;
+    }
+    .commentP textarea{
+        width: calc(100% - 10px);
+        font-family: 'pfont';
+        color: #ffffff9e;
+        background: transparent;
+        border: 1px solid var(--medium_gray);
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .userInfo{
+        margin-bottom: 10px;
+    }
+    .submitComment{
+        cursor: pointer;
+    padding: 5px 10px;
+    width: calc(100% - 10px);
+    background: transparent;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    color: var(--primary);
+    margin-top: 20px;
+    transition: 0.5s ease;
+    }
+    .submitComment:hover{
+        color: black;
+        background-color:  var(--primary);
+    }
+    .messageSend{
+        display: none;
+    }
+
+    @font-face {
+  font-family: "IRANYekanR";
+  src: url("../_fonts/IRANYekanRegular.eot");
+  src: url("../_fonts/IRANYekanRegular.eot?#iefix") format("embedded-opentype"),
+  url("../_fonts/IRANYekanRegular.woff2") format("woff2"),
+  url("../_fonts/IRANYekanRegular.woff") format("woff"), 
+  url("../_fonts/IRANYekanRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+.headTitle h1{
+            font-family: "IRANYekanR";
+            font-size: 32px;
+        }
+         
+        .commentsList .comment .detComment{
+            padding: 10px 0;
+        }
+        .commentsList .comment .commentTitleUser{
+            display: flex;
+            direction: rtl;
+            align-items: baseline;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.493);
+            padding: 10px 0;
+        }
+        
+        .commentsList .comments p{
+            
+            font-family: "IRANYekanR";
+            font-size: 16px;
+            color: white;
+        }
+        .commentsList h2{
+            
+            font-family: "IRANYekanR";
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: white;
+        }
+         .commentsList {
+            width: 60%;
+         }
+</style>
+    </head>
+    <body class="blogShowPage">
+    <basis core="call" file="header.inc"/>  
+  
+    <main>
+        <section class="section_blogSh1">
+            <basis core="print" datamembername="db.gallery">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="ord in (1)">
+                    <img src="[##cms.cms.cdn##]/@largeIMG" alt="نگین تجارت بام تک" title="نگین تجارت بام تک">
+                </face>
+            </basis>
+          
+            <basis core="print" datamembername="db.blogshow1">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="TypeID in (150)">
+                  
+                    <div class="headTitle header_big transition wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay:.1s; animation-name: fadeInUp;"> 
+                  
+                  <h1>
+
+                      @Answer
+                    </h1>
+                    </div>
+                 
+                </face>
+            </basis>
+            <basis core="print" datamembername="db.blogshow1">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="TypeID in (128)">
+                    <div class="header_small">
+                        @Answer
+                    </div>
+                </face>
+            </basis>
+           
+           
+        </section>
+        <div class="clr"></div>
+    
+        <section class="section_blogSh2">
+            <basis core="print" datamembername="db.blogshow1">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="TypeID in (129)">
+                    <div class="body_big articlePara transition wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay:.1s; animation-name: fadeInUp;"> 
+                     @Answer
+                    </div>
+                </face>
+            </basis>
+         
+        </section>
+    
+        <div class="clr"></div>
+        <section class="section_blogSh3">
+            <basis core="print" datamembername="db.gallery">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="ord in (2)">
+                    <img src="[##cms.cms.cdn##]/@largeIMG" alt="نگین تجارت بام تک" title="نگین تجارت بام تک" class="wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: .1s; animation-name: fadeInUp;">
+                </face>
+            </basis>
+            
+        </section>
+    
+    
+        <section class="section_blogSh2">
+            <basis core="print" datamembername="db.blogshow">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="RowNumber in (1)">
+                    <div class="header_small transition wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay:.1s; animation-name: fadeInUp;"> 
+                        @text
+                    </div>
+                    <div class="body_big articlePara transition wow fadeInUp animated" data-wow-delay=".2s" style="visibility: visible; animation-delay:.2s; animation-name: fadeInUp;">
+                     @largetext
+                    </div>
+                </face>
+            </basis>
+       
+         </section> 
+         <section class="section_blogSh3">
+            <basis core="print" datamembername="db.gallery">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="ord in (3)">
+                    <img src="[##cms.cms.cdn##]/@largeIMG" alt="نگین تجارت بام تک" title="نگین تجارت بام تک" class="wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: .1s; animation-name: fadeInUp;">
+                </face>
+            </basis>
+        
+         </section>
+    
+    
+    
+    
+         <section class="section_blogSh2">
+            <basis core="print" datamembername="db.blogshow">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="RowNumber in (2)">
+                    <div class="header_small transition wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay:.1s; animation-name: fadeInUp;">  
+                        @text
+                    </div>
+                    <div class="body_big articlePara transition wow fadeInUp animated" data-wow-delay=".2s" style="visibility: visible; animation-delay:.2s; animation-name: fadeInUp;"> 
+                     @largetext
+                    </div>
+                </face>
+            </basis>
+         </section>
+     
+    
+         <section class="section_blogSh3">
+            <basis core="print" datamembername="db.gallery">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="ord in (4)">
+                    <img src="[##cms.cms.cdn##]/@largeIMG" alt="نگین تجارت بام تک" title="نگین تجارت بام تک" class="wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: .1s; animation-name: fadeInUp;">
+                </face>
+            </basis>
+        
+         </section>
+    
+    
+    
+    
+         <section class="section_blogSh2">
+            <basis core="print" datamembername="db.blogshow">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="RowNumber in (3)">
+                    <div class="header_small transition wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay:.1s; animation-name: fadeInUp;"> 
+                        @text
+                    </div>
+                    <div class="body_big articlePara transition wow fadeInUp animated" data-wow-delay=".2s" style="visibility: visible; animation-delay:.2s; animation-name: fadeInUp;"> 
+                     @largetext
+                    </div>
+                </face>
+            </basis>
+         </section>
+     
+    
+         <section class="section_blogSh3">
+            <basis core="print" datamembername="db.gallery">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="ord in (5)">
+                    <img src="[##cms.cms.cdn##]/@largeIMG" alt="نگین تجارت بام تک" title="نگین تجارت بام تک" class="wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: .1s; animation-name: fadeInUp;">
+                </face>
+            </basis>
+         </section>
+    
+    
+    
+         
+    
+         <section class="section_blogSh2">
+            <basis core="print" datamembername="db.blogshow">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="RowNumber in (4)">
+                    <div class="header_small transition wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay:.1s; animation-name: fadeInUp;"> 
+                        @text
+                    </div>
+                    <div class="body_big articlePara transition wow fadeInUp animated" data-wow-delay=".2s" style="visibility: visible; animation-delay:.2s; animation-name: fadeInUp;"> 
+                     @largetext
+                    </div>
+                </face>
+            </basis>
+         </section>
+     
+    
+          <section class="section_blogSh3">
+            <basis core="print" datamembername="db.gallery">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="ord in (6)">
+                    <img src="[##cms.cms.cdn##]/@largeIMG" alt="نگین تجارت بام تک" title="نگین تجارت بام تک" class="wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: .1s; animation-name: fadeInUp;">
+                </face>
+            </basis>
+         </section>
+    
+    
+         <section class="section_blogSh2">
+            <basis core="print" datamembername="db.blogshow">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="RowNumber in (5)">
+                    <p class="header_small transition wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay:.1s; animation-name: fadeInUp;"> 
+                        @text
+                    </p>
+                    <div class="body_big articlePara transition wow fadeInUp animated" data-wow-delay=".2s" style="visibility: visible; animation-delay:.2s; animation-name: fadeInUp;"> 
+                     @largetext
+                    </div>
+                </face>
+            </basis>
+         </section>
+    
+    
+    
+         <section class="section_blogSh2">
+            <basis core="print" datamembername="db.blogshow">
+                <layout>
+                    @child
+                </layout>
+                <else-layout>
+                    
+                </else-layout>
+                <face filter="RowNumber in (6)">
+                    <p class="header_small transition wow fadeInUp animated" data-wow-delay=".1s" style="visibility: visible; animation-delay:.1s; animation-name: fadeInUp;"> 
+                        @text
+                    </p>
+                    <div class="body_big articlePara transition wow fadeInUp animated" data-wow-delay=".2s" style="visibility: visible; animation-delay:.2s; animation-name: fadeInUp;"> 
+                     @largetext
+                    </div>
+                </face>
+            </basis>
+    
+            <div class="callToR button_small">
+                <img src="[##cms.cms.cdn##]/images/share-transmit.png" alt="نگین تجارت بام تک" title="نگین تجارت بام تک">
+                اشتراک گذاری
+  
+  
+                <span class="tooltips">
+                  <ul class="social">
+                  <li><a href="https://api.whatsapp.com/send?text=[##cms.request.host##]/[##db.list1.link##]" data-pjax-state="">
+                    <img src="[##cms.cms.cdn##]/images/icon_whatsapp.svg" alt="نگین تجارت بام تک" title="نگین تجارت بام تک"></a></li>
+  
+  
+                  <li><a href="https://www.linkedin.com/?url=https://[##cms.request.host##]/[##cms.request.rawurl##]" data-pjax-state="">
+                    <img src="[##cms.cms.cdn##]/images/icon_linkedin.svg" alt="نگین تجارت بام تک" title="نگین تجارت بام تک"></a></li>
+                  <li><a href="https://www.instagram.com/?url=https://[##cms.request.host##]/[##cms.request.rawurl##]" data-pjax-state=""> <img src="[##cms.cms.cdn##]/images/icon_instagram.svg" alt="نگین تجارت بام تک" title="نگین تجارت بام تک"></a></li>
+                  <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://[##cms.request.host##]/[##cms.request.rawurl##]" data-pjax-state=""> <img src="[##cms.cms.cdn##]/images/icon_facebook.svg" alt="نگین تجارت بام تک" title="نگین تجارت بام تک"></a></li>
+                  
+            
+                  </ul>
+                  </span>
+  
+            </div>
+    
+         </section>
+         <section class="section_blogSh2">
+            <basis core="dbsource" source="userbehavior" name="db" run="atclient" triggers="db.sendcomment" if="{##db.sendcomment##}"
+            parentid="0" usedforid="[##cms.query.id##]" userid="100005"
+             title="{##db.userNameTitle.value##}" mid="1" comment="{##db.sendcomment.value##}" >
+                <member request="comment" type="scalar" name="comment" preview="true" />
+            </basis>
+            <div class="header_small mb--15px transition wow fadeInUp animated animated">
+                <h5>
+                    ثبت نظر
+                </h5>
+            </div>
+      
+            <form action="" class="commentP">
+                <div class="userInfo">
+
+                    <input class="userNameTitle" type="text" placeholder="نام و نام خانوادگی">
+                    <input type="email" placeholder="لطفا ایمیل خود را وارد کنید">
+                </div>
+                <div class="msg">
+                    <textarea name="message" id="message" placeholder="پیام شما"></textarea>
+                </div>
+                <div class="messageSend">
+                    <p>
+
+                    </p>
+                </div>
+                <button class="submitComment">ارسال نظر</button>
+            </form>
+
+            <basis core="print" datamembername="list.comment">
+                <layout>
+               
+                    <div class="commentsList">
+                       <h2>
+                           تجربه کاربران
+                       </h2>
+                 @child
+               </div>
+               
+            </layout>
+            <else-layout>
+                
+                <div class="commentsList">
+                   <h2>
+                       تجربه کاربران
+                   </h2>
+             
+             <div class="comments">
+                      <p >
+                         هنوز دیدگاهی ثبت نشده است.شما اولین نفر باشید
+
+                      </p>
+                     </div>
+           </div>
+                </else-layout>
+                <face>
+                       <div class="comment">
+                                <div class="commentTitleUser">
+                                    <span>
+                                        @username
+                                    </span>
+                                    <i>
+                                        @createdate
+                                    </i>
+                                </div>
+                                <div class="detComment">
+                                    <p>
+                                        @comment
+                                    </p>
+                                </div>
+                            </div>
+                </face>
+            </basis>
+         </section>
+    
+    
+    
+         <section class="section_about6 header_medium">
+            <img src="[##cms.cms.cdn##]/images/lineR.png" alt="نگین تجارت بام تک" title="نگین تجارت بام تک">
+            <span>
+                مقالات مرتبط
+            </span>
+          
+            <img src="[##cms.cms.cdn##]/images/lineL.png" alt="نگین تجارت بام تک" title="نگین تجارت بام تک">
+          </section>
+    
+      <section class="blogRelated">
+        <div class="swiper blogRelatedSwiper" dir="rtl">
+            <div class="swiper-wrapper">
+                <basis core="print" datamembername="db.related-blog">
+                    <layout>
+                        @child
+                    </layout>
+                    <else-layout>
+                        
+                    </else-layout>
+                    <face>
+                        <div class="swiper-slide">
+                            <div class="blogList">
+                               <div class="over">
+                                <img src="[##cms.cms.cdn##]/@00443X00310prp" alt="@title">
+                               </div>
+                                <div class="row">
+                                    <p class="body_big">
+                                       @title
+                                    </p>
+                                    <span class="body_medium">
+                                     @prp_7249
+                                    </span>
+                        
+                                </div>
+                                           
+                                <p class="body_medium">
+                                 @substr
+                                </p>
+                        
+                               
+                                <a href="@link" class="callToR button_small">
+                                    ادامه‌ی مطلب
+                                </a>
+                            </div>
+                
+                          </div>
+                    </face>
+                </basis>
+             
+             
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+          </div>
+      </section>
+
+         <section class="section_about6 header_medium">
+            <img src="[##cms.cms.cdn##]/images/lineR.png" alt="نگین تجارت بام تک" title="نگین تجارت بام تک">
+            <span>
+                محصولات مرتبط
+            </span>
+          
+            <img src="[##cms.cms.cdn##]/images/lineL.png" alt="نگین تجارت بام تک" title="نگین تجارت بام تک">
+          </section>
+    
+      <section class="blogRelated">
+        <div class="swiper proRelatedSwiper" dir="rtl">
+            <div class="swiper-wrapper">
+                <basis core="print" datamembername="db.related-pro">
+                    <layout>
+                        @child
+                    </layout>
+                    <else-layout>
+                        
+                    </else-layout>
+                    <face>
+                        <div class="swiper-slide">
+                            <div class="blogList">
+                               <div class="over">
+                                <img src="[##cms.cms.cdn##]/@00443X00310prp" alt="@title">
+                               </div>
+                                <div class="row">
+                                    <p class="body_big">
+                                       @title
+                                    </p>
+                                    <span class="body_medium">
+                                     @prp_7249
+                                    </span>
+                        
+                                </div>
+                                           
+                                <p class="body_medium">
+                                 @substr
+                                </p>
+                        
+                               
+                                <a href="@link" class="callToR button_small">
+                                    ادامه‌ی مطلب
+                                </a>
+                            </div>
+                
+                          </div>
+                    </face>
+                </basis>
+             
+             
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+          </div>
+      </section>
+    
+     
+      <basis core="call" file="footer.inc"/>  
+    </main>
+    
+    
+      
+    
+  
+   <script src="[##cms.cms.cdn##]/_js/basiscore-2.32.0.min.js"></script>
+    
+   <script src="[##cms.cms.cdn##]/js/jquery.js"></script>
+
+   <script src="[##cms.cms.cdn##]/js/swiper-bundle.min.js"></script>
+   <script src='[##cms.cms.cdn##]/js/gsap.min.js'></script>
+   <script src='[##cms.cms.cdn##]/_js/scrollTrigger.js'></script>
+   <script src='[##cms.cms.cdn##]/js/TweenMax.min.js'></script>
+   
+   <script src="[##cms.cms.cdn##]/js/script.js"></script>
+
+
+
+
+
+  
+  <script src="[##cms.cms.cdn##]/js/share.js"></script>
+  <script src="[##cms.cms.cdn##]/js/wow.min.js"></script>
+    <script>
+
+
+
+const host = {
+ 
+ settings:{
+ 'connection.web.trust_login': 'https://basispanel.ir/apicms', 
+ 'connection.web.basiscore': 'https://basispanel.ir/apicms', 
+ 'connection.web.media': 'https://basispanel.ir/apicms', 
+ 'default.dbsource.verb': 'post', 
+ 'connection.web.userbehavior': 'https://basispanel.ir/apicms', 
+
+ 'default.call.verb': 'get', 
+ 'default.viewCommand.groupColumn': 'prpid', 
+ "default.dmnid":'4796',
+ "default.binding.regex":"\\{##([^#]*)##\\}"
+ }
+ }
+
+
+
+document.querySelector('.submitComment').addEventListener('click',(event)=>{
+        //  let input1  = document.querySelector('.namee')
+        event.preventDefault();
+         let textar = document.querySelectorAll('.userInfo input')
+         let emptyFlag=false;
+         textar.forEach(element => {
+            if (element.value == "") {
+                emptyFlag=true
+            }
+         });
+        if(!emptyFlag){
+             $bc.setSource('db.send',true)
+             let val = document.querySelector('.msg textarea').value
+             let userNameTitle = document.querySelector('.userNameTitle').value
+             $bc.setSource('db.userNameTitle',userNameTitle)
+             $bc.setSource('db.sendcomment',val)
+             $bc.setSource('db.run',true)
+             let sendbox = document.querySelector('.messageSend')
+                let text = sendbox.querySelector('p')
+                text.innerHTML = 'درخواست شما با موفقیت ثبت شد'
+       $(".messageSend").css("display","block")
+       
+       document.querySelector(".commentP").reset();
+       setTimeout(()=>{
+           $(".messageSend").css("display","none")
+     },3500)
+        }
+        else{
+            let sendbox = document.querySelector('.messageSend')
+                let text = sendbox.querySelector('p')
+                text.innerHTML = 'فیلدهای الزامی را پر کنید'
+                $(".messageSend").css("display","block")
+       
+       setTimeout(()=>{
+           $(".messageSend").css("display","none")
+     },3500)
+
+        }
+       
+         
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+  var menu = [];
+  var submenu = [];
+  var link = [];
+  jQuery('.ff').each( function(index){
+  menu.push( jQuery(this).find('.slide-inner').attr("data-text") );
+  submenu.push( jQuery(this).find('.slide-inner').attr("data-submenu") );
+  link.push( jQuery(this).find('.slide-inner').attr("data-link") );
+  });
+  // var interleaveOffset = 0.5;
+  var swiperOptions = {
+  loop: true,
+  speed: 1000,
+  parallax: true,
+  
+  preventClicksPropagation:false,
+  preventClicks:false,
+  // autoplay: {
+  // delay: 6500,
+  // 
+  // },
+  watchSlidesProgress: true,
+  pagination: {
+  el: '.mur',
+  clickable: true, 
+  preventClicksPropagation:false,
+  preventClicks:false,
+  renderBullet: function (index, className) {
+  return '<li class="nav-item-to-stag-wr ' + className + '"><div data-index="1" class="nav-prod-link nav-item-to-stag"><a href="' + (link[index]) + '" class="quoteButton" ><span class="nav-prod-link__prelabel"><span class="nav-prod-link__prelabel-inner">' + (submenu[index]) + '</span></span><span class="nav-prod-link__label-row"><span class="nav-prod-link__label effect-text slideDown">' + (menu[index]) + '</span><span class="ui-button-arrow on-dark-bg -right"><span class="ui-button-arrow__wr"><span class="ui-button-arrow__icon-wr"><span class="ui-button-arrow__icon-inner-wr"></span></span></span></span></span></a></div></li>';
+  },
+  },
+  
+  navigation: {
+  nextEl: '.hero-slider .swiper-button-next',
+  prevEl: '.hero-slider .swiper-button-prev',
+  },
+  
+  on: {
+  progress: function() {
+  var swiperss = this;
+  for (var i = 0; i < swiperss.slides.length; i++) {
+  var slideProgress = swiperss.slides[i].progress;
+  var innerOffset = swiperss.width * interleaveOffset;
+  var innerTranslate = slideProgress * innerOffset;
+  swiperss.slides[i].querySelector(".hero-slider .slide-inner").style.transform =
+  "translate3d(" + innerTranslate + "px, 0, 0)";
+  } 
+  },
+  
+  touchStart: function() {
+  var swiperss = this;
+  for (var i = 0; i < swiperss.slides.length; i++) {
+  swiperss.slides[i].style.transition = "";
+  }
+  },
+  
+  setTransition: function(speed) {
+  var swiperss = this;
+  for (var i = 0; i < swiperss.slides.length; i++) {
+  swiperss.slides[i].style.transition = speed + "ms";
+  swiperss.slides[i].querySelector(".hero-slider .slide-inner").style.transition =
+  speed + "ms";
+  }
+  }
+  }
+  };
+  
+  var swiperss = new Swiper(".hero-slider .swiper-container", swiperOptions);
+  
+  // DATA BACKGROUND IMAGE
+  var sliderBgSetting = $(".hero-slider .slide-bg-image");
+  sliderBgSetting.each(function(indx){
+  if ($(this).attr("data-background")){
+  $(this).css("background-image", "url(" + $(this).data("background") + ")");
+  }
+  });
+  
+  $(".quoteButton").on("click", function() {
+  var t = $(this).attr("href") 
+  
+  window.location.href = t;
+  });
+  
+  $('.hero-slider .swiper-pagination-bullet').hover(function() {
+  $( this ).trigger( "click" );
+  
+  });
+  $('.hero-slider .swiper-pagination-bullets').hover(function() {
+  
+  $(".hero-slider .categories-wrapper").fadeOut()
+  
+  })
+  $('.hero-slider .swiper-pagination-bullets').mouseleave(function(){
+  $(".hero-slider .categories-wrapper").fadeIn()
+  })
+  
+  
+  const categoriesWrapper = document.querySelector('.categories-wrapper')
+  
+  categoriesWrapper.addEventListener('mousemove', e => {
+  gsap.to('.imgg', {
+  // move images to mouse position
+  x: e.x,
+  y: e.y,
+  // transform origin of images to center
+  xPercent: -50,
+  yPercent: -50,
+  // stagger subsequent images by 50ms
+  stagger: .05
+  })
+  })
+  
+  gsap.utils.toArray('.categories p')
+  .forEach(category => {
+  let { label } = category.dataset
+  
+  category.addEventListener('mouseenter', () => {
+  gsap.to(`img[data-image=${label}]`, { opacity: 1, scale: 1 })
+  gsap.set(`img[data-image=${label}]`, { zIndex: 1 })
+  gsap.set(`p[data-label=${label}]`, { zIndex: 2 })
+  })
+  
+  category.addEventListener('mouseleave', () => {
+  gsap.to(`img[data-image=${label}]`, { opacity: 0, zIndex: -1, scale: .80 })
+  gsap.set(`p[data-label=${label}]`, { zIndex: 0 })
+  })
+  })
+  
+  
+  
+  
+  
+  $('body').on('click', '.tmenuTitleopen', function() {
+  $('.hero-slider').slideToggle('slow', function() {
+  $('.hero-slider').toggleClass('zindexx', $(this).is(':visible'));
+  })
+  $(".-close").fadeToggle()
+  $(".-icon").fadeToggle() 
+  TweenMax.to(".loading-container1", {
+  animation: "movingLine 3.4s ease-in-out",
+  opacity: 1,
+  top:0,
+  });
+  
+  });
+  
+  
+  
+  $(".hero-slider").css("display", "none") ;
+  
+  
+  </script>
+  
+         <script>
+            var blogRelatedSwiper = new Swiper(".blogRelatedSwiper", {
+                slidesPerView: 2.3,
+                spaceBetween: 70,
+                speed:1000,
+               
+                // navigation: {
+                //     nextEl: ".blogRelatedSwiper .swiper-button-next",
+                //     prevEl: ".blogRelatedSwiper .swiper-button-prev",
+                // },
+  breakpoints: {
+    1500: {
+      slidesPerView:3.4,
+      spaceBetween: 70
+    },
+    1024: {
+      slidesPerView: 2.3,
+      spaceBetween: 70
+    }
+  }
+            });
+            var proRelatedSwiper = new Swiper(".proRelatedSwiper", {
+                slidesPerView: 2.3,
+                spaceBetween: 70,
+                speed:1000,
+               
+           
+  breakpoints: {
+    1500: {
+      slidesPerView:3.4,
+      spaceBetween: 70
+    },
+    1024: {
+      slidesPerView: 2.3,
+      spaceBetween: 70
+    }
+  }
+            });
+    
+            
+     
+      
+               $(document).ready(function () {
+                $('.divVideo').click(function (event) {
+    
+                    $(this).toggleClass('toggle');
+    
+                });
+            });
+    
+    
+    
+   
+         new WOW().init();
+  
+         $(".callToR").mouseenter(function () {
+   $(this).siblings().removeClass("show-tooltip");
+   $(this).addClass("show-tooltip");
+   });
+   $(".callToR").mouseleave(function () {
+   $(this).removeClass("show-tooltip");
+   });
+   
+     </script>
+      
+          
+    </body>
+    </html>
+    
+    

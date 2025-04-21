@@ -172,7 +172,8 @@ table {
 @font-face {
   font-family: "Byekan";
   src: url("../_fonts/B YekanplusRegular.eot");
-  src: url("../_fonts/B YekanplusRegular.eot?#iefix") format("embedded-opentype"),
+  src: url("../_fonts/B YekanplusRegular.eot?#iefix")
+      format("embedded-opentype"),
     url("../_fonts/B YekanplusRegular.woff") format("woff"),
     url("../_fonts/B YekanplusRegular.woff2") format("woff2"),
     url("../_fonts/B YekanplusRegular.ttf") format("truetype");
@@ -249,16 +250,16 @@ table {
   font-display: swap;
 }
 @font-face {
-  font-family: 'IRANSansWeb(FaNum)';
+  font-family: "IRANSansWeb(FaNum)";
   font-weight: 800;
   font-style: bold;
-  src: url('../_fonts/IRANSansWeb(FaNum).eot') format('embedded-opentype'),
-   url('../_fonts/IRANSansWeb(FaNum).woff') format('woff'),
-    url('../_fonts/IRANSansWeb(FaNum).ttf') format('truetype');
+  src: url("../_fonts/IRANSansWeb(FaNum).eot") format("embedded-opentype"),
+    url("../_fonts/IRANSansWeb(FaNum).woff") format("woff"),
+    url("../_fonts/IRANSansWeb(FaNum).ttf") format("truetype");
 }
 .faNum,
 .faNump p {
-  font-family: 'IRANSansWeb(FaNum)' !important;
+  font-family: "IRANSansWeb(FaNum)" !important;
 }
 @mixin DomaineSans300 {
   font-family: "Test Domaine Sans Display";
@@ -292,14 +293,14 @@ table {
   border-radius: 10px;
   background: #6d6d6d;
 }
-.activeMenu2{
-  span{
-    color: white!important;
+.activeMenu2 {
+  span {
+    color: white !important;
     transition: 1s ease-in-out;
   }
 
-  path{
-    stroke: white!important;
+  path {
+    stroke: white !important;
     transition: 1s ease-in-out;
   }
 }
@@ -361,9 +362,9 @@ table {
             height: 100%;
             left: 0;
             right: 0px;
-             opacity: 0;
+            opacity: 0;
             position: absolute;
-             transform: translateY(40%);
+            transform: translateY(40%);
             width: 100%;
           }
 
@@ -433,7 +434,7 @@ table {
 
 footer {
   background-color: #0d0d0d;
-  
+
   .footerIn {
     border-top: 1px solid #b6b6b69d;
     display: flex;
@@ -455,7 +456,8 @@ footer {
       }
 
       h5,
-      h3 {
+      h3,
+      p {
         font-family: "Yekan Bakh FaNum";
         font-size: 16px;
         font-weight: 400;
@@ -465,14 +467,18 @@ footer {
       }
 
       .location,
-      .fax,
       .phone {
         display: flex;
         align-items: center;
         column-gap: 16px;
         direction: rtl;
       }
-
+      .fax {
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+        direction: rtl;
+      }
       .mid {
         display: flex;
         align-items: center;
@@ -503,7 +509,6 @@ footer {
   }
 
   .brmFooter {
-   
     border-top: 1px solid #b6b6b69d;
     display: flex;
     align-items: center;
@@ -874,7 +879,6 @@ footer {
   .section3 {
     padding: 0 75px 0 85px;
 
-
     h2 {
       font-size: 28px;
       @include byekan400();
@@ -935,7 +939,121 @@ footer {
       color: white;
     }
   }
+  .section75 {
+    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    blockquote {
+      font-weight: 100;
+      font-size: 22px;
+      max-width: 600px;
+      line-height: 1.4;
+      position: relative;
+      direction: rtl;
+      margin: 0;
+      @include byekan400();
+      padding: 0.5rem;
+      margin-bottom: 20px;
+    }
 
+    blockquote:before,
+    blockquote:after {
+      position: absolute;
+      color: #f1efe6;
+      font-size: 8rem;
+      width: 4rem;
+      height: 4rem;
+    }
+
+    blockquote:before {
+      content: "“";
+      left: -5rem;
+      bottom: 1rem;
+    }
+
+    blockquote:after {
+      content: "”";
+      top: -2rem;
+      right: -5rem;
+    }
+
+    .btn {
+      @include byekan400();
+      font-weight: 300;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #fff;
+      border: none;
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+      padding: 1rem 3rem;
+      border-radius: 100px;
+      background: white; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to right,
+        #c59b47,
+        transparent
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to right,
+        #c59b47,
+        transparent
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      cursor: pointer;
+      overflow: hidden;
+      transition: 0.5s ease;
+      position: relative;
+
+      &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all 0.5s cubic-bezier(0.51, -0.6, 0.45, 1.6);
+      }
+
+      &__invisible {
+        padding: 2rem 0;
+        position: absolute;
+        top: -102%;
+        left: 0;
+        text-align: center;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        background: white; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to left,
+          #c59b47,
+          transparent
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to left,
+          #c59b47,
+          transparent
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+
+      &:hover .btn__invisible {
+        top: 26%;
+        padding: 0;
+        left: 0;
+      }
+
+      &:hover .btn__visible {
+        transform: translateY(200%);
+      }
+    }
+  }
   .section6 {
     padding: 0 75px 0 85px;
     margin-bottom: 64px;
@@ -970,7 +1088,8 @@ footer {
       justify-content: space-between;
     }
 
-    h3 {
+    h3,
+    p {
       @include byekan400();
       font-size: 28px;
       line-height: 38.16px;
@@ -1015,7 +1134,8 @@ footer {
           opacity: 0;
           transition: 0.3s ease-in-out;
 
-          h4 {
+          h4,
+          p {
             font-size: 20px;
             @include byekan700();
             color: white;
@@ -1070,7 +1190,8 @@ footer {
       justify-content: space-between;
     }
 
-    h3 {
+    h3,
+    p {
       @include byekan400();
       font-size: 28px;
       line-height: 38.16px;
@@ -1113,7 +1234,8 @@ footer {
           opacity: 0;
           transition: 0.3s ease-in-out;
 
-          h4 {
+          h4,
+          p {
             font-size: 20px;
             @include byekan700();
             color: white;
@@ -1153,6 +1275,93 @@ footer {
       background-color: #c59b47;
     }
   }
+  .section98 {
+    padding: 0 60px;
+    white-space: nowrap;
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 300;
+    font-size: 0.8em;
+    direction: rtl;
+    text-align: right;
+    line-height: 36.35px;
+    color: white;
+    .line {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .keyWord {
+      margin-top: 20px;
+    }
+  }
+  .section10 {
+    padding: 0 75px 0 85px;
+    direction: rtl;
+    margin-bottom: 100px;
+    h5 {
+      font-family: "Byekan";
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 38.16px;
+      text-align: right;
+      white-space: nowrap;
+      color: #c59b47;
+      margin-bottom: 30px;
+    }
+    .commentP {
+      width: 70%;
+      .userInfo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        column-gap: 30px;
+      }
+      input {
+        width: 48%;
+      }
+      textarea {
+        width: 97%;
+      }
+      input,
+      textarea {
+        background-color: transparent;
+        color: white;
+        border: none;
+        border-bottom: 1px solid white;
+        padding: 10px;
+        font-family: "Byekan";
+        font-weight: 400;
+        font-size: 16px;
+      }
+      .submitComment {
+        font-family: "Byekan";
+        font-weight: 400;
+        font-size: 18px;
+        margin-top: 25px;
+        background-color: transparent;
+        border: 1px solid #c59b47;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 0;
+        width: 100px;
+        color: white;
+        cursor: pointer;
+        border-radius: 20px;
+      }
+    }
+    .messageSend {
+      font-family: "Byekan";
+      font-weight: 400;
+      margin-top: 10px;
+      font-size: 18px;
+      color: white;
+      direction: rtl;
+    }
+  }
 }
 
 .pause {
@@ -1163,10 +1372,11 @@ footer {
   opacity: 0;
   display: none;
 }
-@media only screen and (max-height:750px){
-  .projectShow , .productShow{
-    .share{
-      bottom: 457px!important;
+@media only screen and (max-height: 750px) {
+  .projectShow,
+  .productShow {
+    .share {
+      bottom: 457px !important;
       z-index: 1000;
     }
   }
@@ -1217,7 +1427,7 @@ footer {
           text-align: right;
           color: black;
         }
-        .share__wrapper{
+        .share__wrapper {
           direction: rtl;
         }
       }
@@ -1256,8 +1466,7 @@ footer {
 
       .imgS {
         overflow: hidden;
-        img{
-
+        img {
           transform: scale(1.2);
           transition: 1s ease-in-out;
         }
@@ -1270,7 +1479,6 @@ footer {
           transition: 1s ease-in-out;
         }
       }
-   
     }
 
     .section3 {
@@ -1418,9 +1626,67 @@ footer {
       }
     }
   }
+  .section98 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 60px;
+    white-space: nowrap;
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 300;
+    font-size: 0.8em;
+    line-height: 36.35px;
+    .line {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .keyWord {
+      margin-top: 20px;
+    }
+  }
 }
 
 .productShow {
+  h1 {
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 36.35px;
+  }
+  h2 {
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 36.35px;
+  }
+  h3 {
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 400;
+    font-size: 1.3em;
+    line-height: 36.35px;
+  }
+  h4 {
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 36.35px;
+  }
+  h5 {
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 300;
+    font-size: 0.8em;
+    line-height: 36.35px;
+  }
+  h6 {
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 300;
+    font-size: 0.7em;
+    line-height: 36.35px;
+  }
   .line {
     transform: translateY(80%);
     opacity: 0;
@@ -1434,7 +1700,11 @@ footer {
     direction: rtl;
     position: relative;
   }
-
+  p {
+    a {
+      color: #c59b47;
+    }
+  }
   .Pin-Wrapp {
     display: flex;
     direction: rtl;
@@ -1464,8 +1734,8 @@ footer {
         left: 0;
         bottom: 525px;
         z-index: 11000;
-        .share__wrapper{
-          direction: rtl
+        .share__wrapper {
+          direction: rtl;
         }
         span {
           @include byekan400();
@@ -1631,23 +1901,22 @@ footer {
                 }
               }
             }
-            .swiper-pagination{
+            .swiper-pagination {
               display: flex;
               justify-content: left;
               bottom: 34px;
               left: 40px;
               align-items: center;
-    direction: ltr;   
-              .swiper-pagination-bullet{
+              direction: ltr;
+              .swiper-pagination-bullet {
                 opacity: 1;
-                background-color: #D9D9D9;
+                background-color: #d9d9d9;
                 width: 5px;
                 height: 5px;
                 transition: 0.5s ease-in-out;
-                
               }
-              
-              .swiper-pagination-bullet-active{
+
+              .swiper-pagination-bullet-active {
                 background-color: #c59b47;
                 width: 11px;
                 height: 11px;
@@ -1697,14 +1966,14 @@ footer {
                 display: flex;
                 align-items: center;
                 column-gap: 11px;
-                a{
+                a {
                   display: flex;
                   align-items: center;
                   @include byekan400();
-font-size: 20px;
-line-height: 36.35px;
-color: black;
-column-gap: 11px;
+                  font-size: 20px;
+                  line-height: 36.35px;
+                  color: black;
+                  column-gap: 11px;
                 }
               }
 
@@ -1798,13 +2067,13 @@ column-gap: 11px;
               height: 100px;
               overflow: hidden;
               margin: 0;
-              p{
+              p {
                 @include byekan400();
-font-size: 20px;
-line-height: 29.45px;
-text-align: justify;
-                span{
-                  color: #69374E;
+                font-size: 20px;
+                line-height: 29.45px;
+                text-align: justify;
+                span {
+                  color: #69374e;
                   margin-left: 10px;
                 }
               }
@@ -1827,8 +2096,8 @@ text-align: justify;
 
         [data-bc-part-container] {
           width: 100%;
-        } 
-        [data-bc-question]{
+        }
+        [data-bc-question] {
           text-align: left;
         }
         input {
@@ -1840,7 +2109,7 @@ text-align: justify;
           font-size: 16px;
           color: black;
         }
-        .msg{
+        .msg {
           color: rgb(0, 156, 0);
           direction: rtl;
           text-align: right;
@@ -1852,7 +2121,7 @@ text-align: justify;
           column-gap: 25px;
           padding: 10px 15px 10px 20px;
         }
-        button{
+        button {
           background-color: transparent;
           border: 1px solid #c59b47;
           color: #c59b47;
@@ -1860,13 +2129,11 @@ text-align: justify;
           font-size: 15px;
           padding: 0px 20px;
           border-radius: 5px;
-          
         }
       }
-      button{
+      button {
         opacity: 1;
         color: #c59b47;
-
       }
     }
 
@@ -1954,7 +2221,34 @@ text-align: justify;
       padding: 0 124px 0 138px;
       column-gap: 69px;
       position: relative;
-
+      .midSection {
+        .para {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          height: 55vh;
+          width: max-content;
+          column-gap: 100px;
+          p {
+            font-family: "Byekan";
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 36.35px;
+            text-align: justify;
+            direction: rtl;
+            display: inline-block;
+            width: 350px;
+          }
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            width: 350px;
+          }
+        }
+      }
       .modal {
         position: absolute !important;
         left: -1000px;
@@ -2013,8 +2307,8 @@ text-align: justify;
 
           [data-bc-part-container] {
             width: 100%;
-          } 
-          [data-bc-question]{
+          }
+          [data-bc-question] {
             text-align: left;
           }
           input {
@@ -2026,7 +2320,7 @@ text-align: justify;
             font-size: 16px;
             color: black;
           }
-          .msg{
+          .msg {
             color: rgb(0, 156, 0);
             direction: rtl;
             text-align: right;
@@ -2038,7 +2332,7 @@ text-align: justify;
             column-gap: 25px;
             padding: 10px 15px 10px 20px;
           }
-          button{
+          button {
             background-color: transparent;
             border: 1px solid #c59b47;
             color: #c59b47;
@@ -2046,13 +2340,11 @@ text-align: justify;
             font-size: 15px;
             padding: 0px 20px;
             border-radius: 5px;
-            
           }
         }
-        button{
+        button {
           opacity: 1;
           color: #c59b47;
-
         }
       }
 
@@ -2085,11 +2377,13 @@ text-align: justify;
           font-size: 24px;
           line-height: 34.04px;
           text-align: justify;
+          white-space: nowrap;
         }
       }
 
       .download {
         a {
+          white-space: nowrap;
           display: flex;
           align-items: center;
           direction: rtl;
@@ -2150,9 +2444,92 @@ text-align: justify;
         filter: brightness(0.8);
       }
     }
-
+    .section91 {
+      display: flex;
+      align-items: flex-start;
+      padding: 0 60px;
+      flex-direction: column;
+      justify-content: center;
+      h5 {
+        font-size: 24px;
+        margin-bottom: 30px;
+        font-weight: 700;
+      }
+      textarea {
+        width: 100%;
+      }
+      .userInfo {
+        display: flex;
+        align-items: center;
+        column-gap: 25px;
+      }
+      input,
+      textarea {
+        border: none;
+        border-bottom: 1px solid black;
+        background: transparent;
+        border-radius: 0;
+        font-family: "Byekan";
+        font-weight: 400;
+        font-size: 16px;
+        color: black;
+      }
+      .msg {
+        margin: 25px 0;
+      }
+      .messageSend {
+        font-family: "Byekan";
+        font-weight: 400;
+        font-size: 16px;
+        direction: rtl;
+      }
+      .submitComment {
+        display: flex;
+        align-items: center;
+        direction: rtl;
+        border: 1px solid #c59b47;
+        border-radius: 29px;
+        text-decoration: none;
+        color: black;
+        font-family: "Byekan";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 34.04px;
+        width: 100px;
+        text-align: center;
+        justify-content: center;
+        background-color: transparent;
+        transform: translateY(-25px);
+        white-space: nowrap;
+      }
+    }
+    .section98 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 60px;
+      white-space: nowrap;
+      font-family: "Yekan Bakh FaNum";
+      font-weight: 300;
+      font-size: 0.8em;
+      line-height: 36.35px;
+      .line {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+      }
+      h1 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      .keyWord {
+        margin-top: 20px;
+      }
+    }
     .section10 {
+      min-width: 300px;
+      background: #bfbfbf;
       a {
+        height: 100vh;
         position: relative;
         display: flex;
         align-items: center;
@@ -2174,8 +2551,12 @@ text-align: justify;
           align-items: center;
           justify-content: end;
           flex-direction: column;
-
-          h2 {
+          .line {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+          }
+          h2,
+          p {
             width: 219px;
             @include byekan700();
             color: white;
@@ -2314,12 +2695,11 @@ text-align: justify;
     }
   }
 }
-@media only screen and (max-height:750px){
-.btmContact{
-  margin-bottom: 3.642vh!important;
-  margin-top: 70px!important;
-}
-
+@media only screen and (max-height: 750px) {
+  .btmContact {
+    margin-bottom: 3.642vh !important;
+    margin-top: 70px !important;
+  }
 }
 .contact {
   width: 100vw;
@@ -2482,8 +2862,7 @@ body {
       width: 100vw;
       height: 100vh;
       object-fit: cover;
-  }
-    
+    }
 
     img {
       width: 100%;
@@ -2681,14 +3060,15 @@ body {
       top: 0;
     }
 
-    .cta__slider-item{
-     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      // transform: scale(1.2);
-      transition: 1.3s ease-in-out;
-    }}
+    .cta__slider-item {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // transform: scale(1.2);
+        transition: 1.3s ease-in-out;
+      }
+    }
 
     .hoverImg {
       transform: scale(1.01) !important;
@@ -2719,7 +3099,8 @@ body {
       justify-content: center;
       overflow: hidden;
 
-      h2 {
+      h2,
+      p {
         opacity: 0;
         font-family: "Yekan Bakh FaNum";
         font-size: 57.6px;
@@ -2823,8 +3204,7 @@ body {
             transition: 0.4s ease-in-out;
             min-width: 100px;
           }
-          span{
-            
+          span {
             font-family: "Test Domaine Sans Display";
             font-size: 35.2px;
             font-weight: 300;
@@ -2845,7 +3225,8 @@ body {
     }
 
     .slider2.swiper-slide-active {
-      h2 {
+      h2,
+      p {
         opacity: 1 !important;
         transition: 1s ease-in-out;
         transition-delay: 0.25;
@@ -2863,7 +3244,8 @@ body {
     }
 
     .slider3.swiper-slide-active {
-      h2 {
+      h2,
+      p {
         opacity: 1 !important;
         transition: 1s ease-in-out;
         transition-delay: 0.25;
@@ -2903,9 +3285,9 @@ body {
         z-index: 100;
         overflow: hidden;
       }
-      .imgS{
+      .imgS {
         height: 100%;
-        img{
+        img {
           transform: scale(1.12);
         }
       }
@@ -3166,15 +3548,15 @@ body {
 
         .swiper-pagination-service {
           text-align: right;
-    right: 71px;
-    bottom: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding-right: 71px;
-    transform: translateX(-71px);
-    position: absolute;
-    z-index: 100;
+          right: 71px;
+          bottom: 38px;
+          display: flex;
+          align-items: center;
+          justify-content: end;
+          padding-right: 71px;
+          transform: translateX(-71px);
+          position: absolute;
+          z-index: 100;
         }
 
         .swiper-pagination-bullet {
@@ -3348,8 +3730,7 @@ body {
         }
       }
     }
-  
-}
+  }
 }
 .share {
   direction: rtl;
@@ -3365,137 +3746,128 @@ body {
     line-height: 28.37px;
     text-align: right;
   }
-  
-      .share__wrapper,
-      .social-link {
-        position: relative;
-        cursor: pointer;
-        display: flex;
-        align-items: end;
-        margin-left: 10px;
-      }
-      
-  
-      
-      .toggle-button {
-        cursor: pointer;
-        display: flex;
-        white-space: nowrap;
-        align-items: center;
-        column-gap: 10px;
-        position: relative;
-        direction: ltr;
-        margin-top: 25px;
-      }
-      .toggle-button:focus {
-        outline: 0;
-      }
-      .toggle-button:before, .toggle-button:after {
-        content: "";
-        position: absolute;
-      }
-      .toggle-button:after {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transition: all 0.2s ease;
-      }
-      
-  
-      .social-link {
-        visibility: hidden;
-        border-radius: 50%;
-        transition: all 0.1s ease;
-        
-        margin-left: 15px;
-       
-      }
-  
-      
-      .share__wrapper--open-left .social-link {
-        animation: 1s right forwards;
-        opacity: 0;
-        will-change: animation;
-      }
-     
-      
-      .share__wrapper--active .social-link {
-        visibility: visible;
-        animation: 0.1s left forwards;
-      }
-      .share__wrapper--active .social-link:nth-child(1) {
-        animation-delay: 0.075s;
-      }
-      .share__wrapper--active .social-link:nth-child(2) {
-        animation-delay: 0.05s;
-      }
-      
-      @keyframes shareClose {
-        0% {
-          opacity: 0;
-          transform: rotateY(0);
-        }
-        100% {
-          opacity: 1;
-          transform: rotateY(360deg);
-        }
-      }
-      @keyframes left {
-        0% {
-          transform: translateX(-170%);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
-      @keyframes right {
-        0% {
-          transform: translateX(-170%);
-        }
-        // 50% {
-        //   opacity: 1;
-        // }
-        100% {
-          opacity: 0;
-          transform: translateX(0);
-        }
-      }
-  
-      
-      .visually-hidden {
-        position: absolute;
-        left: 9999px;
-        width: 1px;
-        height: 1px;
-      }
-      
-      ul, li {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-      }
-      
-      button {
-        border: none;
-        margin: 0;
-        padding: 0;
-        width: auto;
-        overflow: visible;
-        background: transparent;
-        color: inherit;
-        font: inherit;
-        line-height: normal;
-        -webkit-font-smoothing: inherit;
-        -moz-osx-font-smoothing: inherit;
-        -webkit-appearance: none;
-      }
-  
-  
-  
 
-}  
+  .share__wrapper,
+  .social-link {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: end;
+    margin-left: 10px;
+  }
+
+  .toggle-button {
+    cursor: pointer;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    column-gap: 10px;
+    position: relative;
+    direction: ltr;
+    margin-top: 25px;
+  }
+  .toggle-button:focus {
+    outline: 0;
+  }
+  .toggle-button:before,
+  .toggle-button:after {
+    content: "";
+    position: absolute;
+  }
+  .toggle-button:after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease;
+  }
+
+  .social-link {
+    visibility: hidden;
+    border-radius: 50%;
+    transition: all 0.1s ease;
+
+    margin-left: 15px;
+  }
+
+  .share__wrapper--open-left .social-link {
+    animation: 1s right forwards;
+    opacity: 0;
+    will-change: animation;
+  }
+
+  .share__wrapper--active .social-link {
+    visibility: visible;
+    animation: 0.1s left forwards;
+  }
+  .share__wrapper--active .social-link:nth-child(1) {
+    animation-delay: 0.075s;
+  }
+  .share__wrapper--active .social-link:nth-child(2) {
+    animation-delay: 0.05s;
+  }
+
+  @keyframes shareClose {
+    0% {
+      opacity: 0;
+      transform: rotateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateY(360deg);
+    }
+  }
+  @keyframes left {
+    0% {
+      transform: translateX(-170%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes right {
+    0% {
+      transform: translateX(-170%);
+    }
+    // 50% {
+    //   opacity: 1;
+    // }
+    100% {
+      opacity: 0;
+      transform: translateX(0);
+    }
+  }
+
+  .visually-hidden {
+    position: absolute;
+    left: 9999px;
+    width: 1px;
+    height: 1px;
+  }
+
+  ul,
+  li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none;
+  }
+}
 
 .service {
   background-color: black;
@@ -3537,22 +3909,6 @@ body {
         direction: rtl;
       }
     }
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
   }
 
   .section2 {
@@ -3700,7 +4056,10 @@ body {
           transition: 0.3s ease-in-out;
         }
       }
-
+      .button-next,
+      .button-prev {
+        cursor: pointer;
+      }
       .btns {
         position: absolute;
         left: 44px;
@@ -4616,7 +4975,7 @@ header.menu2 {
       z-index: -1;
       transform: scale(0.8);
     }
-    
+
     ul {
       padding-right: 79px;
       direction: rtl;
@@ -4638,19 +4997,23 @@ header.menu2 {
           text-decoration: none;
         }
       }
-      .blurLi{
-        a{
-
+      .blurLi {
+        a {
           color: transparent;
           text-shadow: 0 0 8px #ffffff;
         }
       }
     }
-    
-
-
   }
-
+  @media only screen and (max-height: 661px) {
+    .rightMenu {
+      ul {
+        a {
+          line-height: 58.98px !important;
+        }
+      }
+    }
+  }
   .overMenu {
     position: absolute;
     width: 100%;
@@ -4867,7 +5230,6 @@ header.menu2 {
   overflow: hidden;
   position: relative;
 
-
   .backSlider {
     .backgroundSlider {
       .swiper-slide {
@@ -4881,7 +5243,7 @@ header.menu2 {
             scale: 1.2;
             transition: 1s ease-in-out;
             width: 100%;
-            height: 100%;
+            height: 100vh;
           }
         }
       }
@@ -4970,6 +5332,7 @@ header.menu2 {
               align-items: center;
               flex-wrap: wrap;
               justify-content: center;
+              direction: rtl;
               gap: 33px;
 
               li {
@@ -5063,6 +5426,7 @@ header.menu2 {
       }
 
       .swiper-slide-active {
+        z-index: 10;
         .catListlayer {
           transform: scale(1) !important;
           transform-origin: top;
@@ -5076,6 +5440,656 @@ header.menu2 {
             transition-property: transform !important;
           }
         }
+      }
+    }
+  }
+}
+
+.errorPage {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  direction: rtl;
+  text-align: center;
+  h1 {
+    @include byekan700();
+    font-size: 200px;
+    color: white;
+  }
+  .para {
+    margin: 10px 0;
+    p {
+      @include byekan400();
+      font-size: 18px;
+      color: white;
+    }
+  }
+  .backmainPage {
+    text-decoration: none;
+    color: #c59b47;
+    border: 1px solid #c59b47;
+    border-radius: 10px;
+    @include byekan400();
+    font-size: 18px;
+    display: block;
+    transition: 0.5s ease;
+    padding: 10px 20px;
+    margin: 20px 0;
+  }
+  .backmainPage:hover {
+    background-color: #c59b47;
+    color: black;
+  }
+}
+
+.landing {
+  background-color: black;
+  a {
+    text-decoration: none;
+    color: #c59b47;
+  }
+  p {
+    @include byekan400();
+    font-size: 20px;
+    line-height: 28.37px;
+    text-align: justify;
+    color: white;
+    direction: rtl;
+  }
+  h1 {
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 36.35px;
+    color: #c59b47;
+    direction: rtl;
+  }
+  h2 {
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 36.35px;
+    color: #c59b47;
+    direction: rtl;
+  }
+  h3 {
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 400;
+    font-size: 1.3em;
+    line-height: 36.35px;
+    color: #c59b47;
+    direction: rtl;
+  }
+  h4 {
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 36.35px;
+    color: #c59b47;
+    direction: rtl;
+  }
+  h5 {
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 300;
+    font-size: 0.8em;
+    line-height: 36.35px;
+    color: #c59b47;
+    direction: rtl;
+  }
+  h6 {
+    font-family: "Yekan Bakh FaNum";
+    font-weight: 300;
+    font-size: 0.7em;
+    direction: rtl;
+    line-height: 36.35px;
+    color: #c59b47;
+  }
+  .tableOc {
+    padding: 0 69px 0 85px;
+    margin: 50px 0;
+  }
+  #toc {
+    direction: rtl;
+    color: #c59b47;
+    font-family: "IRANSansWeb(FaNum)";
+    a {
+      text-decoration: none;
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #c59b47;
+      display: inline-block;
+    }
+    h2 {
+      counter-reset: countH3;
+      counter-increment: countH2;
+    }
+    h3 {
+      counter-reset: countH4;
+      counter-increment: countH3;
+    }
+    h4 {
+      counter-reset: countH5;
+      counter-increment: countH4;
+    }
+    h5 {
+      counter-reset: countH6;
+      counter-increment: countH5;
+    }
+    h6 {
+      counter-increment: countH6;
+    }
+
+    h2::before {
+      content: counter(countH2) " - ";
+    }
+    h3::before {
+      content: counter(countH2) "." counter(countH3) " - ";
+    }
+    h4::before {
+      content: counter(countH2) "." counter(countH3) "." counter(countH4) " - ";
+    }
+    h5::before {
+      content: counter(countH2) "." counter(countH3) "." counter(countH4) "."
+        counter(countH5) " - ";
+    }
+    h6::before {
+      content: counter(countH2) "." counter(countH3) "." counter(countH4) "."
+        counter(countH5) "." counter(countH6) " - ";
+    }
+
+    /* Adding counters on the TOC LIs */
+
+    ul {
+      list-style-type: none;
+    }
+
+    counter-reset: nav0;
+
+    & > li {
+      counter-increment: nav0;
+      counter-reset: nav1;
+    }
+    & > li li {
+      counter-increment: nav1;
+      counter-reset: nav2;
+    }
+    & > li li li {
+      counter-increment: nav2;
+      counter-reset: nav3;
+    }
+    & > li li li li {
+      counter-increment: nav3;
+      counter-reset: nav4;
+    }
+    & > li li li li li {
+      counter-increment: nav4;
+      counter-reset: nav5;
+    }
+    & > li li li li li li {
+      counter-increment: nav5;
+      counter-reset: nav6;
+    }
+
+    & > li::before {
+      content: counter(nav0) " - ";
+    }
+    & > li li::before {
+      content: counter(nav0) "." counter(nav1) " - ";
+    }
+    & > li li li::before {
+      content: counter(nav0) "." counter(nav1) "." counter(nav2) " - ";
+    }
+    & > li li li li::before {
+      content: counter(nav0) "." counter(nav1) "." counter(nav2) "."
+        counter(nav3) " - ";
+    }
+    & > li li li li li::before {
+      content: counter(nav0) "." counter(nav1) "." counter(nav2) "."
+        counter(nav3) "." counter(nav4) " - ";
+    }
+    & > li li li li li li::before {
+      content: counter(nav0) "." counter(nav1) "." counter(nav2) "."
+        counter(nav3) "." counter(nav4) "." counter(nav5) " - ";
+    }
+    & > li li li li li li li::before {
+      content: counter(nav0) "." counter(nav1) "." counter(nav2) "."
+        counter(nav3) "." counter(nav4) "." counter(nav5) "." counter(nav6)
+        " - ";
+    }
+  }
+  .section1 {
+    padding: 161px 61px 0 85px;
+
+    .imgBack {
+      position: relative;
+      width: 100%;
+      height: 570px;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .imgBack::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .overlayText {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+
+      p {
+        @include byekan400();
+        font-size: 40px;
+        color: white;
+        line-height: 56.74px;
+        text-align: center;
+        direction: rtl;
+      }
+    }
+  }
+
+  .section2 {
+    margin-top: 51px;
+    padding: 0 69px 0 85px;
+
+    h1 {
+      @include byekan400();
+      font-size: 40px;
+      line-height: 56.74px;
+      text-align: right;
+      color: #c59b47;
+      margin-bottom: 27px;
+    }
+
+    p {
+      @include byekan400();
+      font-size: 20px;
+      line-height: 28.37px;
+      text-align: justify;
+      color: white;
+      direction: rtl;
+    }
+    h2 {
+      margin: 20px 0;
+    }
+  }
+  .productListSection {
+    h1 {
+      margin-bottom: 30px;
+    }
+    .detailPro {
+      padding: 0 65px 0 85px;
+      margin-bottom: 80px;
+    }
+    .titleCat {
+      p {
+        font-family: "Test Domaine Sans Display";
+        font-size: 120px;
+        font-weight: 300;
+        line-height: 166.56px;
+        text-align: center;
+        color: white;
+      }
+    }
+    .para {
+      p {
+        @include byekan400();
+        font-size: 20px;
+        line-height: 28.37px;
+        text-align: justify;
+        color: white;
+        direction: rtl;
+      }
+    }
+  }
+  .section3 {
+    padding: 0 65px 0 85px;
+
+    h2 {
+      @include byekan400();
+      font-size: 28px;
+      line-height: 39.72px;
+      text-align: right;
+      color: #c59b47;
+      margin-top: 40px;
+      direction: rtl;
+    }
+
+    .in3 {
+      display: flex;
+      justify-content: right;
+      margin-top: 15px;
+      column-gap: 87px;
+    }
+
+    .leftItems {
+      ul {
+        direction: rtl;
+
+        li {
+          button {
+            background-color: transparent;
+            font-family: "Yekan Bakh FaNum";
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 47.54px;
+            text-align: right;
+            color: white;
+            border: none;
+            direction: rtl;
+            cursor: pointer;
+          }
+
+          .activeBtn {
+            font-weight: 700;
+            color: #c59b47;
+          }
+        }
+      }
+    }
+
+    .rightSliders {
+      .sliderSection {
+        width: fit-content;
+
+        .verticalSlider {
+          height: 900px;
+          overflow: hidden;
+          width: fit-content;
+          position: relative;
+
+          .verticalSlide {
+            width: fit-content;
+
+            .topSection {
+              width: fit-content;
+            }
+
+            .imgS {
+              width: fit-content;
+              filter: brightness(0.8);
+            }
+
+            .descriptionSection {
+              width: 756px;
+
+              .title p {
+                margin: 37px 0 28px 0;
+                @include byekan700();
+                font-size: 28px;
+                line-height: 55.46px;
+                text-align: right;
+                direction: rtl;
+                color: #c59b47;
+              }
+
+              .para p {
+                @include byekan400();
+                font-size: 20px;
+                color: white;
+                line-height: 40.4px;
+                text-align: justify;
+                color: white;
+                direction: rtl;
+              }
+            }
+          }
+        }
+      }
+
+      .swiper-pagination {
+        display: flex;
+        right: 44px;
+        position: absolute;
+        top: 50%;
+        transform: none;
+        column-gap: 17px;
+        align-items: center;
+        height: fit-content;
+
+        .swiper-pagination-bullet {
+          opacity: 1;
+          transition: 0.3s ease-in-out;
+          cursor: pointer;
+          width: 5px;
+          height: 5px;
+          background-color: #d9d9d9;
+          border-radius: 50%;
+        }
+
+        .swiper-pagination-bullet-active {
+          width: 11px;
+          height: 11px;
+          background-color: #c59b47;
+          transition: 0.3s ease-in-out;
+        }
+      }
+      .button-next,
+      .button-prev {
+        cursor: pointer;
+      }
+      .btns {
+        position: absolute;
+        left: 44px;
+        top: 47%;
+        z-index: 10000;
+        column-gap: 11.5px;
+        display: flex;
+      }
+    }
+  }
+
+  .section4 {
+    padding: 110px 0;
+    text-align: center;
+
+    p {
+      @include byekan400();
+      font-size: 28px;
+
+      line-height: 39.72px;
+      text-align: center;
+      direction: rtl;
+      color: white;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      direction: rtl;
+      column-gap: 20px;
+      width: fit-content;
+      margin: 0 auto;
+      margin-top: 65px;
+      @include byekan400();
+      font-size: 24px;
+      line-height: 34.04px;
+      text-align: justify;
+      color: white;
+      text-decoration: none;
+      border: 1px solid #c59b47;
+      padding: 7px 23px 7px 23px;
+      border-radius: 29px;
+    }
+  }
+  .loaded {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    display: none;
+  }
+  .blogListSection {
+    h1 {
+      padding: 0 65px 0 85px;
+    }
+    .loadMore {
+      display: flex;
+      align-items: center;
+      direction: rtl;
+      column-gap: 20px;
+      width: fit-content;
+      margin: 0 auto;
+      margin-top: 65px;
+      @include byekan400();
+      font-size: 24px;
+      line-height: 34.04px;
+      text-align: justify;
+      color: white;
+      text-decoration: none;
+      border: 1px solid #c59b47;
+      padding: 7px 23px 7px 23px;
+      border-radius: 29px;
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+    .blog {
+      .blogItem:nth-child(3) ~ .blogItem {
+        display: none;
+      }
+      .blogItem {
+        a {
+          p {
+            font-family: "Yekan Bakh FaNum";
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 31px;
+            margin-top: 25px;
+            text-align: right;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .faq {
+    padding: 0 65px 0 85px;
+    margin-top: 100px;
+    h1 {
+      margin-bottom: 50px;
+    }
+    .container {
+      // background-color: white;
+      color: black;
+      border-radius: 20px;
+      box-shadow: 0 0px 8px 0 #c59b47;
+      margin: 20px 0;
+    }
+
+    .question {
+      padding: 20px 20px 20px 80px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      @include byekan400();
+      font-size: 18px;
+
+      line-height: 39.72px;
+      text-align: center;
+      direction: rtl;
+      color: white;
+    }
+
+    .question::after {
+      content: "\002B";
+      font-size: 2.2rem;
+      position: absolute;
+      left: 20px;
+      transition: 0.2s;
+    }
+
+    .question.active::after {
+      transform: rotate(45deg);
+    }
+
+    .answercont {
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .answer {
+      padding: 0 20px 20px;
+      line-height: 1.5rem;
+    }
+
+    .question.active + .answercont {
+    }
+  }
+
+  .commentSection {
+    direction: rtl;
+    padding: 0 65px 0 85px;
+    margin-top: 100px;
+    .header_small {
+      margin-bottom: 30px;
+      p {
+        @include byekan400();
+        font-size: 28px;
+
+        line-height: 39.72px;
+        direction: rtl;
+        color: #c59b47;
+      }
+    }
+    .commentP {
+      width: 70%;
+      .userInfo {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        input {
+          width: 48%;
+        }
+      }
+      textarea {
+        width: calc(100% - 30px);
+        margin-top: 20px;
+      }
+      input,
+      textarea {
+        background-color: transparent;
+        padding: 10px 15px;
+        border: none;
+        border-bottom: 1px solid white;
+        @include byekan400();
+        font-size: 16px;
+        color: white;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        direction: rtl;
+
+        width: fit-content;
+        margin-top: 65px;
+        @include byekan400();
+        font-size: 18px;
+        line-height: 34.04px;
+        text-align: justify;
+        color: white;
+        text-decoration: none;
+        border: 1px solid #c59b47;
+        padding: 3px 23px;
+        border-radius: 29px;
+        background-color: transparent;
+        cursor: pointer;
       }
     }
   }

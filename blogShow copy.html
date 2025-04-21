@@ -227,13 +227,24 @@
                 </face>
             </basis>
         </div>
+        <div class="section75">
+            <blockquote>
+               برای دریافت مشاوره و کسب اطلاعات بیشتر با ما تماس بگیرید.</blockquote>
+        
+        
+            <a href="/تماس-با-ما" class="btn">
+                <span class="btn__visible">تماس با ما</span>
+                <span class="btn__invisible">همین حالا تماس بگیرید</span>
+              </a>
+        
+        </div>
         <div class="section8">
             <!-- Slider main container -->
             <div class="in8">
 
                 <div class="relatedTtle">
                     <h3>
-                        بلاگ‌های مرتبط
+                        مقالات مرتبط
                     </h3>
                 </div>
                 <div class="blogSection">
@@ -321,13 +332,116 @@
                 </div>
             </div>
         </div>
+        <div class="section10">
+            <basis core="dbsource" source="userbehavior" name="db" title="{##db.senduserName.value##}"
+            run="atclient" triggers="db.sendcomment" if="{##db.sendcomment##}"
+           parentid="0" usedforid="[##cms.query.id##]" userid="100005"
+            title="user" mid="20" comment="{##db.sendcomment.value##}" >
+               <member request="comment" type="scalar" name="comment" preview="true" />
+           </basis>
+           <div class="header_small mb--15px transition wow fadeInUp animated animated">
+               <h5>
+                   ثبت نظر
+               </h5>
+           </div>
+     
+           <form action="" class="commentP">
+               <div class="userInfo">
+ 
+                   <input class="userName" type="text" placeholder="نام و نام خانوادگی">
+                   <input type="email" placeholder="لطفا ایمیل خود را وارد کنید">
+               </div>
+               <div class="msg">
+                   <textarea class="msg _textarea" name="message" id="message" placeholder="پیام شما"></textarea>
+               </div>
+               <div class="messageSend">
+                   <p>
+ 
+                   </p>
+               </div>
+               <button class="submitComment">ارسال نظر</button>
+           </form>
+        </div>
     </div>
     <basis core="call" file="footer.inc" />
     <basis core="call" file="scripts.inc" />
     <script src="[##cms.cms.cdn##]/_js/scrollTrigger.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/basiscore-2.28.0.min.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js"></script>
 
     <script src="[##cms.cms.cdn##]/js/swiper4.1.6.js"></script>
     <script src="[##cms.cms.cdn##]/js/blogShow.js"></script>
+
+    <script>
+         var host = {
+            debug: false,
+            settings: {
+
+
+                'connection.web.trust_login': 'https://basispanel.ir/apicms',
+                'connection.web.basiscore': 'https://basispanel.ir/apicms',
+                'connection.web.media': 'https://basispanel.ir/apicms',
+                    'connection.web.userbehavior': 'https://basispanel.ir/apicms', 
+
+                'default.dbsource.verb': 'post',
+                'default.call.verb': 'get',
+                'default.viewCommand.groupColumn': 'prpid',
+                'default.dmnid': '4836',
+                'default.binding.regex': '\\{##([^#]*)##\\}'
+
+            }
+        }
+
+
+
+        document.querySelector('.submitComment').addEventListener('click',(event)=>{
+      //  let input1  = document.querySelector('.namee')
+      event.preventDefault();
+       let textar = document.querySelectorAll('.userInfo input')
+       let emptyFlag=false;
+       textar.forEach(element => {
+          if (element.value == "") {
+              emptyFlag=true
+          }
+       });
+      if(!emptyFlag){
+          
+          let val = document.querySelector(".commentP textarea").value;
+          let userName = document.querySelector(".commentP .userName").value;
+          console.log("val" , val);
+          $bc.setSource('db.send',true)
+           $bc.setSource('db.senduserName',userName)
+           $bc.setSource('db.sendcomment',val)
+           $bc.setSource('db.run',true)
+           let sendbox = document.querySelector('.messageSend')
+              let text = sendbox.querySelector('p')
+              text.innerHTML = 'درخواست شما با موفقیت ثبت شد'
+     $(".messageSend").css("display","block")
+     
+     document.querySelector(".commentP").reset();
+     setTimeout(()=>{
+         $(".messageSend").css("display","none")
+   },3500)
+      }
+      else{
+          let sendbox = document.querySelector('.messageSend')
+              let text = sendbox.querySelector('p')
+              text.innerHTML = 'فیلدهای الزامی را پر کنید'
+              $(".messageSend").css("display","block")
+     
+     setTimeout(()=>{
+         $(".messageSend").css("display","none")
+   },3500)
+
+      }
+     
+       
+  })
+
+
+
+
+    </script>
 <script type="application/ld+json"> 
 [##json.fq.column1##] 
 </script>

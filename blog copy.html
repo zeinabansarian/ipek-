@@ -8,6 +8,7 @@
     <meta charset="UTF-8" />
     <meta name="theme-color" content="#000000" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel='stylesheet' href='[##cms.cms.cdn##]/css/swiper4.1.6.css'>
     <link rel="stylesheet" href="[##cms.cms.cdn##]/css/style.css">
     <basis core="print" datamembername="db.list">
         <face>
@@ -19,10 +20,14 @@
 </head>
 <body>
     <basis core="call" file="header.inc" />
+
     <div class="blog">
+  <div class="cursor-follower">
+            <div class="innerCursor"></div>
+          </div>
         <div class="section1">
             <h1>
-                بلاگ‌ها
+                بلاگ‌
             </h1>
         </div>
         <div class="section2">
@@ -60,7 +65,7 @@
         </div>
     </div>
     <basis core="call" file="footer.inc" />
-    <script src="[##cms.cms.cdn##]/_js/gsap.js"></script>
+    <basis core="call" file="scripts.inc" />
     <script src="[##cms.cms.cdn##]/_js/scrollTrigger.js"></script>
     <script src="[##cms.cms.cdn##]/_js/lenisScroll.js"></script>
     <script src="[##cms.cms.cdn##]/js/blog.js"></script>

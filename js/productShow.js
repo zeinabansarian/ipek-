@@ -240,6 +240,25 @@ setTimeout(() => {
 
                 })
             });
+            let midPara = document.querySelectorAll(".midSection p ")
+            midPara.forEach(element => {
+                gsap.to(element.querySelectorAll(".line"), {
+                    scrollTrigger: {
+                        trigger: element.parentElement,
+                        start: 'right 20%',
+                        end: 'left left',
+                        containerAnimation: scrollTween,
+                    },
+                    y: 0,
+                    opacity: 1,
+                    stagger: 0.1,
+                    delay: 0,
+                    duration: 1,
+
+
+
+                })
+            });
 
 
             gsap.from('.playbtn', {

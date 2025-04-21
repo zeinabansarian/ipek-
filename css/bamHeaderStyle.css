@@ -1,0 +1,65 @@
+.manuBarC .searchBtnH {
+  cursor: pointer;
+}
+
+.manuBarC .searchBtnH path {
+  fill: white;
+}
+
+.manuBarC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+
+.searchContainer form button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.searchContainer form input {
+  background: transparent;
+  border: none;
+  width: 500px;
+  direction: rtl;
+  color: white;
+}
+
+.searchContainer form {
+  margin: 0;
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+
+.searchContainer {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  transform: scale(0);
+  transition: 1s ease;
+  z-index: 10;
+  height: 100vh;
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeSearch path {
+  fill: white;
+}
+
+.closeSearch {
+  position: fixed;
+  top: 125px;
+  cursor: pointer;
+  right: 60px;
+}
+
+.activeSearchContainer {
+  transform: scale(1);
+}/*# sourceMappingURL=bamHeaderStyle.css.map */

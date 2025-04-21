@@ -1,0 +1,561 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
+    <member name="list" type="list" request="product" id="[##cms.query.id##]"></member>
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2343699">
+    <member name="serviceGallery" type="list" />
+   
+    <member name="serviceGallery20" type="list" postsql="select * from [db.serviceGallery20] where ord=20" />
+   
+    </basis>
+
+    <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2343699">
+        <member name="service" type="view"/> </basis>
+            <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358735">
+        <member name="faq" type="view"/> </basis>
+        
+        <basis core="dbsource" source="basiscore" mid="20" name="menu" lid="1"> <member name="productCat" type="tree" request="cat" parentid="207605"  postsql="select * from [menu.productCat] where parentid=207605"/> </basis>
+        <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="207623"> <member name="blogList" type="list" size="376x429" propertyid="7249"/> </basis>
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <basis core="print" datamembername="db.list">
+        <face>
+            <title>[##cms.seo.title|db.list.title##]</title>
+            <meta name="description" content="[##cms.seo.description|db.list.description##]" />
+        </face>
+    </basis>
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper4.1.6.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/style.css">
+</head>
+
+<body>
+    <basis core="call" file="header.inc" />
+
+
+    <div class="landing">
+        <div class="section1">
+            <basis core="print" datamembername="db.serviceGallery">
+           
+                <face filter="ord=1">
+                    
+                    <div class="imgBack" style="background-image: url(/@largeIMG);">
+                        <div class="overlayText">
+                            <p>
+                                
+                                @name
+                            </p>
+                        </div>
+                    </div>
+                </face>
+            </basis>
+        </div>
+
+
+
+        <div class="tableOc">
+            <ul id="toc"></ul>
+        </div>
+        <div class="productListSection">
+            <div class="detailPro">
+
+                <h1>
+                    محصولات ما
+                </h1>
+                <!-- <div class="para">
+
+                    <p>
+                        کارخانه تولید پرده های مدرن، شامل یک مجموعه جامع از خدمات طراحی، نصب و فروش پرده های مدرن است .
+                        تیم ما از طراحان و مهندسان با تجربه است که با استفاده از آخرین تکنولوژی ها، پرده هایی با طراحی منحصر به
+                        فرد و عملکرد بالا ایجاد می‌کنند.
+                        ما با تجربه در طراحی و نصب پروژه های بزرگ ، با شماه هستیم تا با استفاده از پرده های مدرن، فضایی شیک و
+                        جذاب را برای خود و مشتریان خود ایجاد کنید و از تکنولوژی ENERGY SAVING صرفه جویی در مصرف انرژی بهرمند
+                        شوید.
+                        همکاری با پرده سرا ها و اخذ نمایندگی از مهمترین خدمات ایپک میباشد تا فروش خود را به صورت عمده فروشی و
+                        انجام پروژه به بازار عرضه کنید و با افزایش فروش، به رشد و توسعه کسب و کار خود بپردازید .
+                    </p>
+                </div> -->
+            </div>
+            <div class="productCat">
+                <div class="cursor-follower">
+                  <div class="innerCursor">
+            
+                  </div>
+                  <div class="prevCursor">
+            
+                    <svg width="37" height="35" viewBox="0 0 37 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_83_738)">
+                        <path
+                          d="M20.3361 35L12.674 35L-4.65372e-05 17.4053L13.2398 -3.10189e-07L20.3361 0L7.28482 17.4053L20.3361 35Z"
+                          fill="#C59B47" />
+                        <path d="M7.28487 17.4053L37 17.4053" stroke="#C59B47" stroke-width="2" stroke-miterlimit="10" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_83_738">
+                          <rect width="35" height="37" fill="white" transform="translate(37) rotate(90)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="nextCursor">
+            
+                    <svg width="37" height="35" viewBox="0 0 37 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_83_738)">
+                        <path
+                          d="M20.3361 35L12.674 35L-4.65372e-05 17.4053L13.2398 -3.10189e-07L20.3361 0L7.28482 17.4053L20.3361 35Z"
+                          fill="#C59B47" />
+                        <path d="M7.28487 17.4053L37 17.4053" stroke="#C59B47" stroke-width="2" stroke-miterlimit="10" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_83_738">
+                          <rect width="35" height="37" fill="white" transform="translate(37) rotate(90)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+            
+                </div>
+                <div class="backSlider">
+                  <div class="swiper backgroundSlider">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <basis core="print" datamembername="menu.productCat">
+                   
+                          <face>
+                              
+                            <div class="swiper-slide">
+                              <div class="imgS">
+                                <img src="[##cms.cms.cdn##]/images/productCat-back.jpg" alt="@title" title="@title" />
+                              </div>
+                            </div>
+                          </face>
+                      </basis>
+                   
+                    </div>
+                  </div>
+                </div>
+            
+                <div class="overlayCat">
+              
+                  <div class="overlaySliderContainer">
+                    <div class="overlaySlider">
+                      <div class="swiper catSlider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+            
+                          <basis core="repeater" name="rep" datamembername="menu.productCat">
+                           
+                            <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##rep.current.catid##]"> 
+                              <member name="productCatInner" type="list" order="id desc" /> </basis>
+            
+                            <div class="swiper-slide">
+                              <div class="slideContainer">
+                                <div class="titleCat">
+                                  <p>[##rep.current.title##]</p>
+                                </div>
+              
+                                <div class="catListlayer">
+                                  <ul>
+                                    <basis core="print" datamembername="db.productCatInner">
+                                       
+                                        <face>
+                                          <li>
+                                            <button>
+                                              <a href="/@link" title="@title"> @title
+                    
+                                                <div class="arrowContainer">
+                    
+                                                  <span class="maskArrow">
+                                                    <span></span>
+                                                  </span>
+                                                </div>
+                                              </a>
+                                            </button>
+                                          </li>
+                                            
+                                        </face>
+                                    </basis>
+                                    
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </basis>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <basis core="print" datamembername="menu.productCat">
+                <face>
+                    <span class="dataMenu" data-cat="@catid" style="display: none;"></span>
+                </face>
+            </basis>
+<span class="catid" style="display: none;">[##cms.query.catid##]</span>
+
+        </div>
+        <div class="section2">
+            <basis core="print" datamembername="db.service">
+                <face filter="TypeID=150">
+                    
+                    <h1>
+                        @Answer
+                    </h1>
+                </face>
+            </basis>
+            <basis core="print" datamembername="db.service">
+                <face filter="TypeID=129">
+                    @Answer
+                </face>
+            </basis>
+        </div>
+        <div class="section3">
+            <h2>
+                لیست خدمات ما
+            </h2>
+            <div class="in3">
+                <div class="leftItems">
+                    <ul>
+                        <basis core="print" datamembername="db.serviceGallery20">
+                            <face>
+                                
+                                <li>
+                                    <button class="faNum">
+                                       @RowNumber- @name
+                                    </button>
+                                </li>
+                            </face>
+                        </basis>
+                       
+                    </ul>
+                </div>
+                <div class="rightSliders">
+                    <div class="sliderSection">
+                        <div class="swiper verticalSlider">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <basis core="print" datamembername="db.serviceGallery20">
+                                    <face>
+                                        <div class="swiper-slide verticalSlide">
+                                            <div class="topSection">
+                                                <div class="imgS">
+                                                    <img src="/@largeIMG" alt="@name" title="@name">
+                                                </div>
+                                            </div>
+                                            <div class="descriptionSection">
+                                                <div class="title">
+
+                                                    <p>
+                                                     
+                                                        @name
+                                                    </p>
+                                                </div>
+                                              <div class="para">
+
+                                                  <p>
+                                                      @description
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </face>
+                                </basis>
+                             
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- If we need navigation buttons -->
+                            <div class="btns">
+                                <div class="button-prev">
+                                    <svg width="53" height="53" viewBox="0 0 53 53" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_80_489)">
+                                            <path
+                                                d="M26.7305 33.1248L23.7906 33.1248L18.9278 26.4639L24.0077 19.8748L26.7305 19.8748L21.7229 26.4639L26.7305 33.1248Z"
+                                                fill="white" />
+                                            <path d="M21.7237 26.4639L33.125 26.4639" stroke="white" stroke-width="0.5"
+                                                stroke-miterlimit="10" />
+                                        </g>
+                                        <circle cx="26.5" cy="26.5" r="26" stroke="white" />
+                                        <defs>
+                                            <clipPath id="clip0_80_489">
+                                                <rect width="13.25" height="14.1964" fill="white"
+                                                    transform="translate(33.125 19.8748) rotate(90)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="button-next">
+                                    <svg width="54" height="53" viewBox="0 0 54 53" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_80_484)">
+                                            <path
+                                                d="M26.625 19.8752L29.5648 19.8752L34.4277 26.5361L29.3478 33.1252L26.625 33.1252L31.6326 26.5361L26.625 19.8752Z"
+                                                fill="white" />
+                                            <path d="M31.6318 26.5361L20.2305 26.5361" stroke="white" stroke-width="0.5"
+                                                stroke-miterlimit="10" />
+                                        </g>
+                                        <circle cx="26.8555" cy="26.5" r="26" stroke="white" />
+                                        <defs>
+                                            <clipPath id="clip0_80_484">
+                                                <rect width="13.25" height="14.1964" fill="white"
+                                                    transform="translate(20.2305 33.1252) rotate(-90)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<basis core="print" datamembername="db.blogList">
+    <layout>
+        <div class="blogListSection">
+            <h1>
+                مقالات ما
+            </h1>
+    
+            <div class="blog">
+              
+                <div class="section2">
+                    <div class="blogContainer">
+                        <div class="midLine"></div>
+    
+    
+    
+               
+         @child
+    
+                    </div>
+                    <div class="loadMore">
+                        <span>
+    
+                            مشاهده بیشتر
+                        </span>
+    
+                        <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_128_766)">
+                                <path
+                                    d="M9.34375 17.5L5.82336 17.5L0.000134099 8.954L6.08329 0.5L9.34375 0.5L3.34724 8.954L9.34375 17.5Z"
+                                    fill="white" />
+                                <path d="M3.3471 8.9541L17 8.9541" stroke="white" stroke-miterlimit="10" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_128_766">
+                                    <rect width="17" height="17" fill="white" transform="translate(17 0.5) rotate(90)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    </layout>
+    <face>
+        <div class="blogItem">
+            <div class="date">
+                <span>
+                    @prp_7249
+                </span>
+            </div>
+            <a href="/@link" title="@title">
+                <div class="imgS">
+                    <img loading="lazy" src="/@00376X00429prp" alt="@title" title="@title">
+                </div>
+                <p>
+                    @title
+                </p>
+            </a>
+        </div>
+    </face>
+</basis>
+
+<basis core="print" datamembername="db.faq">
+    <layout>
+          <div class="faq">
+              <h1>سوالات متداول</h1>
+    
+    <div class="wrapper">
+          @child
+</div>
+        </div>
+      </layout>
+      <face filter="TypeID=250">
+          <div class="container">
+            <div class="question">
+                <p>
+        
+                @text
+            </p>
+            </div>
+            <div class="answercont">
+              <div class="answer">
+              @largetext
+              </div>
+            </div>
+          </div>
+          
+      </face>
+  </basis>
+  
+
+
+        <div class="commentSection">
+            <basis core="dbsource" source="userbehavior" name="db" title="{##db.senduserName.value##}"
+            run="atclient" triggers="db.sendcomment" if="{##db.sendcomment##}"
+           parentid="0" usedforid="[##cms.query.id##]" userid="100005"
+            title="user" mid="1" comment="{##db.sendcomment.value##}" >
+               <member request="comment" type="scalar" name="comment" preview="true" />
+           </basis>
+           <div class="header_small mb--15px transition wow fadeInUp animated animated">
+               <p>
+                   ثبت نظر
+               </p>
+           </div>
+     
+           <form action="" class="commentP">
+               <div class="userInfo">
+ 
+                   <input class="userName" type="text" placeholder="نام و نام خانوادگی">
+                   <input type="email" placeholder="لطفا ایمیل خود را وارد کنید">
+               </div>
+               <div class="msg">
+                   <___textarea class="msg ___textarea" name="message" id="message" placeholder="پیام شما"></___textarea>
+               </div>
+               <div class="messageSend">
+                   <p>
+ 
+                   </p>
+               </div>
+               <button class="submitComment">ارسال نظر</button>
+           </form>
+        </div>
+        <div class="section4">
+            <basis core="print" datamembername="db.service">
+
+                <face filter="TypeID=128">
+                    
+                    <p>
+                        @Answer
+                    </p>
+                </face>
+            </basis>
+            <a href="/تماس-با-ما" title="تماس با ما">
+
+
+                تماس با ما
+                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g  >
+                        <path
+                            d="M9.34375 17.5L5.82336 17.5L0.000134099 8.954L6.08329 0.5L9.34375 0.5L3.34724 8.954L9.34375 17.5Z"
+                            fill="white" />
+                        <path d="M3.3471 8.9541L17 8.9541" stroke="white" stroke-miterlimit="10" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_128_766">
+                            <rect width="17" height="17" fill="white" transform="translate(17 0.5) rotate(90)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+
+            </a>
+        </div>
+        
+    </div>
+    <basis core="call" file="footer.inc" />
+    <basis core="call" file="scripts.inc" />
+    <script src="[##cms.cms.cdn##]/_js/scrollTrigger.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/lenisScroll.js"></script>
+    <script src="[##cms.cms.cdn##]/_js/basiscore-2.28.0.min.js"></script>
+
+        <script src="[##cms.cms.cdn##]/js/landing.js"></script>
+
+
+
+        <script>
+            var host = {
+               debug: false,
+               settings: {
+   
+   
+                   'connection.web.trust_login': 'https://basispanel.ir/apicms',
+                   'connection.web.basiscore': 'https://basispanel.ir/apicms',
+                   'connection.web.media': 'https://basispanel.ir/apicms',
+                       'connection.web.userbehavior': 'https://basispanel.ir/apicms', 
+   
+                   'default.dbsource.verb': 'post',
+                   'default.call.verb': 'get',
+                   'default.viewCommand.groupColumn': 'prpid',
+                   'default.dmnid': '4836',
+                   'default.binding.regex': '\\{##([^#]*)##\\}'
+   
+               }
+           }
+   
+   
+   
+           document.querySelector('.submitComment').addEventListener('click',(event)=>{
+         //  let input1  = document.querySelector('.namee')
+         event.preventDefault();
+          let textar = document.querySelectorAll('.userInfo input')
+          let emptyFlag=false;
+          textar.forEach(element => {
+             if (element.value == "") {
+                 emptyFlag=true
+             }
+          });
+         if(!emptyFlag){
+             
+             let val = document.querySelector(".commentP textarea").value;
+             let userName = document.querySelector(".commentP .userName").value;
+             console.log("val" , val);
+             $bc.setSource('db.send',true)
+              $bc.setSource('db.senduserName',userName)
+              $bc.setSource('db.sendcomment',val)
+              $bc.setSource('db.run',true)
+              let sendbox = document.querySelector('.messageSend')
+                 let text = sendbox.querySelector('p')
+                 text.innerHTML = 'درخواست شما با موفقیت ثبت شد'
+        $(".messageSend").css("display","block")
+        
+        document.querySelector(".commentP").reset();
+        setTimeout(()=>{
+            $(".messageSend").css("display","none")
+      },3500)
+         }
+         else{
+             let sendbox = document.querySelector('.messageSend')
+                 let text = sendbox.querySelector('p')
+                 text.innerHTML = 'فیلدهای الزامی را پر کنید'
+                 $(".messageSend").css("display","block")
+        
+        setTimeout(()=>{
+            $(".messageSend").css("display","none")
+      },3500)
+   
+         }
+        
+          
+     })
+   
+   
+   
+   
+       </script>
+</body>
+
+</html>

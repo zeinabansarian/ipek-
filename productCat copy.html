@@ -95,7 +95,7 @@
               <basis core="repeater" name="rep" datamembername="menu.productCat">
                
                 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="[##rep.current.catid##]"> 
-                  <member name="productCatInner" type="list" /> </basis>
+                  <member name="productCatInner" type="list" order="id desc" /> </basis>
 
                 <div class="swiper-slide">
                   <div class="slideContainer">
@@ -137,13 +137,32 @@
       </div>
     </div>
   </div>
-  <basis core="call" file="footer.inc" />
+  <basis core="print" datamembername="menu.productCat">
+    <face>
+        <span class="dataMenu" data-cat="@catid" style="display: none;"></span>
+    </face>
+</basis>
+<span class="catid" style="display: none;">[##cms.query.catid##]</span>
+  <!-- <basis core="call" file="footer.inc" /> -->
 
   <basis core="call" file="scripts.inc" />
 
   <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js"></script>
   <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.6.min.js"></script>
   <script src="[##cms.cms.cdn##]/js/productCat.js"></script>
+  <script>
+      let dataMenu= document.querySelectorAll(".dataMenu")
+        let catid = document.querySelector(".catid").innerHTML
+        for (let i = 0; i < dataMenu.length; i++) {
+            const element = dataMenu[i];
+            let dataCat = element.getAttribute("data-cat")
+            if (dataCat==catid) {
+                backgroundSlider.slideTo(i);
+                catSlider.slideTo(i);
+                
+            }
+        }
+  </script>
 </body>
 
 </html>
